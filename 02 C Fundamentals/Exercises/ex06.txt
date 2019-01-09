@@ -1,4 +1,0 @@
-Why is it not a good idea for an identifier to contain more than one adjacent underscore (as in current__balance. for example)?
-
-Writing simple, easy-to-read code is one of the core values to becoming a good programmer.
-Avoid writing redundant double underscore and make, keep everything simple.
