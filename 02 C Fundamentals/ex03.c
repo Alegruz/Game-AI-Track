@@ -1,4 +1,5 @@
 /* Computes the dimensional weight of a 12" x 10" x 8" box */
+/* Condensed version of dweight.c. */
 
 #include <stdio.h>
 
