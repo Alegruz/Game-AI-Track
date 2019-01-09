@@ -1,0 +1,10 @@
+Which of the following are keywords in C?
+
+keywords
+(a) for
+(c) main
+(e) while
+
+not keywords
+(b) If  // C language is case-sensitive
+(d) printf  // printf is not a keyword. Of course, if you include stdio.h header file, it becomes one.
