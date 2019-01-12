@@ -12,4 +12,4 @@ https://doc.lagout.org/programmation/C/Addison.Wesley.Effective.CPP.3rd.Edition.
 https://book.naver.com/bookdb/book_detail.nhn?bid=8970299 번역본
 
 중고
-https://cafe.naver.com/joonggonara/541352616
+https://cafe.naver.com/joonggonara/514183813
