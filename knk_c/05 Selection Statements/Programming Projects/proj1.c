@@ -1,0 +1,1 @@
+/* Calculates number of digits a number contains */
