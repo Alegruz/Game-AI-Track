@@ -1,4 +1,4 @@
-/* Tell whether the following if statement is legal */
+/* Prints the result according to the value of i */
 
 #include <stdio.h>
 
