@@ -8,7 +8,7 @@ int main(void) {
     printf("value of i and j: ");
     scanf("%d %d", &i, &j);
 
-    value = (-1) * (i < j) + (i > j);
+    value = (i > j) - (i < j);
 
     printf("i is %d, j is %d\n", i, j);
     printf("value is %d\n", value);
