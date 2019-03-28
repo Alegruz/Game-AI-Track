@@ -4,7 +4,7 @@
 
 int main(void)
 {
-    int i, j, n;;
+    int i, j, n;
     float factorial, e = 1.0f;
 
     printf("Enter a number: ");
