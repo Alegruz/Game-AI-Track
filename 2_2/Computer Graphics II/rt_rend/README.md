@@ -1,3 +1,3 @@
 # Computer Graphics II
-Real-time rendering, 3rd edition<br>
-by Tomas Akenine-Moller, Eric Haines and Naty Hoffman
+Real-time rendering, 4th edition<br>
+by Tomas Akenine-Möller, Eric Haines, and Naty Hoffman
