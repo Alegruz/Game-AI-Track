@@ -1,6 +1,6 @@
 # Digipen Studies
 
-The Sample Course : https://www.digipen.edu/academics/computer-science-degrees/bs-in-computer-science-and-game-design/sample-course-sequence
+The Sample Course : https://www.digipen.edu/academics/computer-science-degrees/bs-in-computer-science-in-machine-learning/sample-course-sequence
 
 Official Booklist
 
