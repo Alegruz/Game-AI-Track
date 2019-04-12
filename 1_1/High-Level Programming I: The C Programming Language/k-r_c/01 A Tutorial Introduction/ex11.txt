@@ -1,0 +1,2 @@
+1. If the number of each counting characters exceeds the highest value of int
+2. If there are at least 1 character, the number of line must be 1
