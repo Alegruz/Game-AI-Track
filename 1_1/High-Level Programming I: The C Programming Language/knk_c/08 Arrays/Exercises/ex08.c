@@ -1,7 +1,5 @@
 /* Declare a two-dimensional array */
 
-#include <stdio.h>
-
 #define DAYS_IN_MONTH 30
 #define HOURS_IN_DAY 24
 
