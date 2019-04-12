@@ -1,0 +1,2 @@
+Q: Why is sizeof(a) / sizeof(a[0]) better than sizeof(a) / sizeof(type)?
+A: Because you can't bee 100% sure whether "type" is really the type of elements of the array a
