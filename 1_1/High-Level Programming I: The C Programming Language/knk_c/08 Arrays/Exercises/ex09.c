@@ -1,7 +1,5 @@
 /* Computes average temperature for a month */
 
-#include <stdio.h>
-
 #define DAYS_IN_MONTH 30
 #define HOURS_IN_DAY 24
 
