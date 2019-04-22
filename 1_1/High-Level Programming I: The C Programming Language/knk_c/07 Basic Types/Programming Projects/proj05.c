@@ -6,7 +6,7 @@
 int main(void)
 {
     char ch = ' ';
-    int value;
+    int value = 0;
 
     printf("Enter a word: ");
     while (ch != '\n') {
