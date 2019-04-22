@@ -1,0 +1,1 @@
+Result of a logical expression is a boolean type value. Thus, the value is either 0 or 1
