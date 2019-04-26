@@ -39,4 +39,4 @@ int main(void) {
     printf("anagrams.\n");
 
     return 0;
-};
+}
