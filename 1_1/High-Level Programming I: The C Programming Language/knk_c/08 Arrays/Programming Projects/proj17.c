@@ -2,8 +2,6 @@
 
 #include <stdio.h>
 
-void print_array(int* magic_square, int magic_square_size);
-
 int main(void) {
     int magic_square_size, row = 0, column, number = 1;
 
@@ -19,30 +17,29 @@ int main(void) {
     }
 
     int magic_square[magic_square_size][magic_square_size];
-    for (int y = 0; y < magic_square_size; ++y) {
+    for (int y = 0; y < magic_square_size; ++y)
         for (int x = 0; x < magic_square_size; ++x)
             magic_square[y][x] = 0;
-    }
     column = magic_square_size / 2;
     magic_square[row][column] = number;
 
 
     for (;;) {
-        row = (row + 4) % magic_square_size;
+        row = (row + magic_square_size - 1) % magic_square_size;
         column = (column + 1) % magic_square_size;
         number++;
         if (number > magic_square_size * magic_square_size)
             break;
         if (magic_square[row][column] != 0) {
             row = (row + 2) % magic_square_size;
-            column = (column + 4) % magic_square_size;
+            column = (column + magic_square_size - 1) % magic_square_size;
         }
         magic_square[row][column] = number;
     }
 
     for (int y = 0; y < magic_square_size; ++y) {
         for (int x = 0; x < magic_square_size; ++x)
-            printf("%d ", magic_square[y][x]);
+            printf("%4d ", magic_square[y][x]);
         printf("\n");
     }
 

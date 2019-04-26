@@ -8,7 +8,7 @@
 int main(void)
 {
     char name_ch;
-    char last_name[LAST_NAME_SIZE];
+    char last_name[LAST_NAME_SIZE] = {};
     int index = 0;
 
     printf("Enter a first and last name: ");

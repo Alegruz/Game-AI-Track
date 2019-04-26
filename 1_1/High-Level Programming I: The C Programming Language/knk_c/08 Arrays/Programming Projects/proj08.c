@@ -3,10 +3,10 @@
 #include <stdio.h>
 
 int main(void) {
-    double class_quiz_grades[5][5] = {{0.00}};
+    double class_quiz_grades[5][5] = {{}};
     double quiz_grade;
-    double student_score[5] = {0.00};
-    double quiz_score[5][3] = {{0.00}};
+    double student_score[5] = {};
+    double quiz_score[5][3] = {{}};
     double max[5], min[5];
 
     for (int student = 0; student < 5; ++student) {

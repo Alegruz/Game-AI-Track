@@ -7,7 +7,7 @@
 
 int main(void) {
     char ch;
-    int occurrence[26] = {0};
+    int occurrence[26] = {};
     bool is_anagram = false;
 
     printf("Enter first word: ");

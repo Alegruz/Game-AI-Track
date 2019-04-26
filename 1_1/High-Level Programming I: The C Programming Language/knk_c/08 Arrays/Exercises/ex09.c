@@ -5,7 +5,7 @@
 
 int main(void) {
     int temperature_readings[DAYS_IN_MONTH][HOURS_IN_DAY];
-    double average_daily_temperature[DAYS_IN_MONTH] = {0.00}, average_hourly_temperature[HOURS_IN_DAY] = {0.00};
+    double average_daily_temperature[DAYS_IN_MONTH] = {}, average_hourly_temperature[HOURS_IN_DAY] = {};
     double average_monthly_temperature = 0.00;
 
     for (int day = 0; day < DAYS_IN_MONTH; ++day) {

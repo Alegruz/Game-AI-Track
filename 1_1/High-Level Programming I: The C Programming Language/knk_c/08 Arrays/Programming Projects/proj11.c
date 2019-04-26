@@ -5,7 +5,7 @@
 
 int main(void)
 {
-    char numberCh[characters];
+    char numberCh[characters] = {};
     int index = 0;
     printf("Enter phone number: ");
 

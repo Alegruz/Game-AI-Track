@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 int main(void) {
-    int digit_seen[10] = {0};
+    int digit_seen[10] = {};
     int digit;
     long n;
 

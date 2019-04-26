@@ -4,7 +4,7 @@
 #define SENTENCE_LENGTH 255
 
 int main(void) {
-    char sentence[SENTENCE_LENGTH];
+    char sentence[SENTENCE_LENGTH] = {};
     char ch;
     int sentence_index = 0, word_index;
 

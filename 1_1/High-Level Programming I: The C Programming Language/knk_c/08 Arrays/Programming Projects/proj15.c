@@ -5,7 +5,7 @@
 #define MESSAGE_SIZE 80
 
 int main(void) {
-    char message[MESSAGE_SIZE] = {' '};
+    char message[MESSAGE_SIZE] = {};
     char ch;
     bool is_upper = false, is_alpha = false;
     int message_index = 0, shift;

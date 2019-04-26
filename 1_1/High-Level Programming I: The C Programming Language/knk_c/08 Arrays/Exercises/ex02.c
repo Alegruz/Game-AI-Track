@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 int main(void) {
-    int digit_count[10] = {0};
+    int digit_count[10] = {};
     char ch;
 
     printf("Enter a number: ");

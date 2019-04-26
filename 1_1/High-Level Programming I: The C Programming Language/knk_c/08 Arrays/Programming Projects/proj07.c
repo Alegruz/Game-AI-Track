@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 int main(void) {
-    int array5x5[5][5] = {{0}};
+    int array5x5[5][5] = {{}};
     int array_element;
-    int column_sum[5] = {0}, row_sum[5] = {0};
+    int column_sum[5] = {}, row_sum[5] = {};
 
     for (int row = 0; row < 5; ++row) {
         printf("Enter column %d: ", row + 1);

@@ -5,7 +5,7 @@
 
 int main(void) {
     bool digit_seen[10] = {false};
-    long digit[255] = {0};
+    long digit[255] = {};
     long temp_digit;
     long n;
     int digit_index = 0;
