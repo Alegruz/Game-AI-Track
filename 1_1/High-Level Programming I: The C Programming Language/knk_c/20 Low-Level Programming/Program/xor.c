@@ -1,0 +1,1 @@
+/* Performs XOR encryption */
