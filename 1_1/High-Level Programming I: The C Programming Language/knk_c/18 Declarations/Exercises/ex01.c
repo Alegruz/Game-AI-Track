@@ -1,0 +1,1 @@
+/* Identify the storage class, type qualifiers, type specifiers, declarators, and initializers */
