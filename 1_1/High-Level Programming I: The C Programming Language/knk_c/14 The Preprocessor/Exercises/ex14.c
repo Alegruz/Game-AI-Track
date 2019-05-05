@@ -17,7 +17,7 @@ int main(void) {
 
     i = 3; j = 2;       /* i and j needs to be initialized */
 #ifdef N    /* Blank Line */
-    i = j;  /* Blank Line */
+    i = j;
 #else       /* Blank Line */
     j = i;  /* Blank Line */
 #endif      /* Blank Line */
