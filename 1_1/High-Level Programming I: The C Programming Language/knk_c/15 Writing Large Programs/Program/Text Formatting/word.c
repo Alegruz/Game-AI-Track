@@ -10,7 +10,7 @@ int read_char(void) {
     return (ch == '\n' || ch == '\t') ? ' ' : ch;
 }
 
-void read_word(char *word, int len) {
+int read_word(char *word, int len) {
     int ch, pos = 0;
 
     while ((ch = read_char()) == ' ')
@@ -22,4 +22,5 @@ void read_word(char *word, int len) {
         ch = read_char();
     }
     word[pos] = '\0';
+    return pos;
 }
