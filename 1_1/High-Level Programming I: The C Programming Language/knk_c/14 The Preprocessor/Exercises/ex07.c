@@ -18,4 +18,5 @@ GENERIC_MAX(long);
  */
 
 /* c */
-GENERIC_MAX(long unsigned);
+typedef unsigned long ULONG;
+GENERIC_MAX(ULONG);
