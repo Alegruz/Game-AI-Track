@@ -1,3 +1,8 @@
 (a) Describe several other advantages of dividing a program into multiple source files
+- We can renovate the program easily.
+- Easy to find errors.
+- Easy to test/debug separately
 
 (b) Describe some disadvantages
+- Too much files for a relatively smaller programs would be rather complex
+- Bad grouping can result in chaos

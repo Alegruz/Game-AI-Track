@@ -1,0 +1,6 @@
+If file is not in current directory, then yes, it is legal.
+
+#include "file"
+means that compiler will look for file in current directory,
+and if it is not present, then it will search in the system
+header files directory.

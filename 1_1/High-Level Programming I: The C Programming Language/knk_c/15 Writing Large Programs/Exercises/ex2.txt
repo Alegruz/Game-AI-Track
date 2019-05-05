@@ -1,0 +1,10 @@
+Function defintions should not be put in a header file. (function prototypes, macro defintions, type defintions could be put in a header file)
+
+If a header file includes a definition rather than prototypes,
+it means that every single file that is linked to the header file,
+whether they are just using the header file's macros, typedefs etc.,
+they are obligated to compile the function.
+
+Every time the function is used everywhere, compiler must compile the
+same function everytime, which causes error in linking stage
+where linker expects a single definition of the same function.
