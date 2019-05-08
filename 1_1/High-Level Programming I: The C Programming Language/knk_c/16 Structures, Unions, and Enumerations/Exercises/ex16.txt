@@ -1,0 +1,7 @@
+(a) An enumeration constant may represent any integer specified by the programmer,
+as long as that integer does not exceed the maximum number of int.
+(b) Difference between enumeration constants and constants created using #define is that
+enumeration constants can be scoped, while constants created using #define is global.
+(c) Enumeration constants have the values 0, 1, 2, ... by default.
+(d) All constants in an enumeration have different values.
+(e) Enumeration constants may be used as integers in expressions.
