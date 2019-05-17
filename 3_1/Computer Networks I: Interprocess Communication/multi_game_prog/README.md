@@ -1,7 +1,7 @@
 # Computer Networks I: Interprocess Communication
 Multiplayer Game Programming<br>
 Joshua Glazer & Sanjay Madhav
-
+<br>REQUIRED - US
 
 SEMESTER 5<br>
 CS 260

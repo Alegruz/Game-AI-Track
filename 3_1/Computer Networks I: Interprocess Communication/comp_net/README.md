@@ -1,7 +1,7 @@
 # Computer Networks I: Interprocess Communication
 Computer networking :  a top-down approach, 7th edition<br>
 by James Kurose and Keith Ross
-
+<br>REQUIRED - SING
 
 SEMESTER 5<br>
 CS 260

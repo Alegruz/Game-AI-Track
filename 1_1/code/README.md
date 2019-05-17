@@ -1,5 +1,6 @@
 # Computer Environment
 Code: The hidden language of computer hardware and software; Charles Petzold
+<br>REQUIRED
 
 SEMESTER 1<br>
 CS 100

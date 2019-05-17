@@ -1,7 +1,7 @@
 # Data Structures
 Algorithms in C++, 3rd edition<br>
 by Robert Sedgewick
-
+<br>REQUIRED
 
 SEMESTER 4<br>
 CS 280

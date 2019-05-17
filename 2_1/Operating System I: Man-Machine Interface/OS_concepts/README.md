@@ -1,7 +1,8 @@
 # Operating System I, Man-Machine Interface
-Operating system concepts, 10th edition,
+Operating system concepts, 10th edition,<br>
 by Abraham Silberschatz, Peter B. Galvin, and
 Greg Gagne
+<br>REQUIRED
 
 SEMESTER 3<br>
 CS 180

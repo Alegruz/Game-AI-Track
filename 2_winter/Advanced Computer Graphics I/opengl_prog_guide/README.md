@@ -1,10 +1,14 @@
 # Computer Graphics II
 OpenGL Programming Guide, 9th edition, 2016;<br>
 Kessenich, Sellers, and Shreiner
-
+<br>RECOMMENDED
+<br>REQUIRED - US, RECOMMENDED - SING
 
 SEMESTER 4<br>
 CS 250
+
+SEMESTER 5<br>
+CS 300
 
 원서<br>
 https://www.amazon.com/OpenGL-Programming-Guide-Official-Learning/dp/0134495497<br>

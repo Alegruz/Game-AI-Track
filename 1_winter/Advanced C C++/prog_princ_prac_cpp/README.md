@@ -1,6 +1,7 @@
 # Advanced C/C++
-Programming : principles and practice using C++
+Programming : principles and practice using C++<br>
 by Bjarne Stroustrop
+<br>RECOMMENDED
 
 SEMESTER 3<br>
 CS 225

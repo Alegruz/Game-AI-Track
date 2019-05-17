@@ -1,7 +1,8 @@
 # Advanced C/C++
 More effective C++ : 35 new ways to improve your
-programs and designs
+programs and designs<br>
 by Scott Meyers
+<br>RECOMMENDED
 
 SEMESTER 3<br>
 CS 225

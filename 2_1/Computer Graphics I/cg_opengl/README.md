@@ -1,6 +1,7 @@
 # Computer Graphics I
 Computer graphics with OpenGL, International edition, 4th edition<br>
 by Donald Hearn, Pauline Baker and Warren Carithers
+<br>RECOMMENDED
 
 SEMESTER 3<br>
 CS 200

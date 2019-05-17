@@ -1,6 +1,10 @@
 # Advanced C/C++
-The Standard C Library
+The Standard C Library<br>
 by P.J. Plauger
+<br>RECOMMENDED
+
+SEMESTER 1<br>
+CS120
 
 SEMESTER 3<br>
 CS 225

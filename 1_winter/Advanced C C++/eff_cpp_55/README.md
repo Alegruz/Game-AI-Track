@@ -1,7 +1,8 @@
 # Advanced C/C++
 Effective C++ : 55 specific ways to improve your programs
-and designs, 3rd edition
+and designs, 3rd edition<br>
 by Scott Meyers
+<br>RECOMMENDED
 
 SEMESTER 3<br>
 CS 225

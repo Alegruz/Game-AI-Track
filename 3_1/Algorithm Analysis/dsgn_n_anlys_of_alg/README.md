@@ -1,7 +1,7 @@
 # Algorithm Analysis
 Introduction to the design and analysis of algorithms, 3rd edition<br>
 Anany Levitin
-
+<br>REQUIRED - US, RECOMMENDED -SING
 
 SEMESTER 5<br>
 CS 330

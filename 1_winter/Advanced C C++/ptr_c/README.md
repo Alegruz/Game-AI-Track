@@ -1,6 +1,7 @@
 # Advanced C/C++
-Pointers on C
+Pointers on C<br>
 by Kenneth Reek
+<br>RECOMMENDED
 
 SEMESTER 3<br>
 CS 225

@@ -1,6 +1,10 @@
 # Advanced C/C++
-The C programming language, 2nd edition
+The C programming language, 2nd edition<br>
 by Brian W. Kernigan and Dennis M. Ritchie
+<br>RECOMMENDED
+
+SEMESTER 3<br>
+CS 120
 
 SEMESTER 3<br>
 CS 225

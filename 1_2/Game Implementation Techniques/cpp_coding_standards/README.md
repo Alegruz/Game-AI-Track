@@ -1,9 +1,9 @@
 # Game Implementation Techniques
 C++ Coding Standards: 101 Rules, Guidelines, and Best Practices; Herb Sutter & Andrei Alexandrescu
+<br>RECOMMENDED
 
 SEMESTER 2<br>
-CS 230<br>
-GAM 150
+CS 230
 
 원서<br>
 https://www.amazon.com/Coding-Standards-Rules-Guidelines-Practices/dp/0321113586<br>

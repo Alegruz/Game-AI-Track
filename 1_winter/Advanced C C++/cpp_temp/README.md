@@ -1,6 +1,7 @@
 # Advanced C/C++
-C++ templates : the complete guide
+C++ templates : the complete guide<br>
 by David Vandevoorde and Nicolai M. Josuttis
+<br>RECOMMENDED
 
 SEMESTER 3
 CS 225

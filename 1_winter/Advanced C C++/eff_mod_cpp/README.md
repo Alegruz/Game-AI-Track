@@ -1,7 +1,8 @@
 # Advanced C/C++
 Effective modern C++ : 42 specific ways to improve your
-use of C++11 and C++14
+use of C++11 and C++14<br>
 by Scott Meyers
+<br>REQUIRED
 
 SEMESTER 3<br>
 CS 225

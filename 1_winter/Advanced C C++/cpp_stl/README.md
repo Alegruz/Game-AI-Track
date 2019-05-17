@@ -1,8 +1,9 @@
 # Advanced C/C++
 The C++ standard library : a tutorial and reference,
 2
-nd edition
+nd edition<br>
 by Nicolai M. Josuttis
+<br>RECOMMENDED
 
 SEMESTER 3<br>
 CS 225

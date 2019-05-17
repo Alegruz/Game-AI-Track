@@ -1,8 +1,12 @@
 # High-level Programming II: The C++ Programming Language
 C++ primer, 5th edition<br>by Stanley B. Lippman, Jose Lajoie, and Barbara E. Moo
+<br>REQUIRED
 
 SEMESTER 2<br>
-CS 170<br>
+CS 170
+
+SEMESTER 3<br>
+CS 225
 
 원서<br>
 https://www.amazon.com/Primer-5th-Stanley-B-Lippman/dp/0321714113<br>

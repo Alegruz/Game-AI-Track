@@ -1,5 +1,6 @@
 # Project II
 C++ for Game Programmers; 2nd edition, Michael Dickheiser
+<br>RECOMMENDED
 
 SEMESTER 4<br>
 GAM 250

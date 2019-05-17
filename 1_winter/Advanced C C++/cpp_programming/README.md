@@ -1,7 +1,8 @@
 # Advanced C/C++
 The C++ programming language, 4
-th edition
+th edition<br>
 by Bjarne Stroustrop
+<br>RECOMMENDED
 
 SEMESTER 3<br>
 CS 225
