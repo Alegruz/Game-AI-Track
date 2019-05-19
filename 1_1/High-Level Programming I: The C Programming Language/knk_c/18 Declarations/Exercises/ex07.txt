@@ -1,0 +1,8 @@
+a. const int can't always be used as the value of a case label in a switch statement.
+   if const int is declared in a certain scope, or say a function using a variable,
+   we will never know the value of the const int unless we execute the function.
+   Thus, it cannot be used as a case label.
+b. Compiler will check that no assignment is made to a const.
+   const is read-only variable.
+c. const is subject to the same scope rules as variables.
+d. const can be of any type.

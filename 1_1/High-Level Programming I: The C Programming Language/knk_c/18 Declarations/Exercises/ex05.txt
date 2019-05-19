@@ -1,0 +1,6 @@
+a. Static storage duration does not always have file scope.
+-> static variables declared in blocks.
+b. Not all variable declared inside a function has no linkage.
+-> extern variable in a block. (internal if was declared as static, external if not)
+c. Every variable with internal linkage has static storage duration.
+d. Every parameter has block scope.

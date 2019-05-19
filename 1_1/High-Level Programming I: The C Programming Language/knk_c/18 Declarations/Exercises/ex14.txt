@@ -1,0 +1,1 @@
+Array variables, enumeration variables, structure variables, union variables can initialized.
