@@ -4,6 +4,7 @@
         "time.h": "c",
         "stdlib.h": "c",
         "string.h": "c",
-        "word.h": "c"
+        "word.h": "c",
+        "stackadt2.h": "c"
     }
 }
