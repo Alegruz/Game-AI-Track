@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "stackADT3.h"
+#include "stack.h"
 
 struct node {
     Item data;
@@ -16,7 +16,7 @@ static void terminate(const char *message) {
     exit(EXIT_FAILURE);
 }
 
-Stack create(int size) {
+Stack create(void) {
     Stack s = (Stack) malloc(sizeof (struct stack_type));
     if (s == NULL)
         terminate("Error in create: stack could not be created\n");
@@ -34,11 +34,11 @@ void make_empty(Stack s) {
         pop(s);
 }
 
-bool is_empty(Stack s) {
+bool is_empty(const Stack s) {
     return s->top == NULL;
 }
 
-bool is_full(Stack s) {
+bool is_full(const Stack s) {
     return false;
 }
 

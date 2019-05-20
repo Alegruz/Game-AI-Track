@@ -65,3 +65,10 @@ Item pop(Stack s) {
     free(old_top);
     return i;
 }
+
+Item peek(Stack s) {
+    if (is_empty(s))
+        terminate("Error in peek: stack is empty."); 
+    
+    return s->top->data;
+}

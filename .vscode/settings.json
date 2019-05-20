@@ -5,6 +5,10 @@
         "stdlib.h": "c",
         "string.h": "c",
         "word.h": "c",
-        "stackadt2.h": "c"
+        "stackadt2.h": "c",
+        "deque": "c",
+        "list": "c",
+        "unordered_map": "c",
+        "vector": "c"
     }
 }
