@@ -26,14 +26,28 @@ Queue create_queue(int size) {
     return q;
 }
 
+void destroy_queue(Queue q) {
+    make_empty(q);
+    free(q);
+}
+
+void make_empty(Queue q) {
+    while(!is_empty(q))
+        remove_first_item(q);
+}
 void insert_item(Queue q, Item i) {
     struct node *new_node = (struct node *) malloc(sizeof(struct node));
     if (new_node == NULL)
         terminate("Error in insert_item: queue is full");
     
     new_node->data = i;
-    new_node->next = q->last;
-    q->last = new_node;
+    new_node->next = NULL;
+    if (is_empty(q)) {
+        q->first = q->last = new_node;
+    } else {
+        q->last->next = new_node;
+        q->last = new_node;
+    }
 }
 
 Item remove_first_item(Queue q) {
@@ -43,18 +57,26 @@ Item remove_first_item(Queue q) {
     if (is_empty(q))
         terminate("Error in remove_first_item: queue is empty.");
     
+
     old_first = q->first;
     i = old_first->data;
-    q->first = old_first->next;
+    if (q->first == q->last)
+        q->first = q->last = NULL;
+    else
+        q->first = old_first->next;
     free(old_first);
     return i;
 }
 
 Item get_first_item(Queue q) {
+    if (is_empty(q))
+        terminate("Error in get_first_item: Queue empty.");
     return q->first->data;
 }
 
 Item get_last_item(Queue q) {
+    if (is_empty(q))
+        terminate("Error in get_first_item: Queue empty.");
     return q->last->data;
 }
 

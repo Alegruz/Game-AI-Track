@@ -18,7 +18,7 @@ Stack create(void) {
     Stack s = (Stack) malloc(sizeof (struct stack_type));
     if (s == NULL)
         terminate("Error in create: stack could not be created\n");
-    s->top;
+    s->top = 0;
     return s;
 }
 

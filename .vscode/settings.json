@@ -9,6 +9,7 @@
         "deque": "c",
         "list": "c",
         "unordered_map": "c",
-        "vector": "c"
+        "vector": "c",
+        "stdbool.h": "c"
     }
 }
