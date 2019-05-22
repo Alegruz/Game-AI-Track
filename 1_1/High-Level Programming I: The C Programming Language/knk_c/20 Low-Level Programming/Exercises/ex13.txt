@@ -1,0 +1,4 @@
+unsigned int n;
+n &= n - 1;
+
+Removes the least significant bit that contains 1.
