@@ -1,0 +1,10 @@
+Compare and contrast the loops that used a for with those
+using a while. Are there advantages or disadvantages to using either form?
+
+for: useful when used with "counting variables". except for special cases where the loop contains "continue", while can be translated into for.
+    if number of controlling variables or conditions increase, it becomes hard to read.
+    ex) counting
+
+while: useful when used with loops that has no ranges. the loop shall end when the programmer says so.
+    not really the best choice when it comes to loops with ranges.
+    ex) game loop
