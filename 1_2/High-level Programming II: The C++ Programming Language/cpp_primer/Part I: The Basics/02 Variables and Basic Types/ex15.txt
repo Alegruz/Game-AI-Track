@@ -1,0 +1,14 @@
+Which of the following definitions, if any, are invalid? Why?
+(a) int ival = 1.01;
+
+implicit conversion from double to int
+ival == 1
+
+(b) int &rval1 = 1.01;
+
+reference to type int cannot be bound to double
+
+(c) int &rval2 = ival;
+(d) int &rval3;
+
+reference rval3 needs to be initialized

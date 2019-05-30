@@ -1,0 +1,9 @@
+Assuming p is a pointer to int, explain the following code:
+
+if (p) // ...
+
+"P is not a null pointer?"
+
+if (*p) // ...
+
+"Value of the variable that p points is nonzero?"

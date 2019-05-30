@@ -1,0 +1,7 @@
+Why is the initialization of p legal but that of lp illegal?
+
+int i = 42;    void *p = &i;     long *lp = &i;
+
+void * automatically does type conversion to rvalue's pointer type
+
+long * cannot point to an int *

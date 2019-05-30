@@ -1,0 +1,16 @@
+Determine the types and values of each of the following variables.
+
+(a) int* ip, &r = ip;
+
+ip  > pointer to int
+r   > reference to int
+
+(b) int i, *ip = 0;
+
+i   > int
+ip  > pointer to int, null pointer
+
+(c) int* ip, ip2;
+
+ip  > pointer to int
+ip2 > int

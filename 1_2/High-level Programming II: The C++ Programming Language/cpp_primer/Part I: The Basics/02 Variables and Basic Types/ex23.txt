@@ -1,0 +1,5 @@
+Given a pointer p, can you determine whether p points to a valid object?
+If so, how? If not, why not?
+
+No.
+pointer points to a type. thus we need more info to determine whether it is pointing to a valid object.

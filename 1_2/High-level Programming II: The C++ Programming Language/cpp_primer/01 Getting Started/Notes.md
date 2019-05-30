@@ -1,13 +1,12 @@
-## Note
+# Note
 Semicolons mark the end of most statements in C++.<br>
 They are easy to overlook but, when forgotten, can lead to mysterious compiler error messages.
 
 # Key Concept: Types
 A type defines both the contents of a data element and the operations that are possible on those data.<br>
-The data our programs manipulate are stored in variables and every variable has a type.<br>
-When the type of a variable named v is T, we often say that “v has type T” or, interchangeably, that “v is a T.”
+The data our programs manipulate are stored in variables and every variable has a type.
 
-### Running the GNU or Microsoft Compilers
+# Running the GNU or Microsoft Compilers
 The most common compilers are the GNU compiler and the Microsoft Visual Studio compilers.<br>
 By default, the command to run the GNU compiler is g++:<br>
 ```$ g++ -o prog1 prog1.cc```
@@ -23,16 +22,16 @@ Compilers usually include options to generate warnings about problematic constru
 <br>Our preference is to use -Wall with the GNU compiler.<br>
 For further information consult your compiler’s user’s guide.
 
-## Warning
+# Warning
 Programmers often add print statements during debugging.<br>
 Such statements should always flush the stream.<br>
 Otherwise, if the program crashes, output may be left in the buffer, leading to incorrect inferences about where the program crashed.
 
-### Entering an End-of-File from the Keyboard
+# Entering an End-of-File from the Keyboard
 On Windows systems we enter an end-of-file by typing a **control-z—hold down the Ctrl key and press z—followed by hitting either the Enter or Return key.**<br>
 On UNIX systems, including on Mac OS X machines, end-of-file is usually **control-d**.
 
-### Compilation Revisited
+# Compilation Revisited
 Part of the compiler’s job is to look for errors in the program text.<br>
 A compiler cannot detect whether a program does what its author intends, but it can detect errors in the form of the program.<br>
 The following are the most common kinds of errors a compiler will detect.
@@ -70,8 +69,9 @@ It is a good practice to correct errors in the sequence they are reported.<br>
 It is also a good idea to recompile the code after each fix—or after making at most a small number of obvious fixes.<br>
 This cycle is known as **edit-compile-debug**.
 
-## Warning
+# Warning
 It is a common mistake to write `=` when you mean `==` inside a condition.
+
 # Key Concept: Indentation and Formatting of C++ Programs
 * The only requirement is that the open curly must be the first nonblank, noncomment character following main’s parameter list.
 
@@ -84,7 +84,7 @@ It is a common mistake to write `=` when you mean `==` inside a condition.
 # Key Concept: Classes Define Behavior
 The class author determines all the operations that can be used on objects of the class type.
 
-### Using File Redirection
+# Using File Redirection
 Most operating systems support file redirection, which lets us associate a named file with the standard input and the standard output:
 ```
 $ addItems <infile >outfile

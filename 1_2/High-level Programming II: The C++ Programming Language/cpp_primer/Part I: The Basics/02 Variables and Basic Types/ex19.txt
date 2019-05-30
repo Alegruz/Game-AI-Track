@@ -1,0 +1,13 @@
+Explain the key differences between pointers and references.
+
+pointers: points to a type
+            is an object in its own right
+            can be assigned and copied
+            can point to several different objects
+            need not be initialized when defined
+
+references: reference to an object
+            another name of already existing object
+            becomes bound to its initializer
+            remains bound to its initial object
+            must be initialized

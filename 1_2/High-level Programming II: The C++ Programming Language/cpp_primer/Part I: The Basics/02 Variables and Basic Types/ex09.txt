@@ -1,0 +1,22 @@
+Explain the following definitions.
+For those that are illegal, explain what’s wrong and how to correct it.
+
+(a) std::cin >> int input_value;
+
+    int input_value;
+    std::cin >> input_value;
+
+(b) int i = { 3.14 };
+
+    float i = { 3.14f };
+    double i = { 3.14 };
+
+(c) double salary = wage = 9999.99;
+
+    double salary, wage;
+    salary = wage = 9999.99;
+
+(d) int i = 3.14;
+
+    float i = 3.14f;
+    double i = 3.14;

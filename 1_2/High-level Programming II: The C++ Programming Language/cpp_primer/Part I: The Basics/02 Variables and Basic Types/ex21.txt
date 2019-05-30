@@ -1,0 +1,13 @@
+Explain each of the following definitions.
+Indicate whether any are illegal and, if so, why.
+
+int i = 0;
+(a) double* dp = &i;
+
+double * cannot be initialized with int *
+
+(b) int *ip = i;
+
+int * cannot be initialized with int
+
+(c) int *p = &i;
