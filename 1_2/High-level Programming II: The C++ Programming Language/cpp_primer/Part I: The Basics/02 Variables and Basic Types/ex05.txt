@@ -1,0 +1,25 @@
+Determine the type of each of the following literals.
+Explain the differences among the literals in each of the four examples:
+(a) 'a', L'a', "a", L"a"
+char, wchar_t, string, string with wchar_t
+
+char: 1 byte.
+wchar_t: 4 bytes.
+
+(b) 10, 10u, 10L, 10uL, 012, 0xC
+int, unsigned int, long, unsigned long, octal int, hexadecimal int
+
+int: 4 bytes. signed.
+unsigned int: 4 bytes. unsigned.
+long: 8 bytes. signed.
+unsigned long: 8 bytes. signed.
+
+(c) 3.14, 3.14f, 3.14L
+double, float, long double
+
+double: 8 bytes. 10 significant digits. double-precision.
+float: 4 bytes. 6 significant digits. single-precision.
+long double: 16 bytes. 10 significant digits. extended-precision.
+
+(d) 10, 10u, 10., 10e-2
+int, unsigned int, double, double

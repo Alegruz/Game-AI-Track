@@ -1,0 +1,18 @@
+What values do these literals represent? What type does each have?
+
+(a) "Who goes with F\145rgus?\012"
+string.
+"Who goes with Fergus?
+"
+
+(b) 3.14e1L
+long double.
+31.4
+
+(c) 1024f
+INVALID.
+suffix f is only applicable to floating-point numbers
+
+(d) 3.14L
+long double
+3.1400000000

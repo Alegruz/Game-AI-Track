@@ -66,4 +66,40 @@ If you don't use one from the start, you will waste time and resources.
 
 ## 003. Use a version control system.
 
+### Summary
+The palest of ink is better than the best memory (Chinese proverb):<br>
+> Use a **version control system (VCS)**. Never keep files checked out for long periods. Check in frequently after your updated unit tests pass. Ensure that checked-in code does not break the build.
+
+### Discussion
+A VCS automates and controls checkouts, versioning, and merging.<br>
+A VCS will do it faster and more correctly than you could do it by hand.<br>
+A VCS automatically tracks the history of each file and lets you "turn the clock back."<br>
+Don't break the build. The code in the VCS must always build successfully.
+
+### Exceptions
+A project with one programmer that takes about a week from start to finish probably can live without a VCS.
+
 ## 004. Invest in code reviews.
+
+### Summary
+Re-view code:
+> More eyes will help make more quality. Show your code, and read
+others'. You'll all learn and benefit.
+
+### Discussion
+A good code review process benefits your team in many ways. It can:
+* **Increase code quality** through beneficial peer pressure.
+* **Find bugs, non-portable code (if applicable), and potential scaling problems.**
+* **Foster better design and implementation** through cross-breeding of ideas.
+* **Bring newer teammates and beginners up to speed.**
+* **Develop common values and a sense of community** inside the team.
+* **Increase meritocracy, confidence, motivation, and professional pride.**
+
+Make code reviews a routine part of your software development cycle.<br>
+If you agree with your teammates on a reward system based on incentives (and perhaps disincentives), so much the better.<br>
+Without getting too formalistic, it's best to get code reviews in writing—a simple e-mail can suffice.<br>
+
+When reviewing someone else's code, you might like to keep a checklist nearby for reference.<br>
+
+In summary:
+> We know we're preaching to the choir, but it had to be said.Your ego may hate a code review, but the little genius programmer inside of you loves it because it gets results and leads to better code and stronger applications.
