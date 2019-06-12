@@ -1,0 +1,26 @@
+Explain the following definitions. Identify any that are illegal.
+
+(a) int i, *const cp;
+uninitialized int variable i defined.
+
+illegal.
+const pointer to int cp defined but uninitialized.
+
+(b) int *p1, *const p2;
+uninitialized pointer to int p1 defined.
+
+illegal
+const pointer to int p2 defined but initialized.
+
+(c) const int ic, &r = ic;
+illegal.
+const int ic uninitialized.
+
+legal.
+r, initialized reference to const int, references const int ic defined.
+
+(d) const int *const p3;
+p3, const pointer to const int, defined but uninitialized.
+
+(e) const int *p;
+p, pointer to const int, defined.

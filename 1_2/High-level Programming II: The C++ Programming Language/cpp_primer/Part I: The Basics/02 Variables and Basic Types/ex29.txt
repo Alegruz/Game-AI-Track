@@ -1,0 +1,25 @@
+Using the variables in the previous exercise, which of the following assignments are legal?
+Explain why.
+
+(a) i = ic;
+legal.
+
+(b) p1 = p3;
+illegal.
+assigning const pointer to const int to a pointer to int.
+
+(c) p1 = &ic;
+illegal.
+assigning reference to const int to pointer to int.
+
+(d) p3 = &ic;
+illegal.
+const variable can't be assigned.
+
+(e) p2 = p1;
+illegal.
+const variable can't be assigned.
+
+(f) ic = *p3;
+illegal.
+const variable can't be assigned.

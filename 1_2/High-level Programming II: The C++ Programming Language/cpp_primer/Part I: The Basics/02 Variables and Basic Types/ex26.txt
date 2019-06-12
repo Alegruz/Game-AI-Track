@@ -1,0 +1,15 @@
+Which of the following are legal? For those that are illegal, explain why.
+
+(a) const int buf;
+illegal.
+const variable uninitialized on definition.
+
+(b) int cnt = 0;
+legal.
+
+(c) const int sz = cnt;
+legal.
+
+(d) ++cnt; ++sz;
+legal, illegal.
+value of a const variable may not be altered.

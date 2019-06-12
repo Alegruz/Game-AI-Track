@@ -1,0 +1,12 @@
+Is the following code legal or not? If not, how might you make it legal?
+
+int null = 0, *p = null;
+null: int 0
+p = pointer to int.
+
+illegal.
+int cannot be converted to int *
+
+->
+int null = 0;
+int *p = (int *) null;
