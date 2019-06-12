@@ -2,7 +2,9 @@
 Effective C++ : 55 specific ways to improve your programs
 and designs, 3rd edition<br>
 by Scott Meyers
-<br>RECOMMENDED
+<br>RECOMMENDED<br>
+best practice book<br>
+This was written with the aim of being the best second book C++ programmers should read, and it succeeded. Earlier editions were aimed at programmers coming from C, the third edition changes this and targets programmers coming from languages like Java. It presents ~50 easy-to-remember rules of thumb along with their rationale in a very accessible (and enjoyable) style. For C++11 and C++14 the examples and a few issues are outdated and Effective Modern C++ should be preferred.
 
 SEMESTER 3<br>
 CS 225
