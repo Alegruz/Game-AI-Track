@@ -1,6 +1,8 @@
 # Game Implementation Techniques
 C++ Coding Standards: 101 Rules, Guidelines, and Best Practices; Herb Sutter & Andrei Alexandrescu
-<br>RECOMMENDED
+<br>RECOMMENDED<br>
+intermediate<br>
+“Coding standards” here doesn't mean “how many spaces should I indent my code?” This book contains 101 best practices, idioms, and common pitfalls that can help you to write correct, understandable, and efficient C++ code.
 
 SEMESTER 2<br>
 CS 230
