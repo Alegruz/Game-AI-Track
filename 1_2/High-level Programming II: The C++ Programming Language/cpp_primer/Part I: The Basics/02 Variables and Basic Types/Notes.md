@@ -124,3 +124,19 @@ It may be helpful to think of pointers and references to const as pointers or re
 
 # Best Practices
 Generally, it is a good idea to use `constexpr` for variables that you intend to use as constant expressions.
+
+# Warning
+Remember that `decltype(( variable ))` (note, double parentheses) is always a reference type, but `decltype( variable )` is a reference type only if variable is a reference.
+
+# Warning
+It is a common mistake among new programmers to forget the semicolon at the end of a class definition.
+
+# Note
+Whenever a header is updated, the source files that use that header must be recompiled to get the new or changed declarations.
+
+# Warning
+Preprocessor variable names do not respect C++ scoping rules.
+
+# Best Practices
+Headers should have guards, even if they aren’t (yet) included by another header.
+Header guards are trivial to write, and by habitually defining them you don’t need to decide whether they are needed.
