@@ -1,7 +1,12 @@
 // Use your Sales_data class to rewrite the exercises in §1.5.1 (p. 22), § 1.5.2 (p. 24), and § 1.6 (p. 25).
 // For now, you should define your Sales_data class in the same file as your main function.
-#include "ex42.h"
+#include "../02 Variables and Basic Types/ex42.h"
 #include <iostream>
+
+using std::cin;
+using std::cout;
+using std::endl;
+using std::cerr;
 
 int main() {
     Sales_data total, book;
