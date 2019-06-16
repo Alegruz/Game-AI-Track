@@ -1,7 +1,9 @@
 # Advanced C/C++
 C++ templates : the complete guide<br>
 by David Vandevoorde and Nicolai M. Josuttis
-<br>RECOMMENDED
+<br>RECOMMENDED<br>
+intermediate<br>
+This is the book about templates as they existed before C++11. It covers everything from the very basics to some of the most advanced template metaprogramming and explains every detail of how templates work (both conceptually and at how they are implemented) and discusses many common pitfalls. Has excellent summaries of the One Definition Rule (ODR) and overload resolution in the appendices. A second edition covering C++11, C++14 and C++17 has been already published
 
 SEMESTER 3
 CS 225

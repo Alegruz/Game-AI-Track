@@ -2,7 +2,9 @@
 More effective C++ : 35 new ways to improve your
 programs and designs<br>
 by Scott Meyers
-<br>RECOMMENDED
+<br>RECOMMENDED<br>
+intermediate<br>
+Even more rules of thumb than Effective C++. Not as important as the ones in the first book, but still good to know.
 
 SEMESTER 3<br>
 CS 225

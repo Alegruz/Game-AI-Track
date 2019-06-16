@@ -3,7 +3,9 @@ The C++ standard library : a tutorial and reference,
 2
 nd edition<br>
 by Nicolai M. Josuttis
-<br>RECOMMENDED
+<br>RECOMMENDED<br>
+reference<br>
+The introduction and reference for the C++ Standard Library. The second edition (released on April 9, 2012) covers C++11.
 
 SEMESTER 3<br>
 CS 225

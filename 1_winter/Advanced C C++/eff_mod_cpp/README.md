@@ -2,7 +2,9 @@
 Effective modern C++ : 42 specific ways to improve your
 use of C++11 and C++14<br>
 by Scott Meyers
-<br>REQUIRED
+<br>REQUIRED<br>
+best practice<br>
+This is basically the new version of Effective C++, aimed at C++ programmers making the transition from C++03 to C++11 and C++14.
 
 SEMESTER 3<br>
 CS 225
