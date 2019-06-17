@@ -118,3 +118,6 @@ For now, it is important to realize that loops that use iterators should not add
 
 ## Tip
 If you don’t know exactly how many elements you need, use a `vector`.
+
+## Warning
+As with variables of built-in type, a default-initialized array of built-in type that is defined inside a function will have undefined values.
