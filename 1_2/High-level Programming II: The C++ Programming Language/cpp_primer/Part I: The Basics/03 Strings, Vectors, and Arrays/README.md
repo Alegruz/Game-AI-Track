@@ -121,3 +121,8 @@ If you don’t know exactly how many elements you need, use a `vector`.
 
 ## Warning
 As with variables of built-in type, a default-initialized array of built-in type that is defined inside a function will have undefined values.
+
+## Warning
+Some compilers allow array assignment as a compiler extension.<br>
+It is usually a good idea to avoid using nonstandard features.<br>
+Programs that use such features, will not work with a different compiler.
