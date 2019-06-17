@@ -126,3 +126,6 @@ As with variables of built-in type, a default-initialized array of built-in type
 Some compilers allow array assignment as a compiler extension.<br>
 It is usually a good idea to avoid using nonstandard features.<br>
 Programs that use such features, will not work with a different compiler.
+
+## Tip
+It can be easier to understand array declarations by starting with the array’s name and reading them from the inside out.
