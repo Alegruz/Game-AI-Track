@@ -36,3 +36,6 @@ On another system, the result might be different, or the program might behave di
 ## Warning
 It is usually a bad idea to use the boolean literals `true` and `false` as operands in a comparison.<br>
 These literals should be used only to compare to an object of type `bool`.
+
+## Note
+Because assignment has lower precedence than the relational operators, parentheses are usually needed around assignments in conditions.
