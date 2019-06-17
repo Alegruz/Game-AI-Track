@@ -129,3 +129,7 @@ Programs that use such features, will not work with a different compiler.
 
 ## Tip
 It can be easier to understand array declarations by starting with the array’s name and reading them from the inside out.
+
+## Warning
+The most common source of security problems are buffer overflow bugs.<br>
+Such bugs occur when a program fails to check a subscript and mistakenly uses memory outside the range of an array or similar data structure.
