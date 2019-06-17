@@ -92,3 +92,6 @@ A good way to ensure that subscripts are in range is to avoid subscripting altog
 
 ## Note
 If the container is empty, the iterators returned by begin and end are equal—they are both off-the-end iterators.
+
+## Note
+Because the iterator returned from `end` does not denote an element, it may not be incremented or dereferenced.
