@@ -32,3 +32,7 @@ On our system the program completes and writes
 <br>
 The value “wrapped around”: The sign bit, which had been `0`, was set to `1`, resulting in a negative value.<br>
 On another system, the result might be different, or the program might behave differently, including crashing entirely.
+
+## Warning
+It is usually a bad idea to use the boolean literals `true` and `false` as operands in a comparison.<br>
+These literals should be used only to compare to an object of type `bool`.
