@@ -154,3 +154,9 @@ For most applications, in addition to being safer, it is also more efficient to 
 
 ## Warning
 If a program needs continuing access to the contents of the array returned by str(), the program must copy the array returned by c_str.
+
+## Advice: Use Library Types Instead of Arrays
+Pointers and arrays are surprisingly error-prone.<br>
+Part of the problem is conceptual: Pointers are used for low-level manipulations and it is easy to make bookkeeping mistakes.<br>
+Other problems arise because of the syntax, particularly the declaration syntax used with pointers.<br>
+Modern C++ programs should use `vector`s and iterators instead of built-in arrays and pointers, and use `string`s rather than C-style array-based character `string`s.
