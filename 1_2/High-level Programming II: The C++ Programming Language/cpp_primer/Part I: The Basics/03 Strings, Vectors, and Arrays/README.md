@@ -115,3 +115,6 @@ Each container class defines a type named iterator; that iterator type supports 
 
 ## Warning
 For now, it is important to realize that loops that use iterators should not add elements to the container to which the iterators refer.
+
+## Tip
+If you don’t know exactly how many elements you need, use a `vector`.
