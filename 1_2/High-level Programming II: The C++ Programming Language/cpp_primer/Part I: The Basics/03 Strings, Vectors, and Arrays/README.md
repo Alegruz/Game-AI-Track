@@ -133,3 +133,6 @@ It can be easier to understand array declarations by starting with the array’s
 ## Warning
 The most common source of security problems are buffer overflow bugs.<br>
 Such bugs occur when a program fails to check a subscript and mistakenly uses memory outside the range of an array or similar data structure.
+
+## Note
+In most expressions, when we use an object of array type, we are really using a pointer to the first element in that array.
