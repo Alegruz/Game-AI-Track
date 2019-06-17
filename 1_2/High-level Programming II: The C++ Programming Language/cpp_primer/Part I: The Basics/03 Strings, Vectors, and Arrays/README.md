@@ -160,3 +160,16 @@ Pointers and arrays are surprisingly error-prone.<br>
 Part of the problem is conceptual: Pointers are used for low-level manipulations and it is easy to make bookkeeping mistakes.<br>
 Other problems arise because of the syntax, particularly the declaration syntax used with pointers.<br>
 Modern C++ programs should use `vector`s and iterators instead of built-in arrays and pointers, and use `string`s rather than C-style array-based character `string`s.
+
+## Note
+To use a multidimensional array in a range `for`, the loop control variable for all but the innermost array must be references.
+
+## Note
+When you define a pointer to a multidimensional array, remember that a multidimensional array is really an array of arrays.
+
+## Note
+The parentheses in this declaration are essential:
+```
+int *ip[4];    // array of pointers to int
+int (*ip)[4];  // pointer to an array of four ints
+```
