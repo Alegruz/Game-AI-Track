@@ -112,3 +112,6 @@ What’s important to understand is that there is a collection of types that are
 A type is an iterator if it supports a common set of actions.<br>
 Those actions let us access an element in a container and let us move from one element to another.<br>
 Each container class defines a type named iterator; that iterator type supports the actions of an (conceptual) iterator.
+
+## Warning
+For now, it is important to realize that loops that use iterators should not add elements to the container to which the iterators refer.
