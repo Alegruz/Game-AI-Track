@@ -143,3 +143,8 @@ In particular, we may not dereference or increment an off-the-end pointer.
 
 ## Warning
 Unlike subscripts for `vector` and `string`, the index of the built-in subscript operator is not an `unsigned` type.
+
+## Warning
+Although C++ supports C-style `string`s, they should not be used by C++ programs.<br>
+C-style `string`s are a surprisingly rich source of bugs and are the root cause of many security problems.<br>
+They’re also harder to use!
