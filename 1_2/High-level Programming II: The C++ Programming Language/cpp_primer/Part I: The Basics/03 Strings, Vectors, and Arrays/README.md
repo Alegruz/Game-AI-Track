@@ -136,3 +136,7 @@ Such bugs occur when a program fails to check a subscript and mistakenly uses me
 
 ## Note
 In most expressions, when we use an object of array type, we are really using a pointer to the first element in that array.
+
+## Note
+A pointer “one past” the end of a built-in array behaves the same way as the iterator returned by the end operation of a `vector`.<br>
+In particular, we may not dereference or increment an off-the-end pointer.
