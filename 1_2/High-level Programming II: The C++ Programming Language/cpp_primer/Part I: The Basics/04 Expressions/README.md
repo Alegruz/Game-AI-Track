@@ -50,3 +50,16 @@ For `int`s and pointers, the compiler can optimize away this extra work.<br>
 For more complicated iterator types, this extra work potentially might be more costly.<br>
 By habitually using the prefix versions, we do not have to worry about whether the performance difference matters.<br>
 Moreover—and perhaps more importantly—we can express the intent of our programs more directly.
+
+## Advice: Brevity Can Be a Virtue
+Expressions such as `*pbeg++` can be bewildering—at first.<br>
+However, it is a useful and widely used idiom.<br>
+Once the notation is familiar, writing `cout << *iter++ << endl;` is easier and less error-prone than the more verbose equivalent
+```
+cout << *iter << endl;
+++iter;
+```
+It is worthwhile to study examples of such code until their meanings are immediately clear.<br>
+Most C++ programs use succinct expressions rather than more verbose equivalents.<br>
+Therefore, C++ programmers must be comfortable with such usages.<br>
+Moreover, once these expressions are familiar, you will find them less error-prone.
