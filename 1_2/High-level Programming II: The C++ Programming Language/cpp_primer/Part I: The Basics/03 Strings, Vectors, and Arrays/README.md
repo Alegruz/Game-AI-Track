@@ -140,3 +140,6 @@ In most expressions, when we use an object of array type, we are really using a 
 ## Note
 A pointer “one past” the end of a built-in array behaves the same way as the iterator returned by the end operation of a `vector`.<br>
 In particular, we may not dereference or increment an off-the-end pointer.
+
+## Warning
+Unlike subscripts for `vector` and `string`, the index of the built-in subscript operator is not an `unsigned` type.
