@@ -95,3 +95,12 @@ If the container is empty, the iterators returned by begin and end are equal—t
 
 ## Note
 Because the iterator returned from `end` does not denote an element, it may not be incremented or dereferenced.
+
+## Key Concept: Generic Programming
+Programmers coming to C++ from C or Java might be surprised that we used `!=` rather than `<` in our for loops such as the one above and in the one on page 94.<br>
+C++ programmers use `!=` as a matter of habit.<br>
+They do so for the same reason that they use iterators rather than subscripts: This coding style applies equally well to various kinds of containers provided by the library.<br>
+As we’ve seen, only a few library types, `vector` and `string` being among them, have the subscript operator.<br>
+Similarly, all of the library containers have iterators that define the `==` and `!=` operators.<br>
+Most of those iterators do not have the `<` operator.<br>
+By routinely using iterators and `!=`, we don’t have to worry about the precise type of container we’re processing.
