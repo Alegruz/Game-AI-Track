@@ -39,3 +39,14 @@ These literals should be used only to compare to an object of type `bool`.
 
 ## Note
 Because assignment has lower precedence than the relational operators, parentheses are usually needed around assignments in conditions.
+
+## Advice: Use Postfix Operators only When Necessary
+Readers from a C background might be surprised that we use the prefix increment in the programs we’ve written.<br>
+The reason is simple: The prefix version avoids unnecessary work.<br>
+It increments the value and returns the incremented version.<br>
+The postfix operator must store the original value so that it can return the unincremented value as its result.<br>
+If we don’t need the unincremented value, there’s no need for the extra work done by the postfix operator.<br>
+For `int`s and pointers, the compiler can optimize away this extra work.<br>
+For more complicated iterator types, this extra work potentially might be more costly.<br>
+By habitually using the prefix versions, we do not have to worry about whether the performance difference matters.<br>
+Moreover—and perhaps more importantly—we can express the intent of our programs more directly.
