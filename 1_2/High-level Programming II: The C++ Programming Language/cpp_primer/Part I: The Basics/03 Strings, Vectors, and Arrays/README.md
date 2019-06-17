@@ -104,3 +104,11 @@ As we’ve seen, only a few library types, `vector` and `string` being among the
 Similarly, all of the library containers have iterators that define the `==` and `!=` operators.<br>
 Most of those iterators do not have the `<` operator.<br>
 By routinely using iterators and `!=`, we don’t have to worry about the precise type of container we’re processing.
+
+## Terminology: Iterators and Iterator Types
+The term iterator is used to refer to three different entities.<br>
+We might mean the concept of an iterator, or we might refer to the iterator type defined by a container, or we might refer to an object as an iterator.<br>
+What’s important to understand is that there is a collection of types that are related conceptually.<br>
+A type is an iterator if it supports a common set of actions.<br>
+Those actions let us access an element in a container and let us move from one element to another.<br>
+Each container class defines a type named iterator; that iterator type supports the actions of an (conceptual) iterator.
