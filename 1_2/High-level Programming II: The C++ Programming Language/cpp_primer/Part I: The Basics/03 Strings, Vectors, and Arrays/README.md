@@ -151,3 +151,6 @@ They’re also harder to use!
 
 ## Tip
 For most applications, in addition to being safer, it is also more efficient to use library `string`s rather than C-style `string`s.
+
+## Warning
+If a program needs continuing access to the contents of the array returned by str(), the program must copy the array returned by c_str.
