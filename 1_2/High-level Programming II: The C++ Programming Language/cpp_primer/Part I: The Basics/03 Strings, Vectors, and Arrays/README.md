@@ -89,3 +89,6 @@ Such bugs are the most common cause of security problems in PC and other applica
 
 ### Tip
 A good way to ensure that subscripts are in range is to avoid subscripting altogether by using a range for whenever possible.
+
+## Note
+If the container is empty, the iterators returned by begin and end are equal—they are both off-the-end iterators.
