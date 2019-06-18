@@ -81,3 +81,14 @@ Although necessary at times, casts are inherently dangerous constructs.
 ## Warning
 A `reinterpret_cast` is inherently machine dependent.<br>
 Safely using `reinterpret_cast` requires completely understanding the types involved as well as the details of how the compiler implements the cast.
+
+## Advice: Avoid Casts
+Casts interfere with normal type checking (§ 2.2.2, p. 46).<br>
+As a result, we strongly recommend that programmers avoid casts.<br>
+This advice is particularly applicable to `reinterpret_casts`.<br>
+Such casts are always hazardous.<br>
+A `const_cast` can be useful in the context of overloaded functions, which we’ll cover in § 6.4 (p. 232).<br>
+Other uses of `const_cast` often indicate a design flaw.<br>
+The other casts, `static_cast` and `dynamic_cast`, should be needed infrequently.<br>
+Every time you write a cast, you should think hard about whether you can achieve the same result in a different way.<br>
+If the cast is unavoidable, errors can be mitigated by limiting the scope in which the cast value is used and by documenting all assumptions about the types involved.
