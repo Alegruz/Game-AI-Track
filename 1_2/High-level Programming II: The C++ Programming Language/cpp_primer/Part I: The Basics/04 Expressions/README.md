@@ -67,3 +67,10 @@ Moreover, once these expressions are familiar, you will find them less error-pro
 ## Warning
 Nested conditionals quickly become unreadable.<br>
 It’s a good idea to nest no more than two or three.
+
+## Warning
+Because there are no guarantees for how the `sign` bit is handled, we strongly recommend using `unsigned` types with the bitwise operators.
+
+## Warning
+It is a common error to confuse the bitwise and logical operators (§ 4.3, p. 141).<br>
+For example to confuse the bitwise `&` with the logical `&&`, the bitwise `|` with the logical `||`, and the bitwise `~` and the logical `!`).
