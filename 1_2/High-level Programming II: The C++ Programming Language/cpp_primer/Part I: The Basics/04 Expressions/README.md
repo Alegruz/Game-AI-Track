@@ -77,3 +77,7 @@ For example to confuse the bitwise `&` with the logical `&&`, the bitwise `|` wi
 
 ## Warning
 Although necessary at times, casts are inherently dangerous constructs.
+
+## Warning
+A `reinterpret_cast` is inherently machine dependent.<br>
+Safely using `reinterpret_cast` requires completely understanding the types involved as well as the details of how the compiler implements the cast.
