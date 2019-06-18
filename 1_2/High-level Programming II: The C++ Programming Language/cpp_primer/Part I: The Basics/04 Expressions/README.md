@@ -74,3 +74,6 @@ Because there are no guarantees for how the `sign` bit is handled, we strongly r
 ## Warning
 It is a common error to confuse the bitwise and logical operators (§ 4.3, p. 141).<br>
 For example to confuse the bitwise `&` with the logical `&&`, the bitwise `|` with the logical `||`, and the bitwise `~` and the logical `!`).
+
+## Warning
+Although necessary at times, casts are inherently dangerous constructs.
