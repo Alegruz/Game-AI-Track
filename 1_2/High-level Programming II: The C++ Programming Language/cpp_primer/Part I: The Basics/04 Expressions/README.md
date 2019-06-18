@@ -92,3 +92,7 @@ Other uses of `const_cast` often indicate a design flaw.<br>
 The other casts, `static_cast` and `dynamic_cast`, should be needed infrequently.<br>
 Every time you write a cast, you should think hard about whether you can achieve the same result in a different way.<br>
 If the cast is unavoidable, errors can be mitigated by limiting the scope in which the cast value is used and by documenting all assumptions about the types involved.
+
+## Warning
+Old-style casts are less visible than are named casts.<br>
+Because they are easily overlooked, it is more difficult to track down a rogue cast.
