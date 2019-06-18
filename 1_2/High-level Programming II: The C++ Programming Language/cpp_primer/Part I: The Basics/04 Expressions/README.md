@@ -63,3 +63,7 @@ It is worthwhile to study examples of such code until their meanings are immedia
 Most C++ programs use succinct expressions rather than more verbose equivalents.<br>
 Therefore, C++ programmers must be comfortable with such usages.<br>
 Moreover, once these expressions are familiar, you will find them less error-prone.
+
+## Warning
+Nested conditionals quickly become unreadable.<br>
+It’s a good idea to nest no more than two or three.
