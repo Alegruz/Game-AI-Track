@@ -15,3 +15,7 @@ It is a good idea to use such tools if they are available.
 ## Best Practices
 Omitting a break at the end of a case happens rarely.<br>
 If you do omit a break, include a comment explaining the logic.
+
+## Best Practices
+Although it is not necessary to include a break after the last label of a switch, the safest course is to provide one.<br>
+That way, if an additional case is added later, the break is already in place.
