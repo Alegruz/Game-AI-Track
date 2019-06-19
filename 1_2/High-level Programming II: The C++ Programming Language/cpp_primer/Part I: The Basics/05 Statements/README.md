@@ -7,3 +7,7 @@ Extraneous null statements are not always harmless.
 
 ## Note
 A block is not terminated by a semicolon.
+
+## Best Practices
+Many editors and development environments have tools to automatically indent source code to match its structure.<br>
+It is a good idea to use such tools if they are available.
