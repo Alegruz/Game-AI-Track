@@ -30,3 +30,6 @@ Variables defined in a `while` condition or `while` body are created and destroy
 ## Note
 It is worth remembering that the visibility of any object defined within the `for` header is limited to the body of the `for` loop.<br>
 Thus, in this example, index is inaccessible after the `for` completes.
+
+## Note
+A `do` `while` ends with a semicolon after the parenthesized condition.
