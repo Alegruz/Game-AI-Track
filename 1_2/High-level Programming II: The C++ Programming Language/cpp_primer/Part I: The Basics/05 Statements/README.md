@@ -23,3 +23,6 @@ That way, if an additional case is added later, the `break` is already in place.
 ## Best Practices
 It can be useful to define a `default` label even if there is no work for the `default` case.<br>
 Defining an empty `default` section indicates to subsequent readers that the case was considered.
+
+## Note
+Variables defined in a while condition or while body are created and destroyed on each iteration.
