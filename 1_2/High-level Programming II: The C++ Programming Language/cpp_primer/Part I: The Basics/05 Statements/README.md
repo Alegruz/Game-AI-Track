@@ -25,4 +25,8 @@ It can be useful to define a `default` label even if there is no work for the `d
 Defining an empty `default` section indicates to subsequent readers that the case was considered.
 
 ## Note
-Variables defined in a while condition or while body are created and destroyed on each iteration.
+Variables defined in a `while` condition or `while` body are created and destroyed on each iteration.
+
+## Note
+It is worth remembering that the visibility of any object defined within the `for` header is limited to the body of the `for` loop.<br>
+Thus, in this example, index is inaccessible after the `for` completes.
