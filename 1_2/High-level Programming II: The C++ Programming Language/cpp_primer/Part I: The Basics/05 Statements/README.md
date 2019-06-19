@@ -13,9 +13,13 @@ Many editors and development environments have tools to automatically indent sou
 It is a good idea to use such tools if they are available.
 
 ## Best Practices
-Omitting a break at the end of a case happens rarely.<br>
-If you do omit a break, include a comment explaining the logic.
+Omitting a `break` at the end of a case happens rarely.<br>
+If you do omit a `break`, include a comment explaining the logic.
 
 ## Best Practices
-Although it is not necessary to include a break after the last label of a switch, the safest course is to provide one.<br>
-That way, if an additional case is added later, the break is already in place.
+Although it is not necessary to include a `break` after the last label of a `switch`, the safest course is to provide one.<br>
+That way, if an additional case is added later, the `break` is already in place.
+
+## Best Practices
+It can be useful to define a `default` label even if there is no work for the `default` case.<br>
+Defining an empty `default` section indicates to subsequent readers that the case was considered.
