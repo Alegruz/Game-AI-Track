@@ -33,3 +33,7 @@ Thus, in this example, index is inaccessible after the `for` completes.
 
 ## Note
 A `do` `while` ends with a semicolon after the parenthesized condition.
+
+## Best Practices
+Programs should not use `goto`s.<br>
+`goto`s make programs hard to understand and hard to modify.
