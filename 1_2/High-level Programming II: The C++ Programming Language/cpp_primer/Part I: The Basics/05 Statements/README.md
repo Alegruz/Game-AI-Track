@@ -37,3 +37,15 @@ A `do` `while` ends with a semicolon after the parenthesized condition.
 ## Best Practices
 Programs should not use `goto`s.<br>
 `goto`s make programs hard to understand and hard to modify.
+
+## Caution: Writing Exception Safe Code is Hard
+It is important to realize that exceptions interrupt the normal flow of a program.<br>
+At the point where the exception occurs, some of the computations that the caller requested may have been done, while others remain undone.<br>
+In general, bypassing part of the program might mean that an object is left in an invalid or incomplete state, or that a resource is not freed, and so on.<br>
+Programs that properly “clean up” during exception handling are said to be exception safe.<br>
+Writing exception safe code is surprisingly hard, and (largely) beyond the scope of this language Primer.<br>
+Some programs use exceptions simply to terminate the program when an exceptional condition occurs.<br>
+Such programs generally don’t worry about exception safety.<br>
+Programs that do handle exceptions and continue processing generally must be constantly aware of whether an exception might occur and what the program must do to ensure that objects are valid, that resources don’t leak, and that the program is restored to an appropriate state.<br>
+We will occasionally point out particularly common techniques used to promote exception safety.<br>
+However, readers whose programs require robust exception handling should be aware that the techniques we cover are insufficient by themselves to achieve exception safety.
