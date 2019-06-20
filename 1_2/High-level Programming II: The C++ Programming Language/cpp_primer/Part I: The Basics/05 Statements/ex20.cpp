@@ -5,7 +5,6 @@
 // Print the word if it occurs twice in succession,
 // or else print a message saying that no word was repeated.
 #include <iostream>
-#include <vector>
 #include <string>
 
 int main() {
