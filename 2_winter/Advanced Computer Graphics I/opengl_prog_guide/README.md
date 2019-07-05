@@ -1,8 +1,8 @@
-# Computer Graphics II
+# Computer Graphics II / Advanced Computer Graphics I
 OpenGL Programming Guide, 9th edition, 2016;<br>
 Kessenich, Sellers, and Shreiner
-<br>RECOMMENDED
-<br>REQUIRED - US, RECOMMENDED - SING
+<br> SEMESTER 4 RECOMMENDED - SING
+<br> SEMESTER 5 REQUIRED - US, RECOMMENDED - SING
 
 SEMESTER 4<br>
 CS 250

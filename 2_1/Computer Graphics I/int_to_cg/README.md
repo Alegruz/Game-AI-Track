@@ -1,7 +1,11 @@
 # Computer Graphics II
 Introduction to computer graphics : a practical learning approach<br>
 by Fabio Ganovelli, Massimiliano Corsini, Sumanta Pattanaik, and Marco Di Benedetto
-<br>REQUIRED - SING
+<br> CS 200 REQUIRED - US
+<br> CS 250 REQUIRED - SING
+
+SEMESTER 3<br>
+CS 200
 
 SEMESTER 4<br>
 CS 250
