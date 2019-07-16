@@ -7,3 +7,6 @@ Parameter initialization works the same way as variable initialization
 ## Best Practices
 Programmers accustomed to programming in C often use pointer parameters to access objects outside a function.<br>
 In C++, programmers generally use reference parameters instead.
+
+## Best Practices
+Reference parameters that are not changed inside a function should be references to `const`.
