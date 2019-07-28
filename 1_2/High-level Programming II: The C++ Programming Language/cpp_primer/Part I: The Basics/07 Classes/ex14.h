@@ -22,7 +22,7 @@ struct Sales_data {
     // MEMBER FUNCTIONS
     Sales_data &combine(const Sales_data &sd);
     std::string isbn() const { return this->bookNo; }
-    double avg_price() const { return this->revenue / this->units_sold; };
+    double avg_price() const { return this->units_sold ? this->revenue / this->units_sold : 0; };
 
     // MEMBER VARIABLES
     std::string bookNo;
