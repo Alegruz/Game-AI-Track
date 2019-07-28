@@ -6,18 +6,15 @@
 #include <string>
 
 struct Sales_data {
-    std::string isbn;
+    std::string bookNo;
     double price;
     unsigned int units_sold = 0;
     double revenue = 0.0;
     Sales_data &combine(const Sales_data &sd);
-    std::string getIsbn() const { return this->isbn; }
+    std::string isbn() const { return this->bookNo; }
 };
 
 Sales_data &Sales_data::combine(const Sales_data &sd) {
-    if (this->isbn != sd.isbn)
-        return;
-
     this->units_sold += sd.units_sold;
     this->revenue += sd.revenue;
     return *this;
