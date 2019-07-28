@@ -6,6 +6,7 @@
 #include <string>
 #include <iostream>
 
+struct Sales_data;
 std::istream &read(std::istream &, Sales_data &);
 
 struct Sales_data {
