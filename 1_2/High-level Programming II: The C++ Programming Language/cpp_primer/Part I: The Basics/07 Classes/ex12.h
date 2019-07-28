@@ -1,11 +1,12 @@
-// Add constructors to your Sales_data class
-// and write a program to use each of the constructors.
-
-#ifndef EX11_H
-#define EX11_H
+// Move the definition of the Sales_data constructor
+// that takes an istream into the body of the Sales_data class.
+#ifndef EX12_H
+#define EX12_H
 
 #include <string>
 #include <iostream>
+
+std::istream &read(std::istream &, Sales_data &);
 
 struct Sales_data {
     // CONSTRUCTORS
@@ -13,7 +14,7 @@ struct Sales_data {
     Sales_data(const std::string &bn): bookNo(bn) {}
     Sales_data(const std::string &bn, double p, unsigned int us):
                 bookNo(bn), price(p), units_sold(us), revenue(p * us) {}
-    Sales_data(std::istream &is);
+    Sales_data(std::istream &is) { read(is, *this); }
 
     // MEMBER FUNCTIONS
     Sales_data &combine(const Sales_data &sd);
@@ -53,8 +54,5 @@ Sales_data add(const Sales_data &sd1, const Sales_data &sd2) {
     nsd.combine(sd2);
     return nsd;
 }
-Sales_data::Sales_data(std::istream &is) {
-    read(is, *this);
-}
 
-#endif // EX11_H
+#endif // EX12_H
