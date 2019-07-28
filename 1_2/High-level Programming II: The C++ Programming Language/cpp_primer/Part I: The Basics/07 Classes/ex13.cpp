@@ -3,14 +3,15 @@
 
 int main()
 {
+    std::cout << "INPUT: ";
     Sales_data total(std::cin); // variable to hold data for the next transaction
     // read the first transaction and ensure that there are data to process
     if (std::cin) {
+        std::cout << "INPUT: ";
         Sales_data trans(std::cin); // variable to hold the running sum
         // read and process the remaining transactions
         while (std::cin) {
             // if we're still processing the same book
-            
             if (total.isbn() == trans.isbn())
                 total.combine(trans);   // update the running total
             else {
@@ -18,6 +19,9 @@ int main()
                 write(std::cout, total);
                 total = trans;  // total now refers to the next book
             }
+
+            std::cout << "INPUT: ";
+            read(std::cin, trans);
         }
         write(std::cout, total); // print the last transaction
     } else {
