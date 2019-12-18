@@ -158,8 +158,8 @@
 		<tr>
 			<th>5th</th>
 			<td>Build and Push Images</td>
-			<td>Assignment#1nnounce)</td>
-		</tr> (A
+			<td>Assignment#1 (Announce)</td>
+		</tr>
 		<tr>
 			<th>6th</th>
 			<td>Data Compose<br>On-line Class (Video Watching: Video Links are included in Lecture Notes of Data Compose)</td>
