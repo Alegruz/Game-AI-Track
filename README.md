@@ -20,42 +20,42 @@ This curriculum is based on the infamous book of Julian Togelius and Georgios Ya
         <tr>
             <td rowspan=2>Fundamental<br>(15)</td>
             <td colspan=2>Math</td>
-            <td>Calculus, Linear Algebra, Differential Equation, Probability and Random Variables</td>
+            <td><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/1_1/AMTH1009_CALCULUS/README.md">Calculus</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/1_1/AMTH1004_LINEAR_ALGEBRA/README.md">Linear Algebra</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/1_2/AMTH1001_DIFFERENTIAL_EQUATION/README.md">Differential Equation</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/2_1/EE211_PROBABILITY_AND_RANDOM_VARIABLES/README.md">Probability and Random Variables</a></td>
 			<td rowspan=2>5</td>
         </tr>
         <tr>
             <td colspan=2>Physics</td>
-			<td>Physics and Lab 1</td>
+			<td><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/1_1/AMTH1004_LINEAR_ALGEBRA/README.md">Physics and Lab 1</a></td>
         </tr>
         <tr>
             <td rowspan=2>Core<br>(37)</td>
 			<td colspan=2>Convergence</td>
-            <td>Introduction to Software Convergence, Design Thinking, Latest Technology Colloquium 1, Latest Technology Colloquium 2, Captone Design in Software Convergence Engineering, Graduation Thesis: Software Convergence</td>
+            <td><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/1_2/SWCON101_INTRODUCTION_TO_SOFTWARE_CONVERGENCE_ENGINEERING/README.md">Introduction to Software Convergence Engineering</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/1_2/SWCON103_DESIGN_THINKING/README.md">Design Thinking</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_1/CSE438_LATEST_TECHNOLOGY_COLLOQUIUM_1/README.md">Latest Technology Colloquium 1</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_2/SWCON302_LATEST_TECHNOLOGY_COLLOQUIUM_2/README.md">Latest Technology Colloquium 2</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/4_1/SWCON401_CAPSTONE_DESIGN_IN_SOFTWARE_CONVERGENCE_ENGINEERING/README.md">Captone Design in Software Convergence Engineering</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/4_2/SWCON402_GRADUATION_THESIS_SOFTWARE_CONVERGENCE/README.md">Graduation Thesis: Software Convergence</a></td>
 			<td rowspan=2>14</td>
         </tr>
         <tr>
             <td colspan=2>Software</td>
-			<td>Object Oriented Programming, Web and Python Programming, Software Development Methods and Tools, Data Structure, Algorithm Analysis, Computer Operating System, Database, Software Engineering</td>
+			<td><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/2_1/CSE207_OBJECT_ORIENTED_PROGRAMMING/README.md">Object Oriented Programming</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/1_1/SWCON1040_WEB_AND_PYTHON_PROGRAMMING/README.md">Web and Python Programming</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/2_1/SWCON201_SOFTWARE_DEVELOPMENT_METHODS_AND_TOOLS/README.md">Software Development Methods and Tools</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/2_2/CSE204_DATA_STRUCTURE/README.md">Data Structure</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_1/CSE304_ALGORITHM_ANALYSIS/README.md">Algorithm Analysis</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_2/CSE301_COMPUTER_OPERATING_SYSTEM/README.md">Computer Operating System</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_1/CSE305_DATABASE/README.md">Database</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_2/CSE327_SOFTWARE_ENGINEERING/README.md">Software Engineering</a></td>
         </tr>
 		<tr>
 			<td rowspan=4>Elective<br>(36)</td>
 			<td rowspan=2>Game AI Track</td>
 			<td>Core</td>
-			<td>Applied Statistics, Datacenter Programming, Data Mining, Advanced Data Mining, Introduction to Game Programming, Game PX Design, Ludology, Game Graphic Programming, Game Engineering, Data Analysis Capstone Design or Game Design</td>
+			<td><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/2_2/IE208_APPLIED_STATISTICS/README.md">Applied Statistics</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/2_1/SWCON221_DATACENTER_PROGRAMMING/README.md">Datacenter Programming</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_1/IE306_DATA_MINING/README.md">Data Mining</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_2/SWCON322_ADVANCED_DATA_MINING/README.md">Advanced Data Mining</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/4_2/CSE331_MACHINE_LEARNING/README.md">Machine Learning</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/2_2/SWCON211_INTRODUCTION_TO_GAME_PROGRAMMING/README.md">Introduction to Game Programming</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/2_2/SWCON213_GAME_PX_DESIGN/README.md">Game PX Design</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_2/DC304_LUDOLOGY/README.md">Ludology</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_1/SWCON311_GAME_GRAPHIC_PROGRAMMING/README.md">Game Graphic Programming</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_1/SWCON315_GAME_ENGINEERING/README.md">Game Engineering</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_2/SWCON321_DATA_ANALYSIS_CAPSTONE_DESIGN/README.md">Data Analysis Capstone Design</a> or <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_2/DC318_GAME_DESIGN/README.md">Game Design</a></td>
 			<td rowspan=2>16<td>
 		</td>
 		<tr>
 			<td>Elective</td>
-			<td>Data Science and Visualization, Image Processing, Haptics and HCI Programming, Virtual and Augmented Reality Programming</td>
+			<td><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/4_2/SWCON425_DATA_SCIENCE_AND_VISUALIZATION/README.md">Data Science and Visualization</a>, Image Processing, Haptics and HCI Programming, Virtual and Augmented Reality Programming</td>
 		</tr>
 		<tr>
 			<td colspan=2>Common</td>
-			<td>AI and Data Analysis via Game Programming, Networking for Software Convergence, Numerical Analysis Programming, Discrete Structures, System Analysis and Design, Computer Networks, Interactive Computer Graphics, Software Start-up Business, Mobile Programming, Artificial Intelligence, Machine Learning, Information Security, Computer Vision, LINUX System Programming, Cloud Computing, Big Data Programming, Individual In-depth Study 1/2, Convergence Research 1/2/3/4/5/6, Internship in Software Convergence</td>
+			<td><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/4_1/SWCON491_AI_AND_DATA_ANALYSIS_VIA_GAME_PROGRAMMING/README.md">AI and Data Analysis via Game Programming</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/4_2/SWCON492_NETWORKING_FOR_SOFTWARE_CONVERGENCE/README.md">Networking for Software Convergence</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/2_2/SWCON291_NUMERICAL_ANALYSIS_PROGRAMMING/README.md">Numerical Analysis Programming</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/2_1/CSE201_DISCRETE_STRUCTURES/README.md">Discrete Structures</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/4_2/CSE303_SYSTEM_ANALYSIS_AND_DESIGN/README.md">System Analysis and Design</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/4_1/CSE302_COMPUTER_NETWORK/README.md">Computer Networks</a>, Interactive Computer Graphics, Software Start-up Business, Mobile Programming, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/4_1/CSE421_ARTIFICIAL_INTELLIGENCE/README.md">Artificial Intelligence</a>, Information Security, Computer Vision, LINUX System Programming, Cloud Computing, Big Data Programming, Individual In-depth Study 1/2, Convergence Research 1/2/3/4/5/6, Internship in Software Convergence</td>
 			<td>25</td>
 		</tr>
 		<tr>
 			<td colspan=2>Industry Core(10)</td>
-			<td>Latest Technology Colloquium 1, Latest Technology Colloquium 2, Capstone Design in Software Convergence Engineering, Game Design, Internship in Software Convergence, Long-term Internship in Software Convergence</td>
+			<td><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_1/CSE438_LATEST_TECHNOLOGY_COLLOQUIUM_1/README.md">Latest Technology Colloquium 1</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_2/SWCON302_LATEST_TECHNOLOGY_COLLOQUIUM_2/README.md">Latest Technology Colloquium 2</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/4_1/SWCON401_CAPSTONE_DESIGN_IN_SOFTWARE_CONVERGENCE_ENGINEERING/README.md">Captone Design in Software Convergence Engineering</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_2/SWCON321_DATA_ANALYSIS_CAPSTONE_DESIGN/README.md">Data Analysis Capstone Design</a> or <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_2/DC318_GAME_DESIGN/README.md">Game Design</a>, Internship in Software Convergence, Long-term Internship in Software Convergence</td>
 			<td>6</td>
 		</tr>
     </tbody>
@@ -73,19 +73,19 @@ This curriculum is based on the infamous book of Julian Togelius and Georgios Ya
 	<tbody>
 		<tr>
 			<td rowspan=8>Semester 1</td>
-			<td>APHY1002<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/1_1/AMTH1004_LINEAR_ALGEBRA">Physics and Lab 1</a></td>
+			<td>APHY1002<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/1_1/AMTH1004_LINEAR_ALGEBRA/README.md">Physics and Lab 1</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>AMTH1009<br>Calculus</td>
+			<td>AMTH1009<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/1_1/AMTH1009_CALCULUS/README.md">Calculus</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>AMTH1004<br>Linear Algebra</td>
+			<td>AMTH1004<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/1_1/AMTH1004_LINEAR_ALGEBRA/README.md">Linear Algebra</a></td>
 			<td>3</td>
 		</td>
 		<tr>
-			<td>SWCON1040<br>Web and Python Programming</td>
+			<td>SWCON1040<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/1_1/SWCON1040_WEB_AND_PYTHON_PROGRAMMING/README.md">Web and Python Programming</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
@@ -106,15 +106,15 @@ This curriculum is based on the infamous book of Julian Togelius and Georgios Ya
 		</tr>
 		<tr>
 			<td rowspan=7>Semester 2</td>
-			<td>AMTH1001<br>Differential Equation</td>
+			<td>AMTH1001<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/1_2/AMTH1001_DIFFERENTIAL_EQUATION/README.md">Differential Equation</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>SWCON101<br>Introduction to Software Convergence Engineering</td>
+			<td>SWCON101<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/1_2/SWCON101_INTRODUCTION_TO_SOFTWARE_CONVERGENCE_ENGINEERING/README.md">Introduction to Software Convergence Engineering</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>SWCON103<br>Design Thinking</td>
+			<td>SWCON103<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/1_2/SWCON103_DESIGN_THINKING/README.md">Design Thinking</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
@@ -135,23 +135,23 @@ This curriculum is based on the infamous book of Julian Togelius and Georgios Ya
 		</tr>
 		<tr>
 			<td rowspan=7>Semester 3</td>
-			<td>EE211<br>Probability and Random Variables</td>
+			<td>EE211<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/2_1/EE211_PROBABILITY_AND_RANDOM_VARIABLES/README.md">Probability and Random Variables</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>CSE207<br>Object Oriented Programming</td>
+			<td>CSE207<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/2_1/CSE207_OBJECT_ORIENTED_PROGRAMMING/README.md">Object Oriented Programming</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>SWCON201<br>Software Development Methods and Tools</td>
+			<td>SWCON201<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/2_1/SWCON201_SOFTWARE_DEVELOPMENT_METHODS_AND_TOOLS/README.md">Software Development Methods and Tools</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>SWCON221<br>Datacenter Programming</td>
+			<td>SWCON221<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/2_1/SWCON221_DATACENTER_PROGRAMMING/README.md">Datacenter Programming</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>CSE201<br>Discrete Structure</td>
+			<td>CSE201<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/2_1/CSE201_DISCRETE_STRUCTURES/README.md">Discrete Structures</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
@@ -164,23 +164,23 @@ This curriculum is based on the infamous book of Julian Togelius and Georgios Ya
 		</tr>
 		<tr>
 			<td rowspan=7>Semester 4</td>
-			<td>CSE204<br>Data Structure</td>
+			<td>CSE204<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/2_2/CSE204_DATA_STRUCTURE/README.md">Data Structure</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>IE208<br>Applied Statistics</td>
+			<td>IE208<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/2_2/IE208_APPLIED_STATISTICS/README.md">Applied Statistics</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>SWCON211<br>Introduction to Game Programming</td>
+			<td>SWCON211<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/2_2/SWCON211_INTRODUCTION_TO_GAME_PROGRAMMING/README.md">Introduction to Game Programming</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>SWCON213<br>Game PX Design</td>
+			<td>SWCON213<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/2_2/SWCON213_GAME_PX_DESIGN/README.md">Game PX Design</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>SWCON291<br>Numerical Analysis Programming</td>
+			<td>SWCON291<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/2_2/SWCON291_NUMERICAL_ANALYSIS_PROGRAMMING/README.md">Numerical Analysis Programming</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
@@ -193,27 +193,27 @@ This curriculum is based on the infamous book of Julian Togelius and Georgios Ya
 		</tr>
 		<tr>
 			<td rowspan=7>Semester 5</td>
-			<td>CSE304<br>Algorithm Analysis</td>
+			<td>CSE304<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_1/CSE304_ALGORITHM_ANALYSIS/README.md">Algorithm Analysis</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>CSE305<br>Database</td>
+			<td>CSE305<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_1/CSE305_DATABASE/README.md">Database</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>IE306<br>Data Mining</td>
+			<td>IE306<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_1/IE306_DATA_MINING/README.md">Data Mining</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>SWCON315<br>Game Engineering</td>
+			<td>SWCON315<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_1/SWCON315_GAME_ENGINEERING/README.md">Game Engineering</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>SWCON311<br>Game Graphic Programming</td>
+			<td>SWCON311<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_1/SWCON311_GAME_GRAPHIC_PROGRAMMING/README.md">Game Graphic Programming</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>CSE438<br>Lastest Technology Colloquium 1</td>
+			<td>CSE438<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_1/CSE438_LATEST_TECHNOLOGY_COLLOQUIUM_1/README.md">Latest Technology Colloquium 1</a></td>
 			<td>2</td>
 		</tr>
 		<tr>
@@ -222,27 +222,27 @@ This curriculum is based on the infamous book of Julian Togelius and Georgios Ya
 		</tr>
 		<tr>
 			<td rowspan=7>Semester 6</td>
-			<td>CSE301<br>Operating System</td>
+			<td>CSE301<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_2/CSE301_COMPUTER_OPERATING_SYSTEM/README.md">Computer Operating System</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>CSE327<br>Software Engineering</td>
+			<td>CSE327<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_2/CSE327_SOFTWARE_ENGINEERING/README.md">Software Engineering</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>SWCON322<br>Advanced Data Mining</td>
+			<td>SWCON322<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_2/SWCON322_ADVANCED_DATA_MINING/README.md">Advanced Data Mining</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>DC304<br>Ludology</td>
+			<td>DC304<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_2/DC304_LUDOLOGY/README.md">Ludology</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>SWCON321 or DC318<br>Data Analysis Capstone Design or Game Design</td>
+			<td>SWCON321 or DC318<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_2/SWCON321_DATA_ANALYSIS_CAPSTONE_DESIGN/README.md">Data Analysis Capstone Design</a> or <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_2/DC318_GAME_DESIGN/README.md">Game Design</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>SWCON302<br>Latest Technology Colloquium 2</td>
+			<td>SWCON302<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_2/SWCON302_LATEST_TECHNOLOGY_COLLOQUIUM_2/README.md">Latest Technology Colloquium 2</a></td>
 			<td>2</td>
 		</tr>
 		<tr>
@@ -251,19 +251,19 @@ This curriculum is based on the infamous book of Julian Togelius and Georgios Ya
 		</tr>
 		<tr>
 			<td rowspan=7>Semester 7</td>
-			<td>SWCON401<br>Capstone Design in Software Convergence Engineering</td>
+			<td>SWCON401<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/4_1/SWCON401_CAPSTONE_DESIGN_IN_SOFTWARE_CONVERGENCE_ENGINEERING/README.md">Captone Design in Software Convergence Engineering</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>CSE421<br>Artificial Intelligence</td>
+			<td>CSE421<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/4_1/CSE421_ARTIFICIAL_INTELLIGENCE/README.md">Artificial Intelligence</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>SWCON491<br>AI and Data Analysis via Game Programming</td>
+			<td>SWCON491<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/4_1/SWCON491_AI_AND_DATA_ANALYSIS_VIA_GAME_PROGRAMMING/README.md">AI and Data Analysis via Game Programming</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>CSE302<br>Computer Networks</td>
+			<td>CSE302<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/4_1/CSE302_COMPUTER_NETWORK/README.md">Computer Networks</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
@@ -279,20 +279,24 @@ This curriculum is based on the infamous book of Julian Togelius and Georgios Ya
 			<td>18</td>
 		</tr>
 		<tr>
-			<td rowspan=7>Semester 8</td>
-			<td>SWCON402<br>Graduation Thesis: Software Convergence</td>
+			<td rowspan=8>Semester 8</td>
+			<td>SWCON402<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/4_2/SWCON402_GRADUATION_THESIS_SOFTWARE_CONVERGENCE/README.md">Graduation Thesis: Software Convergence</a></td>
 			<td>0</td>
 		</tr>
 		<tr>
-			<td>CSE331<br>Machine Learning</td>
+			<td>CSE331<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/4_2/CSE331_MACHINE_LEARNING/README.md">Machine Learning</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>CSE303<br>System Analysis and Design</td>
+			<td>CSE303<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/4_2/CSE303_SYSTEM_ANALYSIS_AND_DESIGN/README.md">System Analysis and Design</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>SWCON492<br>Networking for Software Convergence</td>
+			<td>SWCON492<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/4_2/SWCON492_NETWORKING_FOR_SOFTWARE_CONVERGENCE/README.md">Networking for Software Convergence</a></td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>SWCON425<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/4_2/SWCON425_DATA_SCIENCE_AND_VISUALIZATION/README.md">Data Science and Visualization</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
@@ -305,11 +309,11 @@ This curriculum is based on the infamous book of Julian Togelius and Georgios Ya
 		</tr>
 		<tr>
 			<td>Semester Total</td>
-			<td>15</td>
+			<td>18</td>
 		</tr>
 		<tr>
 		<td colspan=2>Degree Total (minimum credits required)</td>
-		<td>139</td>
+		<td>142</td>
 		</tr>
 	</tbody>
 </table>
