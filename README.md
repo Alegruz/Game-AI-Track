@@ -73,7 +73,7 @@ This curriculum is based on the infamous book of Julian Togelius and Georgios Ya
 	<tbody>
 		<tr>
 			<td rowspan=8>Semester 1</td>
-			<td style="color:#0000ff" bgcolor="#FFFFFF">APHY1002<br>Physics and Lab 1</td>
+			<td style="color:#FFFFFF" bgcolor="#FF5733">APHY1002<br>Physics and Lab 1</td>
 			<td>3</td>
 		</tr>
 		<tr>
