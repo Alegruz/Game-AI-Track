@@ -1,63 +1,64 @@
-# Digipen Studies
+# Curriculum Overview
 
-The Sample Course : https://www.digipen.edu/academics/computer-science-degrees/bs-in-computer-science-in-real-time-interactive-simulation/sample-course-sequence
+The Artificial Intelligence Technology is now one of the most biggest technological paradigm of 21st Century.
 
-Official Booklist
+But, to this date, the game industry is still using conventional, relatively safe game AI's which are based on controlled environment of individual games.
 
-(US. 2019-Summer) : https://www.digipen.edu/student-portal/academics/booklist
+This curriculum is based on the infamous book of Julian Togelius and Georgios Yannakakis' book on game AI, the <<td>Artificial Intelligence and Games>.
 
-(Sing. 2018-Spring) : https://www.digipen.edu.sg/sites/default/files/public/docs/digipen-singapore-spring-booklist-2018.pdf<br>
-(Sing. 2018-Summer) : https://www.digipen.edu.sg/sites/default/files/public/docs/digipen-singapore-summer-booklist-2018.pdf<br>
-(Sing. 2018-Fall) : https://www.digipen.edu.sg/sites/default/files/public/docs/digipen-singapore-fall-booklist-2018.pdf<br>
-(Sing. 2019-Summer) : https://www.digipen.edu.sg/sites/default/files/public/docs/digipen-singapore-booklist.pdf
+# Curriculum Courses
 
-**AMTH1004/MAT140		LINEAR ALGEBRA-**<br>
-**AMTH1009/MAT150/MAT200	CALCULUS-**<br>
-**CS120			HI-LVL PROG I: C-**<br>
+<table align="center">
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th colspan=3>Courses</th>
+			<th>Number of Courses</th>
+        </tr>
+    </thead>
+    <tbody align="center">
+        <tr>
+            <td rowspan=2>Fundamental<br>(15)</td>
+            <td colspan=2>Math</td>
+            <td>Calculus, Linear Algebra, Differential Equation, Probability and Random Variables</td>
+			<td rowspan=2>5</td>
+        </tr>
+        <tr>
+            <td colspan=2>Physics</td>
+			<td>Physics and Lab 1</td>
+        </tr>
+        <tr>
+            <td rowspan=2>Core<br>(37)</td>
+			<td colspan=2>Convergence</td>
+            <td>Introduction to Software Convergence, Design Thinking, Latest Technology Colloquium 1, Latest Technology Colloquium 2, Captone Design in Software Convergence Engineering, Graduation Thesis: Software Convergence</td>
+			<td rowspan=2>14</td>
+        </tr>
+        <tr>
+            <td colspan=2>Software</td>
+			<td>Object Oriented Programming, Web and Python Programming, Software Development Methods and Tools, Data Structure, Algorithm Analysis, Computer Operating System, Database, Software Engineering</td>
+        </tr>
+		<tr>
+			<td rowspan=4>Selective<br>(36)</td>
+			<td rowspan=2>Game AI Track</td>
+			<td>Core</td>
+			<td>Applied Statistics, Datacenter Programming, Data Mining, Advanced Data Mining, Introduction to Game Programming, Game PX Design, Ludology, Game Graphic Programming, Game Engineering, Game Design</td>
+			<td rowspan=2>16<td>
+		</tr>
+		<tr>
+			<td>Selective</td>
+			<td>Data Science and Visualization, Image Processing, Haptics and HCI Programming, Virtual and Augmented Reality Programming</td>
+		</tr>
+		<tr>
+			<td colspan=2>Common</td>
+			<td>AI and Data Analysis via Game Programming, Networking for Software Convergence, Numerical Analysis Programming, Discrete Structures, System Analysis and Design, Computer Networks, Interactive Computer Graphics, Software Start-up Business, Mobile Programming, Artificial Intelligence, Machine Learning, Information Security, Computer Vision, LINUX System Programming, Cloud Computing, Big Data Programming, Individual In-depth Study 1/2, Convergence Research 1/2/3/4/5/6, Internship in Software Convergence</td>
+			<td>25</td>
+		</tr>
+		<tr>
+			<td colspan=2>Industry Core(10)</td>
+			<td>Latest Technology Colloquium 1, Latest Technology Colloquium 2, Capstone Design in Software Convergence Engineering, Game Design, Internship in Software Convergence, Long-term Internship in Software Convergence</td>
+			<td>6</td>
+		</tr>
+    </tbody>
+</table>
 
-AMTH1001/MAT256	DIF EQ-<br>
-**MAT180		VECTOR CALCULUS I (MAT140)**<br>
-CS230		GAME IMPLEMENTATION TECH<br>
-**CS170       High-Level Programming II: The C++ Programming Language- (CS120)**<br>
------------------------------------------<br>
-**CS225		ADVANCED C/C++ (CS170)**<br>
-PHY200		MOTION DYNAMICS<br>
-**CSE201/MAT258	DISC MATH-**<br>
------------------------------------------<br>
-DC205/ENG116	STORYTELLING<br>
-EE211/MAT340	PROB & RAND VAR/PROB & STATISTICS<br>
-CSE301/CS180	OS/OS I: MAN-MACHINE INTERFACE<br>
-SWCON311/CS200	GAME GRAPHICS PROG/CG I
-
-SWCON221	DATA CENTER PROG<br>
-DC203/DES260	INTERACTION DESIGN/UX DESIGN I<br>
-**CSE204/CS280	DATA STRUCTURES (CS225)**<br>
-AMTH1004/MAT250	LINEAR ALGEBRA-<br>
-CS250		CG II<br>
-GAM250		PROJECT II<br>
---------------------------------------------<br>
-SWCON212/CS325	GAME UI/UX DESIGN/UI & UX DESIGN (DATA STRUCTURES)<br>
-CS300		ADVANCED CG I<br>
-CS315		LO-LVL PROG<br>
---------------------------------------------<br>
-SWCON312	HAPTICS & HCI PROG<br>
-DC304		GAME<br>
-**CSE304/CS330	ALGORITHM ANALYSIS (CS225, CS280, MAT200, MAT230)** (MAT 230 Vector Calculus II)<br>
-PHY250		WAVES, OPTICS, & THERMODYNAMICS<br>
-CSE302/CS260	COMP NET/COMP NET I<br>
-
-SWCON313	VR & AR PROG<br>
-DC318/DES115	GAME DESIGN/INTRO TO GAME DESIGN<br>
-CS350		ADVANCED CG II<br>
-CSE305/CS211	DATABASE/INTRO TO DATABASES<br>
-CG130		3D COMP ANIM PROD I<br>
------------------------------------------<br>
-CSE303		SYSTEM ANALYSIS & DESIGN<br>
-MAT345		DATA SCIENCE<br>
-CSE327/CS365	SW ENGINEERING<br>
-
-**CSE421/CS381	AI/INTRO TO AI (CS330, MAT258)**<br>
-SWCON314/CS529	GAME ENGINE PROG/FUNDAMENTALS OF GAME DEV
-
-**CS385       Machine Learning (CS381)**<br>
-**CS355       Parallel Programming (CS330)**
+# Sample Course Sequence
