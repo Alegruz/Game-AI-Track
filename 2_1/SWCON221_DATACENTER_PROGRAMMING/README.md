@@ -168,7 +168,7 @@
 		<tr>
 			<th>7th</th>
 			<td>Docker Storage<br>Docker Machine</td>
-			<td>[10/17] Assignment#1 (Due) &amp; Assignment#2 (Announce)</td>
+			<td>Assignment#1 (Due) &amp; Assignment#2 (Announce)</td>
 		</tr>
 		<tr>
 			<th>8th</th>
