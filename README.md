@@ -73,7 +73,7 @@ This curriculum is based on the infamous book of Julian Togelius and Georgios Ya
 	<tbody>
 		<tr>
 			<td rowspan=8>Semester 1</td>
-			<td>APHY1002<br>Physics and Lab 1</td>
+			<td>APHY1002<br><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/1_1/AMTH1004_LINEAR_ALGEBRA">Physics and Lab 1</a></td>
 			<td>3</td>
 		</tr>
 		<tr>
