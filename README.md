@@ -42,8 +42,8 @@ This curriculum is based on the infamous book of Julian Togelius and Georgios Ya
 			<td rowspan=2>Game AI Track</td>
 			<td>Core</td>
 			<td>Applied Statistics, Datacenter Programming, Data Mining, Advanced Data Mining, Introduction to Game Programming, Game PX Design, Ludology, Game Graphic Programming, Game Engineering, Data Analysis Capstone Design or Game Design</td>
-			<tr rowspan=2>16<td>
-		</tr>
+			<td rowspan=2>16<td>
+		</td>
 		<tr>
 			<td>Elective</td>
 			<td>Data Science and Visualization, Image Processing, Haptics and HCI Programming, Virtual and Augmented Reality Programming</td>
