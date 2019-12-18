@@ -292,7 +292,7 @@ This curriculum is based on the infamous book of Julian Togelius and Georgios Ya
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>SWCON491<br>Networking for Software Convergence</td>
+			<td>SWCON492<br>Networking for Software Convergence</td>
 			<td>3</td>
 		</tr>
 		<tr>
