@@ -42,11 +42,11 @@ This curriculum is based on the infamous book of Julian Togelius and Georgios Ya
 			<td rowspan=2>Game AI Track</td>
 			<td>Core</td>
 			<td><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/2_2/IE208_APPLIED_STATISTICS/README.md">Applied Statistics</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/2_1/SWCON221_DATACENTER_PROGRAMMING/README.md">Datacenter Programming</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_1/IE306_DATA_MINING/README.md">Data Mining</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_2/SWCON322_ADVANCED_DATA_MINING/README.md">Advanced Data Mining</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/4_2/CSE331_MACHINE_LEARNING/README.md">Machine Learning</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/2_2/SWCON211_INTRODUCTION_TO_GAME_PROGRAMMING/README.md">Introduction to Game Programming</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/2_2/SWCON213_GAME_PX_DESIGN/README.md">Game PX Design</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_2/DC304_LUDOLOGY/README.md">Ludology</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_1/SWCON311_GAME_GRAPHIC_PROGRAMMING/README.md">Game Graphic Programming</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_1/SWCON315_GAME_ENGINEERING/README.md">Game Engineering</a>, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_2/SWCON321_DATA_ANALYSIS_CAPSTONE_DESIGN/README.md">Data Analysis Capstone Design</a> or <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/3_2/DC318_GAME_DESIGN/README.md">Game Design</a></td>
-			<td rowspan=2>16<td>
+			<td rowspan=2>15<td>
 		</td>
 		<tr>
 			<td>Elective</td>
-			<td><a href="https://github.com/Alegruz/Game-AI-Track/tree/master/4_2/SWCON425_DATA_SCIENCE_AND_VISUALIZATION/README.md">Data Science and Visualization</a>, Image Processing, Haptics and HCI Programming, Virtual and Augmented Reality Programming</td>
+			<td>Decision Analysis, <a href="https://github.com/Alegruz/Game-AI-Track/tree/master/4_2/SWCON425_DATA_SCIENCE_AND_VISUALIZATION/README.md">Data Science and Visualization</a>, Haptics and HCI Programming, Virtual and Augmented Reality Programming</td>
 		</tr>
 		<tr>
 			<td colspan=2>Common</td>
