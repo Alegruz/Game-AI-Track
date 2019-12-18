@@ -26,7 +26,7 @@ Learn basic knowledge of software convergence by track and colloquium type. Afte
 		</tr>
 		<tr>
 			<th>Credit</th>
-			<td>3</td>
+			<td colspan=3>3</td>
 		</tr>
 	</tbody>
 </table>
@@ -169,7 +169,7 @@ In addition, various projects will confirm the actual understanding of the track
 		</tr>												
 		<tr>
 			<th>Assignment</th>
-			<td colspan="2">Project.1: Track of choice related news article (3 domestic, 3 foreign) summary and thoughts; Project.2: 5 examples of track of choice related company/lab/startup (3 domestic, 2 foreign) analysis / summary and thoughts; Project.3: Term-Project on track of choice</td>
+			<td colspan="2">Project.1: Track of choice related news article (3 domestic, 3 foreign) summary and thoughts;<br>Project.2: 5 examples of track of choice related company/lab/startup (3 domestic, 2 foreign) analysis / summary and thoughts;<br>Project.3: Term-Project on track of choice</td>
 		</tr>
 	</tbody>
 </table>
