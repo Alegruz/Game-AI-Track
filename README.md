@@ -73,7 +73,7 @@ This curriculum is based on the infamous book of Julian Togelius and Georgios Ya
 	<tbody>
 		<tr>
 			<td rowspan=8>Semester 1</td>
-			<td style="color:#FFFFFF" bgcolor="#FF5733">APHY1002<br>Physics and Lab 1</td>
+			<td>APHY1002<br>Physics and Lab 1</td>
 			<td>3</td>
 		</tr>
 		<tr>
@@ -251,19 +251,19 @@ This curriculum is based on the infamous book of Julian Togelius and Georgios Ya
 		</tr>
 		<tr>
 			<td rowspan=7>Semester 7</td>
-			<td>Capstone Design in Software Convergence Engineering</td>
+			<td>SWCON401<br>Capstone Design in Software Convergence Engineering</td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>Artificial Intelligence</td>
+			<td>CSE421<br>Artificial Intelligence</td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>AI and Data Analysis via Game Programming</td>
+			<td>SWCON491<br>AI and Data Analysis via Game Programming</td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>Computer Networks</td>
+			<td>CSE302<br>Computer Networks</td>
 			<td>3</td>
 		</tr>
 		<tr>
@@ -280,19 +280,19 @@ This curriculum is based on the infamous book of Julian Togelius and Georgios Ya
 		</tr>
 		<tr>
 			<td rowspan=7>Semester 8</td>
-			<td>Graduation Thesis: Software Convergence</td>
+			<td>SWCON402<br>Graduation Thesis: Software Convergence</td>
 			<td>0</td>
 		</tr>
 		<tr>
-			<td>Machine Learning</td>
+			<td>CSE331<br>Machine Learning</td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>System Analysis and Design</td>
+			<td>CSE303<br>System Analysis and Design</td>
 			<td>3</td>
 		</tr>
 		<tr>
-			<td>Networking for Software Convergence</td>
+			<td>SWCON491<br>Networking for Software Convergence</td>
 			<td>3</td>
 		</tr>
 		<tr>
