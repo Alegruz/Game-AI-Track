@@ -236,3 +236,10 @@ Jones and Bartlett</td>
 		</tr>
 	</tbody>
 </table>
+
+# Similar Courses
+## DigiPen: CS280 Data Structures
+Prerequisite: [CS225](https://github.com/Alegruz/Game-AI-Track/tree/master/2_1/CSE207_OBJECT_ORIENTED_PROGRAMMING/README.md)
+This course introduces classical abstract data types (ADT) in computer science. ADTs provide the hierarchical views of data organization used in programming. Among the topics covered are the algorithms and primitives of the data structures for arrays, linked lists, stacks, queues, trees, hash tables, and graphs. In addition, the course provides an introduction to algorithm complexity and notation.
+
+Algorithms in C++, 3rd editionby Robert Sedgewick ISBN-13: 9780201350883

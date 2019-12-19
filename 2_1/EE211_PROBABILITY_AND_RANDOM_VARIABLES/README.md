@@ -213,3 +213,12 @@ and random signal processing</td>
 		</tr>
 	</tbody>
 </table>
+
+# Similar Courses
+## DigiPen: MAT340 Probability and Statistics
+Prerequisite: [MAT200](https://github.com/Alegruz/Game-AI-Track/tree/master/1_1/AMTH1009_CALCULUS/READMD.md), [MAT258](https://github.com/Alegruz/Game-AI-Track/tree/master/2_1/CSE201_DISCRETE_STRUCTURES/README.md)<br>
+This course is an introduction to basic probability and statistics with an eye toward computer science and artificial intelligence. Basic topics from probability theory include sample spaces, random variables, continuous and discrete probability density functions, mean and variance, expectation, and conditional probability. Basic topics from statistics include binomial, Poisson, chi-square, and normal distributions; confidence intervals; and the Central Limit Theorem. Further topics may include fuzzy sets and fuzzy logic.
+
+Probability & statistics for engineers & scientists,9thedition, Global editionby Ronald E. Walpole, Raymond H. Myers, Sharon L. Myers and Keying YeISBN-10:1292161361ISBN-13:978-1292161365
+
+Student solutions manual for probability and statistics for engineers and scientists, 9th editionby Sharon L. MyersISBN-10: 0321640136ISBN-13: 978-0321640130

@@ -1,0 +1,4 @@
+# Similar Courses
+## DigiPen: CS330 Algorithm Analysis
+Prerequisite: [MAT200](https://github.com/Alegruz/Game-AI-Track/tree/master/1_1/AMTH1009_CALCULUS/READMD.md), [CS225](https://github.com/Alegruz/Game-AI-Track/tree/master/2_1/CSE207_OBJECT_ORIENTED_PROGRAMMING/README.md), [CS280](https://github.com/Alegruz/Game-AI-Track/tree/master/2_2/CSE204_DATA_STRUCTURE/READMD.md)
+This course provides students with an introduction to the analysis of algorithms, specifically proving their correctness and making a statement about their efficiency. Topics for discussion may include loop invariants, strong mathematical induction and recursion, asymptotic notation, recurrence relations, and generating functions. Students examine examples of algorithm analysis from searching and sorting algorithms.

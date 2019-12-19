@@ -1,0 +1,4 @@
+# Similar Courses
+## DigiPen: MAT357 Numerical Analysis
+Prerequisite: [MAT250](https://github.com/Alegruz/Game-AI-Track/tree/master/1_1/AMTH1004_LINEAR_ALGEBRA/READMD.md), [MAT258](https://github.com/Alegruz/Game-AI-Track/tree/master/2_1/CSE201_DISCRETE_STRUCTURES/README.md)<br>
+This course covers the numerical techniques arising in many areas of computer science and applied mathematics. Such techniques provide essential tools for obtaining approximate solutions to non-linear equations arising from the construction of mathematical models of real-world phenomena. Topics of study include root finding, interpolation, approximation of functions, cubic splines, integration, and differential equations. Further topics may include stability, iterative methods for solving systems of equations, eigenvalue approximation, and the fast Fourier transform.

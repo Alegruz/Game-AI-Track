@@ -1,0 +1,5 @@
+# Similar Courses
+## DigiPen: CS230 Game Implementation Techniques
+Prerequisite: CS120<br>
+Concurrent Course: [CS170](https://github.com/Alegruz/Game-AI-Track/tree/master/2_1/CSE207_OBJECT_ORIENTED_PROGRAMMING/README.md)<br>
+This presents game implementation techniques and engine architecture. Students investigate foundational concepts of game architecture, such as game-system component separation and game flow, while learning about essential elements such as the game state manager, input/output handler, and frame rate controller. This course introduces Windows programming, state machines, and collision detection algorithms, which students will integrate into their own remakes of classic games. As part of their implementation, students create and expand their own collision, vector, and matrix libraries, enabling them to incorporate basic physics engines. Students survey concepts in space partitioning, particle systems, map editors, and other elements as a bridge to more advanced concepts in implementation techniques and engine architecture.
