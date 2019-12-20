@@ -209,7 +209,7 @@ Help students get familiar with web programming using Python and and Javascript
 		<tr>
 			<th>수업<br>안내사항</th>
 			<td colspan="2">[Lecture Materials] Dropbox: https://www.dropbox.com/sh/dn7dpz0gszsiflz/AAAIAOJvNnIldMXeJ3Atj3Foa?dl=0<br>
-[Course BBS for Q&amp;A] http://mobilelab.khu.ac.kr/webpythonbbs/
+[Course BBS for Q&amp;A] http://mobilelab.khu.ac.kr/webpythonbbs/<br>
 [Lecture Video] http://mobilelab.khu.ac.kr/webpythonbbs/</td>
 		</tr>
 	</tbody>
