@@ -101,7 +101,7 @@
 	<tbody>	
 		<tr>
 			<th>1st</th>
-			<td>1.1 Vector Geometry and Algebra (14, 20, 22, 26, 41)<br>1.2 Length and Angle: Scala Product (26, 30, 35, 38, 54)<br>1.3 Line and Plane (6, 10, 26, 35, 38)</td>
+			<td>1.1 <a href="https://github.com/Alegruz/Game-AI-Track/blob/master/1_1/AMTH1004_LINEAR_ALGEBRA/Notes/01_VECTOR.md">Vector Geometry and Algebra</a> (14, 20, 22, 26, 41)<br>1.2 Length and Angle: Scala Product (26, 30, 35, 38, 54)<br>1.3 Line and Plane (6, 10, 26, 35, 38)</td>
 			<td></td>
 		</tr>							
 		<tr>
