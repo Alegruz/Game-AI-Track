@@ -93,7 +93,7 @@
 	<tbody>	
 		<tr>
 			<th>1st</th>
-			<td>2,4 Derivative of Trigonometric Functions(Review)<br>2.5 Chain Rule: 26, 31, 32, 33, 35, 36, 37<br>2.6 Differential Rules of Implicit Function: 3, 5, 9, 10, 11, 12, 14, 16, 24</td>
+			<td>2.4 Derivative of Trigonometric Functions(Review)<br>2.5 Chain Rule: 26, 31, 32, 33, 35, 36, 37<br>2.6 Differential Rules of Implicit Function: 3, 5, 9, 10, 11, 12, 14, 16, 24</td>
 			<td></td>
 		</tr>							
 		<tr>
