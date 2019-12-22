@@ -1,5 +1,3 @@
-[TOC]
-
 # 1.1. Vector Geometry and Algebra
 * **vector** is a directional line that corresponds to a move from a point A to another point B ![vector](https://latex.codecogs.com/gif.download?%5Coverrightarrow%7BAB%7D)
 * **initial point** / **tail** is the point A
