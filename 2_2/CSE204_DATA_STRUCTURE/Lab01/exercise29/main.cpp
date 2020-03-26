@@ -1,0 +1,6 @@
+#include "StrType.h"
+
+int main()
+{
+	return 0;
+}
