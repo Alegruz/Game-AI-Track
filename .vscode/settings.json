@@ -54,6 +54,8 @@
 		"set": "cpp",
 		"iomanip": "cpp",
 		"functional": "cpp",
-		"cinttypes": "cpp"
+		"cinttypes": "cpp",
+		"numeric": "cpp",
+		"random": "cpp"
 	}
 }
