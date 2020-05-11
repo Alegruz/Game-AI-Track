@@ -9,10 +9,8 @@ namespace hw7
 	{
 	public:
 		Node(std::unique_ptr<T> data);
-		Node(std::unique_ptr<T> data, std::shared_ptr<Node<T>> prev);
 		std::unique_ptr<T> Data;
 		std::shared_ptr<Node<T>> Next;
-		std::weak_ptr<Node<T>> Previous;
 	};
 
 	template<typename T>
@@ -20,14 +18,5 @@ namespace hw7
 		: Data(std::move(data))
 	{
 		Next = nullptr;
-		Previous.lock() = nullptr;
-	}
-
-	template<typename T>
-	Node<T>::Node(std::unique_ptr<T> data, std::shared_ptr<Node<T>> prev)
-		: Data(std::move(data))
-	{
-		Next = nullptr;
-		Previous = prev;
 	}
 }
