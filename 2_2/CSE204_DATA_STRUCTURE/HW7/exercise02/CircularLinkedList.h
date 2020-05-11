@@ -10,7 +10,6 @@ namespace hw7
 	{
 	public:
 		CircularLinkedList();
-		CircularLinkedList(T*&& node);
 		CircularLinkedList(const CircularLinkedList& other);
 		virtual ~CircularLinkedList();
 
@@ -27,17 +26,10 @@ namespace hw7
 	}
 
 	template<typename T>
-	CircularLinkedList<T>::CircularLinkedList(T*&& node)
-		: mFirstNode(new Node<T>(node->Data))
-		, mSize(0)
-	{
-		mFirstNode->Next = nullptr;
-		node = nullptr;
-	}
-
-	template<typename T>
 	CircularLinkedList<T>::CircularLinkedList(const CircularLinkedList& other)
 	{
+		mSize = other.mSize;
+
 		if (mFirstNode != other.mFirstNode)
 		{
 			mFirstNode = new Node<T>(other.mFirstNode->Data);
@@ -45,7 +37,7 @@ namespace hw7
 			Node<T>* tempPtr = mFirstNode;
 			Node<T>* tempOtherPtr = other.mFirstNode->Next;
 
-			for (; tempOtherPtr != nullptr; tempOtherPtr = tempOtherPtr->Next)
+			for (size_t count = 0; tempOtherPtr != nullptr && count < mSize; tempOtherPtr = tempOtherPtr->Next, ++count)
 			{
 				tempPtr->Next = tempOtherPtr;
 				tempPtr = new Node<T>(tempOtherPtr->Data);
@@ -53,8 +45,6 @@ namespace hw7
 
 			tempPtr->Next = nullptr;
 		}
-
-		mSize = other.mSize;
 	}
 
 	template<typename T>
@@ -62,12 +52,16 @@ namespace hw7
 	{
 		Node<T>* nodeToDelete = nullptr;
 
-		while (mFirstNode != nullptr)
+		while (mSize > 0 && mFirstNode != nullptr)
 		{
 			nodeToDelete = mFirstNode;
 			mFirstNode = mFirstNode->Next;
 
-			delete nodeToDelete;
+			if (nodeToDelete != nullptr)
+			{
+				delete nodeToDelete;
+				--mSize;
+			}
 		}
 	}
 }

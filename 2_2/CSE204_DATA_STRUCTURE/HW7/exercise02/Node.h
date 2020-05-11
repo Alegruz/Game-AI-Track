@@ -7,20 +7,13 @@ namespace hw7
 	{
 	public:
 		Node(const T& data);
-		virtual ~Node();
 		T Data;
-		T* Next;
+		Node<T>* Next;
 	};
 
 	template<typename T>
 	Node<T>::Node(const T& data)
 		: Data(data), Next(nullptr)
 	{
-	}
-
-	template<typename T>
-	Node<T>::~Node()
-	{
-		delete Next;
 	}
 }
