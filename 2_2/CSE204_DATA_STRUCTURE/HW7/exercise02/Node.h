@@ -8,15 +8,21 @@ namespace hw7
 	class Node
 	{
 	public:
-		Node(std::unique_ptr<T> data);
-		std::unique_ptr<T> Data;
-		std::shared_ptr<Node<T>> Next;
+		Node(const T& data);
+		virtual ~Node();
+		T Data;
+		T* Next;
 	};
 
 	template<typename T>
-	Node<T>::Node(std::unique_ptr<T> data)
-		: Data(std::move(data))
+	Node<T>::Node(const T& data)
+		: Data(data), Next(nullptr)
 	{
-		Next = nullptr;
+	}
+
+	template<typename T>
+	Node<T>::~Node()
+	{
+		delete Next;
 	}
 }
