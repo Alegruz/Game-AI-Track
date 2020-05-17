@@ -1,0 +1,12 @@
+/*
+a. the case for which the solution can be stated nonrecursively
+
+b. the case for which the solution is expressed in terms of a smaller version of itself
+
+c. a data structure that keeps track of activation records during the execution of a program
+
+d. the time at which a name or symbol is bound to the appropriate code
+
+e. the case in which a function contains only a single recursive invocation and it is the last statement to be executed in the function
+
+ */
