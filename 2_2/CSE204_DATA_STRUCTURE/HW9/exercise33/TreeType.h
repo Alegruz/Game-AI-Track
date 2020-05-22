@@ -1,0 +1,52 @@
+#pragma once
+
+#include <fstream>
+#include <iostream>
+#include <string>
+
+#include "QueType.h"
+
+typedef char ItemType;
+struct TreeNode
+{
+	ItemType info;
+	TreeNode *left;
+	TreeNode *right;
+};
+
+enum OrderType
+{
+	PRE_ORDER,
+	IN_ORDER,
+	POST_ORDER
+};
+
+class TreeType
+{
+public:
+	TreeType();                     // constructor
+	~TreeType();                    // destructor
+	TreeType(const TreeType& originalTree); 
+	void operator=(const TreeType& originalTree);
+	// copy constructor
+	void MakeEmpty();
+	bool IsBST() const;
+	bool IsEmpty() const;
+	bool IsFull() const;
+	int LengthIs() const; 
+	void RetrieveItem(ItemType& item, bool& found);
+	void InsertItem(ItemType item);
+	void DeleteItem(ItemType item);
+	void ResetTree(OrderType order); 
+	void GetNextItem (ItemType& item, OrderType order, bool& finished);
+	void Print(std::ofstream& outFile) const;
+	int LeafCount() const;
+	int SingleParentCount() const;
+	bool SimilarTrees(TreeNode*& tr1, TreeNode*& tr2) const;	// returns true if shape of two trees are the same
+private:
+	TreeNode* mRoot;
+	QueType mPreQue;
+	QueType mInQue;
+	QueType mPostQue;
+};
+
