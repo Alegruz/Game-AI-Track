@@ -58,6 +58,12 @@
 		"numeric": "cpp",
 		"random": "cpp",
 		"chrono": "cpp",
-		"ratio": "cpp"
+		"ratio": "cpp",
+		"cassert": "cpp",
+		"condition_variable": "cpp",
+		"mutex": "cpp",
+		"thread": "cpp",
+		"bitset": "cpp",
+		"regex": "cpp"
 	}
 }
