@@ -1,0 +1,10 @@
+/*
+ Using queue
+ addition and removal of an element requires fewer operation time than array
+ suitable for data structures that has sizes that are very fluid
+
+ Using array
+ needs fewer memory than queue given they have the same number of elements
+ indexing requires constant time
+
+ */

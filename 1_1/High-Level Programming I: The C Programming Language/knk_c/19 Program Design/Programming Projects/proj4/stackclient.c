@@ -1,29 +1,32 @@
 #include <stdio.h>
-#include "stackADT.h"
+#include "stackADT3.h"
 
 int main(void) {
     Stack s1, s2;
-    int n;
+    int* n;
 
     s1 = create();
     s2 = create();
 
-    push(s1, 1);
-    push(s2, 2);
+	int item0 = 1;
+	int item1 = 2;
+    push(s1, (Item) &item0);
+    push(s2, (Item) &item1);
 
     n = pop(s1);
-    printf("Popped %d from s1\n", n);
-    push(s2, n);
-    n = pop(s1);
-    printf("Popped %d from s1\n", n);
+    printf("Popped %d from s1\n", *n);
+    push(s1, n);
+    n = pop(s2);
+    printf("Popped %d from s2\n", *n);
     push(s2, n);
 
     destroy(s1);
 
     while (!is_empty(s2))
-        printf("Popped %d from s2\n", pop(s2));
+        printf("Popped %d from s2\n", *((int*) pop(s2)));
 
-    push(s2, 3);
+	int item2 = 3;
+    push(s2, (Item) &item2);
     make_empty(s2);
     if (is_empty(s2))
         printf("s2 is empty, \n");
