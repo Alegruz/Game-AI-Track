@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">About me</string>
+    <string name="name">Minha Ju</string>
+    <string name="yellow_star">Yellow star</string>
+    <string name="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et egestas lacus, eget faucibus lacus. Vestibulum risus justo, lobortis sed odio quis, gravida congue sem. Nullam ac consequat orci, eget ultricies justo. Nunc non aliquam justo. Pellentesque turpis velit, ullamcorper ac mollis sed, elementum ut lorem. Proin commodo nisl eros, quis iaculis tellus tempor vitae. Nunc facilisis venenatis consectetur. In imperdiet tempor nisl, vitae auctor est convallis ac. Sed ut purus nulla. Proin sagittis libero sed tristique dictum. Morbi malesuada bibendum tellus nec pharetra. Maecenas fringilla vulputate dui eget semper. Ut egestas, dolor ac varius maximus, nisi elit gravida sem, non sollicitudin massa dui nec est. Sed eget leo a urna ornare sodales.
+\n\n
+Vestibulum mi ante, fringilla consequat ante sit amet, pretium finibus mi. Etiam commodo mi sit amet diam facilisis, eget sollicitudin libero tempus. Nunc interdum, sem id accumsan lobortis, tellus urna convallis tellus, et sodales felis augue vel justo. Vivamus quis molestie eros. Quisque vulputate commodo mauris, non pretium dolor malesuada quis. Maecenas orci nibh, mattis ac scelerisque eu, venenatis eu tortor. Donec sed suscipit massa. Morbi consectetur porta quam id imperdiet. Mauris sit amet ullamcorper neque. In ut felis nisi.
+\n\n
+Cras et lacinia justo, sit amet vestibulum enim. Pellentesque sagittis nunc urna, ut euismod purus tristique vitae. Nunc a vehicula nunc. Integer euismod nibh id neque imperdiet, eu mollis augue tempor. Duis ac viverra tortor. Fusce a libero ligula. Nullam congue sem posuere fringilla eleifend. Nulla cursus ante a scelerisque vestibulum. Suspendisse varius placerat viverra. Ut ligula tortor, suscipit sed leo eu, convallis mattis elit. Phasellus quis enim mi. Sed hendrerit enim vitae purus tristique consequat a id mauris.
+\n\n
+Aenean in enim quis nisi finibus rhoncus. Cras feugiat augue in mauris elementum gravida. Donec et velit et nulla imperdiet lobortis a nec lorem. Integer pellentesque magna quis congue convallis. Suspendisse eget nulla a quam venenatis volutpat a vel eros. Nulla et tempus nunc. Maecenas semper faucibus turpis quis viverra.
+\n\n
+Pellentesque non lacus eu eros tristique congue nec id mi. Nunc orci tellus, feugiat ac mollis nec, viverra sed ipsum. Mauris vehicula placerat nulla vel vulputate. Cras quis tortor sit amet neque euismod finibus eget ut libero. Duis dignissim, enim eu pulvinar porta, neque ligula porta eros, et sollicitudin justo eros et eros. Fusce sed nulla semper, sagittis lacus et, commodo urna. Fusce malesuada quis ex in porttitor. Vivamus eget ligula cursus, blandit leo non, semper neque. Morbi sodales magna metus, dignissim euismod tortor placerat ac. Phasellus sed vehicula magna, in ullamcorper lorem. Mauris iaculis vel neque sed ultricies. </string>
+    <string name="what_is_your_nickname">What is Your Nickname?</string>
+</resources>
