@@ -64,6 +64,8 @@
 		"mutex": "cpp",
 		"thread": "cpp",
 		"bitset": "cpp",
-		"regex": "cpp"
+		"regex": "cpp",
+		"shared_mutex": "cpp",
+		"bit": "cpp"
 	}
 }

@@ -6,9 +6,9 @@
                 "${workspaceFolder}/**"
             ],
             "defines": [],
-            "compilerPath": "/usr/bin/clang",
-            "intelliSenseMode": "clang-x64",
-            "compileCommands": "${workspaceFolder}/2_2/SWCON311_GAME_GRAPHIC_PROGRAMMING/HW2/app/.cxx/cmake/debug/arm64-v8a/compile_commands.json"
+            "compilerPath": "/usr/bin/g++-9",
+            "intelliSenseMode": "${default}",
+            "compileCommands": "${default}"
         }
     ],
     "version": 4
