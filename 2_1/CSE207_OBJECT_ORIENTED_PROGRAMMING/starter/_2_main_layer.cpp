@@ -1,8 +1,8 @@
-#include "ImageLib.h"
-#include "CLayer.h"
+#include "Imagelib.h"
+#include "Layer.h"
 using namespace std;
 
-// Á¤È®ÇÏ°Ô µ¿ÀÛ½Ã 40Á¡ (ºÎºÐÁ¡¼ö ¾øÀ½)
+// ï¿½ï¿½È®ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½Û½ï¿½ 40ï¿½ï¿½ (ï¿½Îºï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
 
 
 void print_all_elements(const Tensor3D& tensor) {
@@ -20,7 +20,7 @@ void print_all_elements(const Tensor3D& tensor) {
 	}
 }
 
-Tensor3D* read_tensor(string filename) {
+Tensor3D* ReadTensor(string filename) {
 	ifstream fin(filename);
 	int fK = 5;
 	int fC = 2;
@@ -49,9 +49,9 @@ int main() {
 	cout << endl << endl;
 
 	// tensor1 ->(layer1)-> tensor2 -> (layer2) -> tensor3
-	Tensor3D* tensor1 = read_tensor("tensor_5x5x2.txt");
-	Tensor3D* tensor2 = layer1->forward(tensor1);
-	Tensor3D* tensor3 = layer2->forward(tensor2);
+	Tensor3D* tensor1 = ReadTensor("tensor_5x5x2.txt");
+	Tensor3D* tensor2 = layer1->Forward(tensor1);
+	Tensor3D* tensor3 = layer2->Forward(tensor2);
 	cout << endl << endl;
 	
 	cout << "(Tensor information)________________" << endl;
