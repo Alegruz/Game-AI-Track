@@ -17,6 +17,8 @@ Tensor3D* LayerReLU::Forward(const Tensor3D* input)
 
 	input->GetInfo(height, width, channelCount);
 
+	assert(channelCount == mFilterCount);
+
 	Tensor3D* output = new Tensor3D(height, width, mFilterCount);
 
 	size_t offset = (mKernelSize - 1) / 2;
@@ -26,12 +28,7 @@ Tensor3D* LayerReLU::Forward(const Tensor3D* input)
 		{
 			for (size_t f = 0; f < mFilterCount; ++f)
 			{
-				for (size_t ch = 0; ch < channelCount; ++ch)
-				{
-					output->SetElem(h, w, f, output->GetElem(h, w, f) + input->GetElem(h, w, ch) / static_cast<double>(channelCount));
-				}
-
-				output->SetElem(h, w, f, output->GetElem(h, w, f) > 0 ? output->GetElem(h, w, f) : 0);
+				output->SetElem(h, w, f, input->GetElem(h, w, f) > 0.0 ? input->GetElem(h, w, f) : 0.0);
 			}
 		}
 	}

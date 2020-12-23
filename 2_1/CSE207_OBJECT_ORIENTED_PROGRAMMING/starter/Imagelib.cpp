@@ -133,6 +133,10 @@ bool convert2Dto1D(double** src_Y, double** src_U, double** src_V, BYTE* dst, si
     {
         for (size_t x = 0; x < width; x++)
         {
+			if (src_Y[y][x] < 0.0 || src_Y[y][x] > 1.0)
+			{
+				std::cout << x << ", " << y << ": " << src_Y[y][x] << std::endl;
+			}
             src_Y[y][x] = src_Y[y][x] * 255.0; // in the range from [0, 1] to [0, 255]
             iR = static_cast<int>(BYTE(clip(src_Y[y][x] + 1.403 * src_V[y][x], 0, 255)));
             iG = static_cast<int>(BYTE(clip(src_Y[y][x] - 0.344 * src_U[y][x] - 0.714 * src_V[y][x], 0, 255)));
@@ -341,6 +345,17 @@ void convert3Dto2D(double*** src3D, double** dst2D, size_t height, size_t width)
         for (size_t x = 0; x < width; ++x)
         {
             dst2D[y][x] = src3D[y][x][0];
+        }
+    }
+}
+
+void convert3Dto2D(double*** src3D, double** dst2D, size_t filter, size_t height, size_t width)
+{
+    for (size_t y = 0; y < height; ++y)
+    {
+        for (size_t x = 0; x < width; ++x)
+        {
+            dst2D[y][x] = src3D[y][x][filter] / 3.0;
         }
     }
 }

@@ -11,6 +11,9 @@ public:
 	void GetInfo(size_t& height, size_t& width, size_t& channelCount) const;
 	void SetTensor(double*** tensor);
 	double*** GetTensor() const;
+	size_t GetHeight() const;
+	size_t GetWidth() const;
+	size_t GetChannelCount() const;
 	void Print() const;
 private:
 	double*** mTensor;

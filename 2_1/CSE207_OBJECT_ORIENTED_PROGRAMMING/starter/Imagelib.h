@@ -26,6 +26,7 @@ bool convert2Dto1D(double** src_Y, double** src_U, double** src_V, BYTE* dst, si
 
 void convert2Dto3D(double** src2D, double*** dst3D, size_t height, size_t width);
 void convert3Dto2D(double*** src3D, double** dst2D, size_t height, size_t width);
+void convert3Dto2D(double*** src3D, double** dst2D, size_t filter, size_t height, size_t width);
 
 double* dmatrix1D_malloc(size_t height);
 double** dmatrix2D_malloc(size_t height, size_t width);

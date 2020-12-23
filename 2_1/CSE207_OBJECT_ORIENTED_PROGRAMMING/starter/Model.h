@@ -11,6 +11,7 @@ public:
 
 	void ReadImage(const string filename, BYTE*& pLoadImage, double**& img_Y, double**& img_U, double**& img_V, size_t& nH, size_t& nW);
 	void SaveImage(string filename, BYTE*& pLoadImage, Tensor3D*& tensor_Y, double** img_U, double** img_V, size_t nH, size_t nW);
+	void SaveImage(string filename, BYTE*& pLoadImage, double** img, size_t nH, size_t nW);
 	void PrintLayerInfo() const;
 	void PrintTensorInfo() const;
 

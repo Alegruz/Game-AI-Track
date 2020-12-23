@@ -73,3 +73,18 @@ void Tensor3D::Print() const
 {
 	std::cout << mHeight << "*" << mWidth << "*" << mChannelCount << std::endl;
 }
+
+size_t Tensor3D::GetHeight() const
+{
+	return mHeight;
+}
+
+size_t Tensor3D::GetWidth() const
+{
+	return mWidth;
+}
+
+size_t Tensor3D::GetChannelCount() const
+{
+	return mChannelCount;
+}
