@@ -129,3 +129,123 @@ Give corresponding definitions for &Omega;(g(n, m)) and &Theta;(g(n, m)).
 &Omega;(g(n, m)) = {f(n, m) : there exist positive constants c, n<sub>0</sub>, and m<sub>0</sub> such that 0 &leq; cg(n, m) &leq; f(n, m) for all n &geq; n<sub>0</sub> or m &geq; m<sub>0</sub>}.
 
 &Theta;(g(n, m)) = {f(n, m) : there exist positive constants c<sub>1</sub>, c<sub>2</sub>, n<sub>0</sub>, and m<sub>0</sub> such that 0 &leq; c<sub>1</sub>g(n, m) &leq; f(n, m) &leq; c<sub>2</sub>g(n, m) for all n &geq; n<sub>0</sub> or m &geq; m<sub>0</sub>}.
+
+## 3.2-1
+
+Show that if f(n) and g(n) are monotonically increasing functions, then so are the functions f(n) + g(n) and f(g(n)), and if f(n) and g(n) are in addition
+nonnegative, then f(n) ⋅ g(n) is monotonically increasing.
+
+* if x < y -> f(x) &leq; f(y) and if x < y -> g(x) &leq; g(y)
+* thus, if x < y, f(x) + g(x) &leq; f(y) + g(y)
+* thus, if x < y, g(x) &leq; g(y), if g(x) &leq; g(y), f(g(x)) &leq; f(g(y))
+* if f(n), g(n) > 0, if x < y, f(x)g(x) &leq; f(y)g(y)
+
+## 3.2-2
+
+Prove equation (3.16).
+
+a<sup>log<sub>b</sub>c</sup> = c<sup>log<sub>b</sub>a</sup>
+
+* a<sup>log<sub>b</sub>c</sup>
+  * a<sup>(log<sub>a</sub>c)/log<sub>a</sub>b)</sup>
+  * (a<sup>log<sub>a</sub>c)</sup>)<sup>(1/log<sub>a</sub>b)</sup>
+  * c<sup>(1/log<sub>a</sub>b)</sup>
+  * c<sup>(1/(log<sub>b</sub>b/log<sub>b</sub>a))</sup>
+  * c<sup>(1/(1/log<sub>b</sub>a))</sup>
+  * * c<sup>log<sub>b</sub>a</sup>
+
+## 3.2-3
+
+Prove equation (3.19). Also prove that n! ≠ &omega;(2<sup>n</sup>) and n! ≠ o(n<sup>n</sup>).
+
+log<sub>2</sub> n! = &Theta;(n log<sub>2</sub> n)
+
+* log<sub>2</sub> n! = log<sub>2</sub>(√(2&pi;n)(n/e)<sup>n</sup>(1+&Theta;(1/n)))
+  * log<sub>2</sub>(√(2&pi;n)) + log<sub>2</sub>(n/e)<sup>n</sup> + log<sub>2</sub>(1+&Theta;(1/n))
+  * &Theta;(√n) + nlog<sub>2</sub>(n/e) + log<sub>2</sub>(&Theta;(1)+&Theta;(1/n))
+  * &Theta;(√n) + &Theta;(nlog<sub>2</sub>n) + &Theta;(1/n)
+  * &Theta;(nlog<sub>2</sub>n)
+
+* lim<sub>n→∞</sub>(2<sup>n</sup>/n!) = lim<sub>n→∞</sub>(2<sup>n</sup>/(√(2&pi;n)(n/e)<sup>n</sup>(1+&Theta;(1/n))))
+  * lim<sub>n→∞</sub>((2<sup>n</sup>/(√(2&pi;n)(1+&Theta;(1/n)))((2e/n)<sup>n</sup>)) &leq; lim<sub>n→∞</sub>((2e/n)<sup>n</sup>) &leq; lim<sub>n→∞</sub>(1/2<sup>n</sup>) = 0 (n > 4e)
+
+
+* lim<sub>n→∞</sub>(n<sup>n</sup>/n!) = lim<sub>n→∞</sub>(n<sup>n</sup>/(√(2&pi;n)(n/e)<sup>n</sup>(1+&Theta;(1/n))))
+  * lim<sub>n→∞</sub>(e<sup>n</sup>/(√(2&pi;n)(1+&Theta;(1/n))))
+  * lim<sub>n→∞</sub>(O(1/√n)e<sup>n</sup>) &geq; lim<sub>n→∞</sub>(e<sup>n</sup>/c√n) &geq; lim<sub>n→∞</sub>(e<sup>n</sup>/cn) = ∞ (∃c > 0)
+
+## 3.2-4 ★
+
+Is the function ⌈log<sub>2</sub>n⌉! polynomially bounded? Is the function ⌈log<sub>2</sub>log<sub>2</sub>n⌉! polynomially bounded?
+
+* log<sub>2</sub>(n!) = &Theta;(n log<sub>2</sub>n)
+  * log<sub>2</sub>(⌈log<sub>2</sub>n⌉!) = &Theta;((⌈log<sub>2</sub>n⌉) log<sub>2</sub>(⌈log<sub>2</sub>n⌉))
+    * &Theta;((log<sub>2</sub>n) log<sub>2</sub>(log<sub>2</sub>n))
+    * &omega;(log<sub>2</sub>n)
+    * thus, ≠ O(log<sub>2</sub> n)
+
+* log<sub>2</sub>(⌈log<sub>2</sub>log<sub>2</sub>n⌉!) = &Theta;((⌈log<sub>2</sub>log<sub>2</sub>n⌉) log<sub>2</sub>(⌈log<sub>2</sub>log<sub>2</sub>n⌉))
+  * &Theta;((log<sub>2</sub>log<sub>2</sub>n) log<sub>2</sub>(log<sub>2</sub>log<sub>2</sub>n))
+  * o((log<sub>2</sub>log<sub>2</sub>n)<sup>2</sup>)
+  * o(log<sub>2</sub><sup>2</sup>(log<sub>2</sub>n))
+  * o(log<sub>2</sub>n)
+  * O(log<sub>2</sub>n)
+
+## 3.2-5 ★
+
+Which is asymptotically larger: log<sub>2</sub>(log<sub>2</sub><sup>\*</sup>n) or log<sub>2</sub><sup>\*</sup>(log<sub>2</sub>n)?
+
+* lim<sub>n→∞</sub>(log<sub>2</sub>(log<sub>2</sub><sup>\*</sup>n) / log<sub>2</sub><sup>\*</sup>(log<sub>2</sub>n)) = lim<sub>n→∞</sub>(log<sub>2</sub>(log<sub>2</sub><sup>\*</sup>2<sup>n</sup>) / log<sub>2</sub><sup>\*</sup>(log<sub>2</sub>2<sup>n</sup>))
+  * lim<sub>n→∞</sub>(log<sub>2</sub>(1 + log<sub>2</sub><sup>\*</sup>n) / log<sub>2</sub><sup>\*</sup>n)
+  * lim<sub>n→∞</sub>(log<sub>2</sub>(1 + n) / n) = 0
+
+log<sub>2</sub><sup>\*</sup>(log<sub>2</sub>n) is asymptotically larger.
+
+## 3.2-6
+
+Show that the golden ratio &Phi; and its conjugate &Phi;<sup>^</sup> both satisfy the equation x<sup>2</sup> = x + 1.
+
+* x<sup>2</sup> - x - 1 = 0
+* x = (1 ± √(1 + 4)) / 2
+  * x<sub>0</sub> = (1 + √5)) / 2 = &Phi;
+  * x<sub>1</sub> = (1 - √5)) / 2 = &Phi;<sup>^</sup>
+
+## 3.2-7
+
+Prove by induction that the i th Fibonacci number satisfies the equality F<sub>i</sub> = &Phi;<sup>i</sup> - &Phi;<sup>^</sup><sup>i</sup> / √5, where &Phi; is the golden ratio and &Phi;<sup>^</sup> is its conjugate.
+
+f(1) = 1
+f(2) = 1
+f(n) = f(n - 1) + f(n - 2)
+
+By characteristic equations,
+
+(f(n) - &alpha;f(n - 1)) = &beta;(f(n - 1) - &alpha;f(n - 2))
+
+&alpha; + &beta; = 1
+&alpha;&beta; = -1
+
+thus, &alpha; = &Phi;, &beta; = &Phi;<sup>^</sup>.
+
+(f(n + 1) - &Phi;f(n)) = &Phi;<sup>^</sup><sup>n-1</sup>(f(2) - &Phi;f(1))
+(f(n + 1) - &Phi;<sup>^</sup>f(n)) = &Phi;<sup>n-1</sup>(f(2) - &Phi;<sup>^</sup>f(1))
+
+subtract two expressions
+
+(&Phi; - &Phi;<sup>^</sup>)f(n) = (f(2) - &Phi;<sup>^</sup>f(1))&Phi;<sup>n-1</sup> - (f(2) - &Phi;f(1))&Phi;<sup>^</sup><sup>n-1</sup>
+  * (1 - &Phi;<sup>^</sup>)&Phi;<sup>n-1</sup> - (1 - &Phi;)&Phi;<sup>^</sup><sup>n-1</sup>
+  * &Phi;<sup>n</sup> - &Phi;<sup>^</sup><sup>n</sup>
+* f(n) = (&Phi;<sup>n</sup> - &Phi;<sup>^</sup><sup>n</sup>) / (&Phi; - &Phi;<sup>^</sup>)
+  * (&Phi;<sup>n</sup> - &Phi;<sup>^</sup><sup>n</sup>) / √5
+
+## 3.2-8
+
+Show that k log<sub>e</sub> k = &Theta;(n) implies k = &Theta;(n / log<sub>e</sub>n)
+
+* k log<sub>e</sub> k = &Theta;(n)
+* n = &Theta;(k log<sub>e</sub> k)
+  * log<sub>e</sub>n = &Theta;(log<sub>e</sub>(k log<sub>e</sub> k))
+    * &Theta;(log<sub>e</sub>k + log<sub>e</sub><sup>2</sup>k)
+    * &Theta;(log<sub>e</sub>k)
+* n/log<sub>e</sub>n = &Theta;(k log<sub>e</sub> k)/&Theta;(log<sub>e</sub>k) = &Theta;((k log<sub>e</sub> k) / log<sub>e</sub>k) = &Theta;(k)
+  * k = &Theta;(n/log<sub>e</sub>n)
