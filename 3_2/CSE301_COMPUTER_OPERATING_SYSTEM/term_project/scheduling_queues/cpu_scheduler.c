@@ -75,7 +75,7 @@ void reload_process(cpu_scheduler_t* cpu_scheduler)
 
 void add_process(cpu_scheduler_t* cpu_scheduler, process_control_block_t* process)
 {
-	enqueue_process(cpu_scheduler->wait_queue, process);
+	enqueue_process(cpu_scheduler->ready_queue, process);
 }
 
 void ready_process(cpu_scheduler_t* cpu_scheduler)
