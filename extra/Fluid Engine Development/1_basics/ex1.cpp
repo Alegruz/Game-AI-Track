@@ -122,7 +122,7 @@ void Draw(const std::array<double, gBufferSize>& heightField)
 	}
 
 	// draw new buffer
-	printf("%s", buffer.c_str);
+	printf("%s", buffer.c_str());
 	fflush(stdout);
 }
 

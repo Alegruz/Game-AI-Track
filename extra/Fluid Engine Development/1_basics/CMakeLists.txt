@@ -3,4 +3,8 @@ file(GLOB SOURCE_FILES "${CMAKE_CURRENT_SOURCE_DIR}/1_basics/*.cpp")
 
 add_executable(Ex1 ex1.cpp)
 
-target_compile_options(Ex1 PRIVATE /W4 /WX)
+if(MSVC)
+	target_compile_options(Ex1 PRIVATE /W4 /WX)
+else()
+	target_compile_options(Ex1 PRIVATE -Wall -Wextra -pedantic -Werror)
+endif()
