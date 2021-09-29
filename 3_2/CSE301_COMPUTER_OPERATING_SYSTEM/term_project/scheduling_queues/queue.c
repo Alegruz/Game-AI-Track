@@ -1,3 +1,4 @@
+#include <assert.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -12,6 +13,20 @@ struct queue
 	uint64_t size;
 	queue_node_t* front;
 	queue_node_t* back;
+};
+
+typedef struct id_node
+{
+	uint64_t id;
+	uint64_t index;
+	struct id_node* next;
+} id_node_t;
+
+struct job_queue
+{
+	process_control_block_t* jobs[256];
+	id_node_t* pid_to_index[256];
+	uint64_t size;
 };
 
 queue_t* create_queue_malloc()
@@ -59,6 +74,11 @@ queue_node_t* get_back(queue_t* queue)
 bool is_queue_empty(queue_t* queue)
 {
 	return queue->front == NULL && queue->back == NULL;
+}
+
+uint64_t get_size_of_queue(queue_t* queue)
+{
+	return queue->size;
 }
 
 void enqueue(queue_t* queue, void* item)
@@ -149,3 +169,117 @@ bool is_wait_queue_empty(wait_queue_t* wait_queue)
 {
 	return is_queue_empty(wait_queue);
 }
+
+id_node_t* create_id_node_malloc(uint64_t index, uint64_t id)
+{
+	id_node_t* node = (id_node_t*) malloc(sizeof(id_node_t));
+	memset(node, 0, sizeof(id_node_t));
+	node->id = id;
+	node->index = index;
+
+	return node;
+}
+
+job_queue_t* create_job_queue_malloc()
+{
+	job_queue_t* queue = (job_queue_t*) malloc(sizeof(job_queue_t));
+	memset(queue, 0, sizeof(job_queue_t));
+	queue->size = (uint64_t) rand() % 256 + 1;
+
+	for (uint64_t i = 0; i < queue->size; ++i) {
+		queue->jobs[i] = create_process_malloc(~0u);
+	}
+
+	return queue;
+}
+
+void destroy_job_queue(job_queue_t* queue)
+{
+	for (uint64_t i = 0; i < sizeof(queue->pid_to_index) / sizeof(queue->pid_to_index[0]); ++i) {
+		id_node_t* iter = queue->pid_to_index[i];
+
+		while (iter != NULL) {
+			id_node_t* node_to_free = iter;
+			iter = iter->next;
+			free(node_to_free);
+		}
+	}
+
+	for (uint32_t i = 0; i < queue->size; ++i) {
+		destroy_process(queue->jobs[i]);
+	}
+
+	free(queue);
+}
+
+process_control_block_t* get_job(job_queue_t* queue, uint64_t index, uint64_t id)
+{
+	if (get_process_id(queue->jobs[index]) != ~0u) {
+		return NULL;
+	}
+
+	uint64_t id_node_index = id % 256;
+
+	id_node_t* iter = queue->pid_to_index[id_node_index];
+	if (iter == NULL) {
+		iter = queue->pid_to_index[id_node_index] = create_id_node_malloc(index, id);
+	} else {
+		while (iter->next != NULL) {
+			iter = iter->next;
+		}
+
+		iter->next = create_id_node_malloc(index, id);
+	}
+
+	set_process_id(queue->jobs[index], id);
+
+	return queue->jobs[index];
+}
+
+void return_job(job_queue_t* queue, process_control_block_t* job)
+{
+	uint64_t id_node_index = get_process_id(job) % 256;
+
+	id_node_t* iter = queue->pid_to_index[id_node_index];
+	id_node_t* prev = NULL;
+
+	while (iter != NULL && iter->id != get_process_id(job)) {
+		prev = iter;
+		iter = iter->next;
+	}
+	
+	assert(iter != NULL);
+
+	if (prev != NULL) {
+		prev->next = iter->next;
+	} else {
+		queue->pid_to_index[id_node_index] = iter->next;
+	}
+
+	free(iter);
+}
+
+uint64_t get_size_of_job_queue(job_queue_t* queue)
+{
+	return queue->size;
+}
+
+#ifdef _DEBUG_MODE_
+void print_job_queue_debug_information(job_queue_t* queue)
+{
+	for (uint32_t i = 0; i < 256; ++i)
+	{
+		id_node_t* node = queue->pid_to_index[i];
+		if (node != NULL) {
+			printf("BUCKET[%u]:", i);
+		}
+		while (node != NULL) {
+			printf(" -> (id: %lu, index: %lu)", node->id, node->index);
+			node = node->next;
+		}
+		if (queue->pid_to_index[i] != NULL) {
+			printf("\n");
+		}
+	}
+}
+#endif

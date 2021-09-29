@@ -1,3 +1,4 @@
+#include <assert.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -61,14 +62,20 @@ struct process_control_block
 	file_t* file_opened;
 };
 
-process_control_block_t* create_process(uint64_t id)
+process_control_block_t* create_process_malloc(uint64_t id)
 {
 	process_control_block_t* process = (process_control_block_t*) malloc(sizeof(process_control_block_t));
-	memset(process, 0, sizeof(process_control_block_t));
+	assert(process != NULL);
+	initialize_process(process);
 	process->id = id;
-	process->state = NEW;
-
+	
 	return process;
+}
+
+void initialize_process(process_control_block_t* process)
+{
+	memset(process, 0, sizeof(process_control_block_t));
+	process->state = NEW;
 }
 
 void destroy_process(process_control_block_t* process)
@@ -84,6 +91,11 @@ void set_process_state(process_control_block_t* process, e_process_state_t state
 uint64_t get_process_id(process_control_block_t* process)
 {
 	return process->id;
+}
+
+void set_process_id(process_control_block_t* process, uint64_t id)
+{
+	process->id = id;
 }
 
 #ifdef _DEBUG_MODE_

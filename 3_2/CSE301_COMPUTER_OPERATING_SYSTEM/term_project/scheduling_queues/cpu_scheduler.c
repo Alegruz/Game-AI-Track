@@ -12,33 +12,28 @@ struct cpu_scheduler
 	process_control_block_t* current_process;
 	ready_queue_t* ready_queue;
 	wait_queue_t* wait_queue;
+	job_queue_t* job_queue;
+	uint64_t next_id;
 };
 
-cpu_scheduler_t* create_cpu_scheduler_malloc(ready_queue_t* ready_queue, wait_queue_t* wait_queue)
+cpu_scheduler_t* create_cpu_scheduler_malloc(job_queue_t* job_queue)
 {
 	cpu_scheduler_t* cpu_scheduler = (cpu_scheduler_t*) malloc(sizeof(cpu_scheduler_t));
 	memset(cpu_scheduler, 0, sizeof(cpu_scheduler_t));
 
-	cpu_scheduler->ready_queue = ready_queue;
-	cpu_scheduler->wait_queue = wait_queue;
+	cpu_scheduler->ready_queue = create_ready_queue_malloc();
+	cpu_scheduler->wait_queue = create_wait_queue_malloc();
+	cpu_scheduler->job_queue = job_queue;
 
 	return cpu_scheduler;
 }
 
 void destroy_cpu_scheduler(cpu_scheduler_t* cpu_scheduler)
 {
+	destroy_ready_queue(cpu_scheduler->ready_queue);
+	destroy_wait_queue(cpu_scheduler->wait_queue);
+	destroy_job_queue(cpu_scheduler->job_queue);
 	free(cpu_scheduler);
-}
-
-
-void set_ready_queue(cpu_scheduler_t* cpu_scheduler, ready_queue_t* ready_queue)
-{
-	cpu_scheduler->ready_queue = ready_queue;
-}
-
-void set_wait_queue(cpu_scheduler_t* cpu_scheduler, wait_queue_t* wait_queue)
-{
-	cpu_scheduler->wait_queue = wait_queue;
 }
 
 void run_process(cpu_scheduler_t* cpu_scheduler)
@@ -52,10 +47,8 @@ void run_process(cpu_scheduler_t* cpu_scheduler)
 void exit_process(cpu_scheduler_t* cpu_scheduler)
 {
 	set_process_state(cpu_scheduler->current_process, TERMINATED);
-#ifdef _DEBUG_MODE_
-	print_process_debug_information(cpu_scheduler->current_process);
-#endif
-	destroy_process(cpu_scheduler->current_process);
+	
+	return_job(cpu_scheduler->job_queue, cpu_scheduler->current_process);
 	cpu_scheduler->current_process = NULL;
 }
 
@@ -68,21 +61,50 @@ void save_process(cpu_scheduler_t* cpu_scheduler)
 	}
 }
 
-void reload_process(cpu_scheduler_t* cpu_scheduler)
-{
-	run_process(cpu_scheduler);
-}
-
-void add_process(cpu_scheduler_t* cpu_scheduler, process_control_block_t* process)
-{
-	enqueue_process(cpu_scheduler->ready_queue, process);
-}
-
 void ready_process(cpu_scheduler_t* cpu_scheduler)
 {
 	process_control_block_t* process = dequeue_process(cpu_scheduler->wait_queue);
 	set_process_state(process, READY);
 	enqueue_process(cpu_scheduler->ready_queue, process);
+}
+
+void call_process(cpu_scheduler_t* cpu_scheduler, uint64_t index)
+{
+	uint64_t temp = cpu_scheduler->next_id - get_size_of_queue(cpu_scheduler->wait_queue) - get_size_of_queue(cpu_scheduler->ready_queue);
+	temp = (cpu_scheduler->next_id - (temp & ~(temp >> 63)));
+	process_control_block_t* process = get_job(cpu_scheduler->job_queue, index, temp);
+	if (process != NULL) {
+		enqueue_process(cpu_scheduler->ready_queue, process);
+		cpu_scheduler->next_id = temp + 1;
+	}
+}
+
+void update(cpu_scheduler_t* cpu_scheduler)
+{
+	if (is_ready_queue_empty(cpu_scheduler->ready_queue) && !is_wait_queue_empty(cpu_scheduler->wait_queue)) {
+		int wait_to_ready_count = rand() % 8 + 1;
+		for (int i = 0; i < wait_to_ready_count; ++i) {
+			process_control_block_t* process = dequeue_process(cpu_scheduler->wait_queue);
+			if (process == NULL) {
+				break;
+			}
+			set_process_state(process, READY);
+
+			enqueue_process(cpu_scheduler->ready_queue, process);
+		}
+
+		if (is_ready_queue_empty(cpu_scheduler->ready_queue)) {
+			return;
+		}
+	}
+	run_process(cpu_scheduler);
+#ifdef _DEBUG_MODE_
+	print_cpu_scheduler_debug_information(cpu_scheduler);
+#endif
+
+	if (rand() % 5 == 0) {
+		exit_process(cpu_scheduler);
+	}
 }
 
 #ifdef _DEBUG_MODE_
@@ -159,49 +181,24 @@ void print_cpu_scheduler_debug_information(cpu_scheduler_t* cpu_scheduler)
 
 void test()
 {
-	wait_queue_t* wait_queue = create_wait_queue_malloc();
-	ready_queue_t* ready_queue = create_ready_queue_malloc();
-	cpu_scheduler_t* cpu_scheduler = create_cpu_scheduler_malloc(ready_queue, wait_queue);
+	job_queue_t* job_queue = create_job_queue_malloc();
+	cpu_scheduler_t* cpu_scheduler = create_cpu_scheduler_malloc(job_queue);
 
-	srand(time(NULL));
-	uint32_t process_count = (uint32_t) rand() % 256 + 1;
-
-	for (uint32_t i = 0; i < process_count; ++i) {
-		printf("adding processes %u/%u\n", (i + 1), process_count);
-		process_control_block_t* process = create_process((uint64_t) i);
-		add_process(cpu_scheduler, process);
+	uint64_t call_process_count = (uint64_t) rand() % get_size_of_job_queue(cpu_scheduler->job_queue) + 1;
+	for (uint64_t i = 0; i < call_process_count; ++i) {
+		call_process(cpu_scheduler, (uint64_t) rand() % get_size_of_job_queue(cpu_scheduler->job_queue));
 	}
 
-	/* test loop */
-	uint64_t process_run_count = 0;
-	while (process_run_count < 256) {
-		if (is_ready_queue_empty(cpu_scheduler->ready_queue)) {
-			int wait_to_ready_count = rand() % 8 + 1;
-			for (int i = 0; i < wait_to_ready_count; ++i) {
-				process_control_block_t* process = dequeue_process(cpu_scheduler->wait_queue);
-				if (process == NULL) {
-					break;
-				}
-				set_process_state(process, READY);
-
-				enqueue_process(cpu_scheduler->ready_queue, process);
-			}
-
-			if (is_ready_queue_empty(cpu_scheduler->ready_queue)) {
-				break;
-			}
-		}
-
-		run_process(cpu_scheduler);
 #ifdef _DEBUG_MODE_
-		print_cpu_scheduler_debug_information(cpu_scheduler);
+	print_job_queue_debug_information(cpu_scheduler->job_queue);
 #endif
-
-		if (rand() % 5 == 0) {
-			exit_process(cpu_scheduler);
-			++process_count;
-		}
-	}
+#ifdef _DEBUG_MODE_
+	print_cpu_scheduler_debug_information(cpu_scheduler);
+#endif
+	/* test loop */
+	do {
+		update(cpu_scheduler);
+	} while (!is_wait_queue_empty(cpu_scheduler->wait_queue) || !is_ready_queue_empty(cpu_scheduler->ready_queue));
 
 	if (cpu_scheduler->current_process != NULL) {
 		exit_process(cpu_scheduler);
@@ -210,18 +207,6 @@ void test()
 #ifdef _DEBUG_MODE_
 	print_cpu_scheduler_debug_information(cpu_scheduler);
 #endif
-
-	while (!is_wait_queue_empty(cpu_scheduler->wait_queue)) {
-		destroy_process(dequeue_process(cpu_scheduler->wait_queue));
-	}
-	destroy_wait_queue(cpu_scheduler->wait_queue);
-	cpu_scheduler->wait_queue = NULL;
-
-	while (!is_ready_queue_empty(cpu_scheduler->ready_queue)) {
-		destroy_process(dequeue_process(cpu_scheduler->ready_queue));
-	}
-	destroy_ready_queue(cpu_scheduler->ready_queue);
-	cpu_scheduler->ready_queue = NULL;
 
 	destroy_cpu_scheduler(cpu_scheduler);
 	cpu_scheduler = NULL;
