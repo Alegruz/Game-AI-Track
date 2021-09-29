@@ -23,7 +23,7 @@ class Ball(GameObject):
         self.radius: int = 10
         self.direction: list[int] = [1, -1]
         self.speed: int = 10
-        self.image: tk.PhotoImage = tk.PhotoImage(file="ball2.png")
+        self.image: tk.PhotoImage = tk.PhotoImage(file="3_1/SWCON211_INTRODUCTION_TO_GAME_PROGRAMMING/ball2.png")
         self.x: int = x
         self.y: int = y
         item: int = canvas.create_image(x, y, anchor=tk.CENTER, image=self.image)
