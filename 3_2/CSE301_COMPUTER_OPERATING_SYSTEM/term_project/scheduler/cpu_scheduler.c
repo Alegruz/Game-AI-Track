@@ -206,14 +206,15 @@ void destroy_cpu_scheduler(cpu_scheduler_t* cpu_scheduler)
 
 void run_process(cpu_scheduler_t* cpu_scheduler)
 {
-	
 	bool b_should_preempt = true;
 	if (cpu_scheduler->current_process != NULL) {
+		// process that has spent all their burst time must be preempted(exited)
 		b_should_preempt = get_process_remaining_burst_time(cpu_scheduler->current_process) == 0;
 		if (!b_should_preempt) {
 			switch (cpu_scheduler->scheduling_algorithm)
 			{
 			case PREEMPTIVE_SJF:
+				// process with shortest burst time in the ready queue must be compared with current process whether to preempt
 				if (!is_ready_queue_empty(cpu_scheduler->ready_queue)) {
 					uint32_t next_process_burst_time = get_process_remaining_burst_time((process_control_block_t*) get_front(cpu_scheduler->ready_queue)->item);
 					uint32_t current_process_burst_time = get_process_remaining_burst_time(cpu_scheduler->current_process);
@@ -232,8 +233,10 @@ void run_process(cpu_scheduler_t* cpu_scheduler)
 				}
 				break;
 			case FCFS:
+				// fcfs requires no preemption
 				break;
 			case ROUND_ROBIN_WITH_TIME_QUANTUM:
+				// time quantum preempts the process
 				b_should_preempt = 0 == cpu_scheduler->quantum_timer;
 				break;
 			default:
