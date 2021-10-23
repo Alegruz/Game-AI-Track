@@ -4,7 +4,7 @@
 
 #include "queue.h"
 
-#ifdef _DEBUG_MODE_
+#ifdef DEBUG
 #include <stdio.h>
 #endif
 
@@ -100,6 +100,41 @@ void enqueue(queue_t* queue, void* item)
 	++queue->size;
 }
 
+void enqueue_by_priority(queue_t* queue, void* item, uint32_t priority)
+{
+	queue_node_t* node = (queue_node_t*) malloc(sizeof(queue_node_t));
+	node->item = item;
+	node->next = NULL;
+	node->priority = priority;
+
+	if (queue->back == NULL) {
+		queue->back = node;
+
+		if (queue->front == NULL) {
+			queue->front = node; 
+		}
+	} else {
+		if (queue->front->priority > priority) {
+			node->next = queue->front;
+			queue->front = node;
+		} else {
+			for (queue_node_t* iter_node = queue->front->next, * prev_node = queue->front; iter_node != NULL; prev_node = iter_node, iter_node = iter_node->next) {
+				if (iter_node->priority > priority) {
+					node->next = iter_node;
+					prev_node->next = node;
+					goto enqueue_done;
+				}
+			}
+
+			queue->back->next = node;
+			queue->back = node;
+		}
+		enqueue_done:
+			;
+	}
+	++queue->size;
+}
+
 void* dequeue(queue_t* queue)
 {
 	if (queue->front == NULL) {
@@ -145,6 +180,11 @@ void enqueue_process(queue_t* queue, process_control_block_t* process)
 	enqueue(queue, process);
 }
 
+void enqueue_process_by_sjf(queue_t* queue, process_control_block_t* process)
+{
+	enqueue_by_priority(queue, process, get_process_remaining_burst_time(process));
+}
+
 void* dequeue_process(queue_t* queue)
 {
 	return dequeue(queue);
@@ -187,7 +227,20 @@ job_queue_t* create_job_queue_malloc()
 	queue->size = (uint64_t) rand() % 256 + 1;
 
 	for (uint64_t i = 0; i < queue->size; ++i) {
-		queue->jobs[i] = create_process_malloc(~0u);
+		queue->jobs[i] = create_process_malloc(~0u, 1u);
+	}
+
+	return queue;
+}
+
+job_queue_t* create_job_queue_with_data_malloc(process_control_block_t** processes, uint64_t processes_count)
+{
+	job_queue_t* queue = (job_queue_t*) malloc(sizeof(job_queue_t));
+	memset(queue, 0, sizeof(job_queue_t));
+	queue->size = processes_count;
+
+	for (uint64_t i = 0; i < queue->size; ++i) {
+		queue->jobs[i] = processes[i];
 	}
 
 	return queue;
@@ -264,7 +317,7 @@ uint64_t get_size_of_job_queue(job_queue_t* queue)
 	return queue->size;
 }
 
-#ifdef _DEBUG_MODE_
+#ifdef DEBUG
 void print_job_queue_debug_information(job_queue_t* queue)
 {
 	for (uint32_t i = 0; i < 256; ++i)
@@ -274,7 +327,7 @@ void print_job_queue_debug_information(job_queue_t* queue)
 			printf("BUCKET[%u]:", i);
 		}
 		while (node != NULL) {
-			printf(" -> (id: %lu, index: %lu)", node->id, node->index);
+			printf(" -> (id: %llu, index: %llu, burst time: %u)", node->id, node->index, get_process_remaining_burst_time(queue->jobs[node->index]));
 			node = node->next;
 		}
 		if (queue->pid_to_index[i] != NULL) {

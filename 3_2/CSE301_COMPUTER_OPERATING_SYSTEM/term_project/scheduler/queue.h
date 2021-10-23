@@ -10,6 +10,7 @@
 typedef struct queue_node
 {
 	void* item;
+	uint32_t priority;
 	struct queue_node* next;
 } queue_node_t;
 
@@ -28,6 +29,7 @@ queue_node_t* get_back(queue_t* queue);
 bool is_queue_empty(queue_t* queue);
 uint64_t get_size_of_queue(queue_t* queue);
 void enqueue(queue_t* queue, void* item);
+void enqueue_by_priority(queue_t* queue, void* item, uint32_t priority);
 void* dequeue(queue_t* queue);
 
 ready_queue_t* create_ready_queue_malloc();
@@ -35,6 +37,7 @@ void destroy_ready_queue(ready_queue_t* ready_queue);
 ready_queue_t* copy_ready_queue_malloc(ready_queue_t* lhs, ready_queue_t* rhs);
 bool is_ready_queue_empty(ready_queue_t* ready_queue);
 void enqueue_process(queue_t* queue, process_control_block_t* process);
+void enqueue_process_by_sjf(queue_t* queue, process_control_block_t* process);
 void* dequeue_process(queue_t* queue);
 
 wait_queue_t* create_wait_queue_malloc();
@@ -43,11 +46,12 @@ wait_queue_t* copy_wait_queue_malloc(wait_queue_t* lhs, wait_queue_t* rhs);
 bool is_wait_queue_empty(wait_queue_t* wait_queue);
 
 job_queue_t* create_job_queue_malloc();
+job_queue_t* create_job_queue_with_data_malloc(process_control_block_t** processes, uint64_t processes_count);
 void destroy_job_queue(job_queue_t* queue);
 process_control_block_t* get_job(job_queue_t* queue, uint64_t index, uint64_t id);
 void return_job(job_queue_t* queue, process_control_block_t* job);
 uint64_t get_size_of_job_queue(job_queue_t* queue);
-#ifdef _DEBUG_MODE_
+#ifdef DEBUG
 	void print_job_queue_debug_information(job_queue_t* queue);
 #endif
 

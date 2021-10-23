@@ -4,7 +4,7 @@
 
 #include "process_control_block.h"
 
-#ifdef _DEBUG_MODE_
+#ifdef DEBUG
 #include <stdio.h>
 #endif
 
@@ -60,22 +60,28 @@ struct process_control_block
 	/* i/o status information */
 	io_device_t* io_device_head;
 	file_t* file_opened;
+
+	uint32_t burst_time;
+	uint32_t wait_time;
+	uint32_t arrival_time;
 };
 
-process_control_block_t* create_process_malloc(uint64_t id)
+process_control_block_t* create_process_malloc(uint64_t id, uint32_t priority)
 {
 	process_control_block_t* process = (process_control_block_t*) malloc(sizeof(process_control_block_t));
 	assert(process != NULL);
-	initialize_process(process);
+	initialize_process(process, priority, (uint32_t) rand() % 5 + 1);
 	process->id = id;
 	
 	return process;
 }
 
-void initialize_process(process_control_block_t* process)
+void initialize_process(process_control_block_t* process, uint32_t priority, uint32_t burst_time)
 {
 	memset(process, 0, sizeof(process_control_block_t));
 	process->state = NEW;
+	process->priority = priority;
+	process->burst_time = burst_time;
 }
 
 void destroy_process(process_control_block_t* process)
@@ -98,11 +104,77 @@ void set_process_id(process_control_block_t* process, uint64_t id)
 	process->id = id;
 }
 
-#ifdef _DEBUG_MODE_
+
+uint32_t get_process_priority(process_control_block_t* process)
+{
+	return process->priority;
+}
+
+void set_process_priority(process_control_block_t* process, uint32_t priority)
+{
+	process->priority = priority;
+}
+
+
+uint32_t get_process_remaining_burst_time(process_control_block_t* process)
+{
+	return process->burst_time;
+}
+
+void set_process_burst_time(process_control_block_t* process, uint32_t burst_time)
+{
+	process->burst_time = burst_time;
+}
+
+void run_process_for_single_time_step(process_control_block_t* process)
+{
+	if (process->burst_time <= 0) {
+		printf("wrong process id: %llu\n", process->id);
+	}
+	assert(process->burst_time > 0);
+	--process->burst_time;
+}
+
+void tick(process_control_block_t* process)
+{
+	assert(process->burst_time > 0);
+	switch (process->state)
+	{
+	case RUNNING:
+		--process->burst_time;
+		break;
+	case READY:
+		/* intentional fallthrough */
+	case WAITING:
+		++process->wait_time;
+		break;
+	default:
+		break;
+	}
+}
+
+uint32_t get_process_waiting_time(process_control_block_t* process)
+{
+	return process->wait_time;
+}
+
+
+uint32_t get_process_arrival_time(process_control_block_t* process)
+{
+	return process->arrival_time;
+}
+
+void set_process_arrival_time(process_control_block_t* process, uint32_t arrival_time)
+{
+	process->arrival_time = arrival_time;
+}
+
+#ifdef DEBUG
 void print_process_debug_information(process_control_block_t* process)
 {
 	printf("========PROCESS INFO========\n");
-	printf("* process id: %5ld        *\n", process->id);
+	printf("* process id: %5llu        *\n", process->id);
+	printf("* process priority: %2u     *\n", process->priority);
 	printf("* state: ");
 
 	switch (process->state)
@@ -126,6 +198,10 @@ void print_process_debug_information(process_control_block_t* process)
 		printf("INVALID STATE     *\n");
 		break;
 	}
+	
+	printf("* remaining time step: %2u  *\n", process->burst_time);
+	printf("* waiting time: %2u         *\n", process->wait_time);
+	printf("* arrival time: %2u         *\n", process->arrival_time);
 	printf("============================\n");
 }
 #endif
