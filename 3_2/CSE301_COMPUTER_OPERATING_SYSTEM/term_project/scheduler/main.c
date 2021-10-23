@@ -64,7 +64,9 @@ int main(void)
 
 		test_with_data(processes, TEST_PROCESS_COUNT, FCFS, 1u);
 	}
+#ifdef WIN32
 	_CrtDumpMemoryLeaks();
+#endif
 	
 	{
 		process_control_block_t* processes[TEST_PROCESS_COUNT] = { NULL, };
@@ -95,7 +97,9 @@ int main(void)
 
 		test_with_data(processes, TEST_PROCESS_COUNT, PREEMPTIVE_SJF, 1u);
 	}
+#ifdef WIN32
 	_CrtDumpMemoryLeaks();
+#endif
 
 	{
 		process_control_block_t* processes[TEST_PROCESS_COUNT] = { NULL, };
@@ -126,7 +130,9 @@ int main(void)
 
 		test_with_data(processes, TEST_PROCESS_COUNT, ROUND_ROBIN_WITH_TIME_QUANTUM, 3u);
 	}
+#ifdef WIN32
 	_CrtDumpMemoryLeaks();
+#endif
 
 	return 0;
 }

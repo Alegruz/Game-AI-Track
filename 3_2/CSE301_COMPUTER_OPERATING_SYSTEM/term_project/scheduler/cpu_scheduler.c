@@ -44,97 +44,140 @@ uint32_t get_priority(const e_priority_class_t priority_class, const e_relative_
 	switch (relative_priority) {
 	case NORMAL:
 		return (uint32_t) priority_class;
+		break;
 	case TIME_CRITICAL:
 		if (priority_class == REAL_TIME_PRIORITY_CLASS) {
 			return 31u;
 		}
 		return 15u;
+		break;
 	case HIGHEST:
 		switch (priority_class) {
 		case REAL_TIME_PRIORITY_CLASS:
 			return 26u;
+			break;
 		case HIGH_PRIORITY_CLASS:
 			return 15u;
+			break;
 		case ABOVE_NORMAL_PRIORITY_CLASS:
 			return 12u;
+			break;
 		case NORMAL_PRIORITY_CLASS:
 			return 10u;
+			break;
 		case BELOW_NORMAL_PRIORITY_CLASS:
 			return 8u;
+			break;
 		case IDLE_PRIORITY_CLASS:
 			return 6u;
+			break;
 		default:
+			assert(false);
 			break;
 		}
+		break;
 	case ABOVE_NORMAL:
 		switch (priority_class) {
 		case REAL_TIME_PRIORITY_CLASS:
 			return 25u;
+			break;
 		case HIGH_PRIORITY_CLASS:
 			return 14u;
+			break;
 		case ABOVE_NORMAL_PRIORITY_CLASS:
 			return 11u;
+			break;
 		case NORMAL_PRIORITY_CLASS:
 			return 9u;
+			break;
 		case BELOW_NORMAL_PRIORITY_CLASS:
 			return 7u;
+			break;
 		case IDLE_PRIORITY_CLASS:
 			return 5u;
+			break;
 		default:
+			assert(false);
 			break;
 		}
+		break;
 	case BELOW_NORMAL:
 		switch (priority_class) {
 		case REAL_TIME_PRIORITY_CLASS:
 			return 23u;
+			break;
 		case HIGH_PRIORITY_CLASS:
 			return 12u;
+			break;
 		case ABOVE_NORMAL_PRIORITY_CLASS:
 			return 9u;
+			break;
 		case NORMAL_PRIORITY_CLASS:
 			return 7u;
+			break;
 		case BELOW_NORMAL_PRIORITY_CLASS:
 			return 5u;
+			break;
 		case IDLE_PRIORITY_CLASS:
 			return 3u;
+			break;
 		default:
+			assert(false);
 			break;
 		}
+		break;
 	case LOWEST:
 		switch (priority_class) {
 		case REAL_TIME_PRIORITY_CLASS:
 			return 22u;
+			break;
 		case HIGH_PRIORITY_CLASS:
 			return 11u;
+			break;
 		case ABOVE_NORMAL_PRIORITY_CLASS:
 			return 8u;
+			break;
 		case NORMAL_PRIORITY_CLASS:
 			return 6u;
+			break;
 		case BELOW_NORMAL_PRIORITY_CLASS:
 			return 4u;
+			break;
 		case IDLE_PRIORITY_CLASS:
 			return 2u;
+			break;
 		default:
+			assert(false);
 			break;
 		}
+		break;
 	case IDLE:
 		switch (priority_class) {
 		case REAL_TIME_PRIORITY_CLASS:
 			return 16u;
+			break;
 		case HIGH_PRIORITY_CLASS:
 			return 1u;
+			break;
 		case ABOVE_NORMAL_PRIORITY_CLASS:
 			return 1u;
+			break;
 		case NORMAL_PRIORITY_CLASS:
 			return 1u;
+			break;
 		case BELOW_NORMAL_PRIORITY_CLASS:
 			return 1u;
+			break;
 		case IDLE_PRIORITY_CLASS:
 			return 1u;
+			break;
 		default:
+			assert(false);
 			break;
 		}
+		break;
 	default:
+		assert(false);
 		break;
 	}
 
@@ -475,7 +518,7 @@ void print_cpu_scheduler_debug_information(cpu_scheduler_t* cpu_scheduler)
 #ifdef WIN32
 			length += sprintf_s(line + length, sizeof(line) - length, "%5llu ->", get_process_id((process_control_block_t*) iter->item));
 #else
-			length += sprintf(line + length, "%5llu ->", get_process_id((process_control_block_t*) iter->item));
+			length += sprintf(line + length, "%5lu ->", get_process_id((process_control_block_t*) iter->item));
 #endif
 			// printf("\ncoutner: %ld, length: %d, string: %s\n", counter, length, line);
 			if (counter % 3 == 2) {
@@ -510,7 +553,7 @@ void print_cpu_scheduler_debug_information(cpu_scheduler_t* cpu_scheduler)
 #ifdef WIN32
 			length += sprintf_s(line + length, sizeof(line) - length, "%5llu ->", get_process_id((process_control_block_t*) iter->item));
 #else
-			length += sprintf(line + length, "%5llu ->", get_process_id((process_control_block_t*) iter->item));
+			length += sprintf(line + length, "%5lu ->", get_process_id((process_control_block_t*) iter->item));
 #endif
 			// printf("\ncoutner: %ld, length: %d, string: %s\n", counter, length, line);
 			if (counter % 3 == 2) {
@@ -567,7 +610,11 @@ void test(e_scheduling_algorithm_t scheduling_algorithm, uint32_t time_quantum)
 		assert(false);
 		break;
 	}
+#ifdef WIN32
 	printf("PROCESS COUNT: %llu\n", call_process_count);
+#else
+	printf("PROCESS COUNT: %lu\n", call_process_count);
+#endif
 #ifdef DEBUG
 	print_job_queue_debug_information(cpu_scheduler->job_queue);
 	print_cpu_scheduler_debug_information(cpu_scheduler);
@@ -621,7 +668,11 @@ void test_with_data(process_control_block_t** test_set, uint64_t data_size, e_sc
 		assert(false);
 		break;
 	}
+#ifdef WIN32
 	printf("PROCESS COUNT: %llu\n", data_size);
+#else
+	printf("PROCESS COUNT: %lu\n", data_size);
+#endif
 #ifdef DEBUG
 	print_job_queue_debug_information(cpu_scheduler->job_queue);
 	print_cpu_scheduler_debug_information(cpu_scheduler);
@@ -640,6 +691,7 @@ void test_with_data(process_control_block_t** test_set, uint64_t data_size, e_sc
 #endif
 
 	printf("Average Waiting Time: %f\n", (float) cpu_scheduler->total_waiting_time / (float) data_size);
+	free(arrival_times);
 	destroy_cpu_scheduler(cpu_scheduler);
 	cpu_scheduler = NULL;
 }

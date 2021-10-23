@@ -327,7 +327,11 @@ void print_job_queue_debug_information(job_queue_t* queue)
 			printf("BUCKET[%u]:", i);
 		}
 		while (node != NULL) {
+#ifdef WIN32
 			printf(" -> (id: %llu, index: %llu, burst time: %u)", node->id, node->index, get_process_remaining_burst_time(queue->jobs[node->index]));
+#else
+			printf(" -> (id: %lu, index: %lu, burst time: %u)", node->id, node->index, get_process_remaining_burst_time(queue->jobs[node->index]));
+#endif
 			node = node->next;
 		}
 		if (queue->pid_to_index[i] != NULL) {

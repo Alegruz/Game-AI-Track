@@ -129,7 +129,11 @@ void set_process_burst_time(process_control_block_t* process, uint32_t burst_tim
 void run_process_for_single_time_step(process_control_block_t* process)
 {
 	if (process->burst_time <= 0) {
+#ifdef WIN32
 		printf("wrong process id: %llu\n", process->id);
+#else
+		printf("wrong process id: %lu\n", process->id);
+#endif
 	}
 	assert(process->burst_time > 0);
 	--process->burst_time;
@@ -173,7 +177,11 @@ void set_process_arrival_time(process_control_block_t* process, uint32_t arrival
 void print_process_debug_information(process_control_block_t* process)
 {
 	printf("========PROCESS INFO========\n");
+#ifdef WIN32
 	printf("* process id: %5llu        *\n", process->id);
+#else
+	printf("* process id: %5lu        *\n", process->id);
+#endif
 	printf("* process priority: %2u     *\n", process->priority);
 	printf("* state: ");
 

@@ -1,0 +1,2985 @@
+PLATFORM: UNIX
+COMPILER: GCC
+BUILD SETTING: Debug Mode
+SCHEDULING ALGORITHM: First Come, First Served (FCFS)
+PROCESS COUNT: 6
+============CPU INFO============
+* TIMER:    0  0/ 1        *
+================================
+============CPU INFO============
+* TIMER:    0  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  9  *
+* waiting time:  0         *
+* arrival time:  0         *
+============================
+================================
+============CPU INFO============
+* TIMER:    1  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  8  *
+* waiting time:  0         *
+* arrival time:  0         *
+============================
+================================
+============CPU INFO============
+* TIMER:    2  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  7  *
+* waiting time:  0         *
+* arrival time:  0         *
+============================
+================================
+============CPU INFO============
+* TIMER:    3  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  6  *
+* waiting time:  0         *
+* arrival time:  0         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: READY             *
+* remaining time step: 12  *
+* waiting time:  1         *
+* arrival time:  3         *
+============================
+* READY QUEUE:             *
+*     1 ->                 *
+================================
+============CPU INFO============
+* TIMER:    4  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  5  *
+* waiting time:  0         *
+* arrival time:  0         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: READY             *
+* remaining time step: 12  *
+* waiting time:  2         *
+* arrival time:  3         *
+============================
+* READY QUEUE:             *
+*     1 ->                 *
+================================
+============CPU INFO============
+* TIMER:    5  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  4  *
+* waiting time:  0         *
+* arrival time:  0         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: READY             *
+* remaining time step: 12  *
+* waiting time:  3         *
+* arrival time:  3         *
+============================
+* READY QUEUE:             *
+*     1 ->                 *
+================================
+============CPU INFO============
+* TIMER:    6  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  3  *
+* waiting time:  0         *
+* arrival time:  0         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: READY             *
+* remaining time step: 12  *
+* waiting time:  4         *
+* arrival time:  3         *
+============================
+* READY QUEUE:             *
+*     1 ->                 *
+================================
+============CPU INFO============
+* TIMER:    7  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  2  *
+* waiting time:  0         *
+* arrival time:  0         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: READY             *
+* remaining time step: 12  *
+* waiting time:  5         *
+* arrival time:  3         *
+============================
+* READY QUEUE:             *
+*     1 ->    2 ->         *
+================================
+============CPU INFO============
+* TIMER:    8  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  1  *
+* waiting time:  0         *
+* arrival time:  0         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: READY             *
+* remaining time step: 12  *
+* waiting time:  6         *
+* arrival time:  3         *
+============================
+* READY QUEUE:             *
+*     1 ->    2 ->         *
+================================
+============CPU INFO============
+* TIMER:    9  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  0  *
+* waiting time:  0         *
+* arrival time:  0         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: READY             *
+* remaining time step: 12  *
+* waiting time:  7         *
+* arrival time:  3         *
+============================
+* READY QUEUE:             *
+*     1 ->    2 ->         *
+================================
+============CPU INFO============
+* TIMER:   10  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step: 11  *
+* waiting time:  7         *
+* arrival time:  3         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  1     *
+* state: READY             *
+* remaining time step:  4  *
+* waiting time:  4         *
+* arrival time:  7         *
+============================
+* READY QUEUE:             *
+*     2 ->    3 ->         *
+================================
+============CPU INFO============
+* TIMER:   11  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step: 10  *
+* waiting time:  7         *
+* arrival time:  3         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  1     *
+* state: READY             *
+* remaining time step:  4  *
+* waiting time:  5         *
+* arrival time:  7         *
+============================
+* READY QUEUE:             *
+*     2 ->    3 ->         *
+================================
+============CPU INFO============
+* TIMER:   12  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  9  *
+* waiting time:  7         *
+* arrival time:  3         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  1     *
+* state: READY             *
+* remaining time step:  4  *
+* waiting time:  6         *
+* arrival time:  7         *
+============================
+* READY QUEUE:             *
+*     2 ->    3 ->         *
+================================
+============CPU INFO============
+* TIMER:   13  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  8  *
+* waiting time:  7         *
+* arrival time:  3         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  1     *
+* state: READY             *
+* remaining time step:  4  *
+* waiting time:  7         *
+* arrival time:  7         *
+============================
+* READY QUEUE:             *
+*     2 ->    3 ->         *
+================================
+============CPU INFO============
+* TIMER:   14  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  7  *
+* waiting time:  7         *
+* arrival time:  3         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  1     *
+* state: READY             *
+* remaining time step:  4  *
+* waiting time:  8         *
+* arrival time:  7         *
+============================
+* READY QUEUE:             *
+*     2 ->    3 ->    4 -> *
+================================
+============CPU INFO============
+* TIMER:   15  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  6  *
+* waiting time:  7         *
+* arrival time:  3         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  1     *
+* state: READY             *
+* remaining time step:  4  *
+* waiting time:  9         *
+* arrival time:  7         *
+============================
+* READY QUEUE:             *
+*     2 ->    3 ->    4 -> *
+*     5 ->                 *
+================================
+============CPU INFO============
+* TIMER:   16  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  5  *
+* waiting time:  7         *
+* arrival time:  3         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  1     *
+* state: READY             *
+* remaining time step:  4  *
+* waiting time: 10         *
+* arrival time:  7         *
+============================
+* READY QUEUE:             *
+*     2 ->    3 ->    4 -> *
+*     5 ->                 *
+================================
+============CPU INFO============
+* TIMER:   17  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  4  *
+* waiting time:  7         *
+* arrival time:  3         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  1     *
+* state: READY             *
+* remaining time step:  4  *
+* waiting time: 11         *
+* arrival time:  7         *
+============================
+* READY QUEUE:             *
+*     2 ->    3 ->    4 -> *
+*     5 ->                 *
+================================
+============CPU INFO============
+* TIMER:   18  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  3  *
+* waiting time:  7         *
+* arrival time:  3         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  1     *
+* state: READY             *
+* remaining time step:  4  *
+* waiting time: 12         *
+* arrival time:  7         *
+============================
+* READY QUEUE:             *
+*     2 ->    3 ->    4 -> *
+*     5 ->                 *
+================================
+============CPU INFO============
+* TIMER:   19  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  2  *
+* waiting time:  7         *
+* arrival time:  3         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  1     *
+* state: READY             *
+* remaining time step:  4  *
+* waiting time: 13         *
+* arrival time:  7         *
+============================
+* READY QUEUE:             *
+*     2 ->    3 ->    4 -> *
+*     5 ->                 *
+================================
+============CPU INFO============
+* TIMER:   20  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  1  *
+* waiting time:  7         *
+* arrival time:  3         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  1     *
+* state: READY             *
+* remaining time step:  4  *
+* waiting time: 14         *
+* arrival time:  7         *
+============================
+* READY QUEUE:             *
+*     2 ->    3 ->    4 -> *
+*     5 ->                 *
+================================
+============CPU INFO============
+* TIMER:   21  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  0  *
+* waiting time:  7         *
+* arrival time:  3         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  1     *
+* state: READY             *
+* remaining time step:  4  *
+* waiting time: 15         *
+* arrival time:  7         *
+============================
+* READY QUEUE:             *
+*     2 ->    3 ->    4 -> *
+*     5 ->                 *
+================================
+============CPU INFO============
+* TIMER:   22  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  1     *
+* state: RUNNING           *
+* remaining time step:  3  *
+* waiting time: 15         *
+* arrival time:  7         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     3        *
+* process priority:  6     *
+* state: READY             *
+* remaining time step:  6  *
+* waiting time: 13         *
+* arrival time: 10         *
+============================
+* READY QUEUE:             *
+*     3 ->    4 ->    5 -> *
+================================
+============CPU INFO============
+* TIMER:   23  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  1     *
+* state: RUNNING           *
+* remaining time step:  2  *
+* waiting time: 15         *
+* arrival time:  7         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     3        *
+* process priority:  6     *
+* state: READY             *
+* remaining time step:  6  *
+* waiting time: 14         *
+* arrival time: 10         *
+============================
+* READY QUEUE:             *
+*     3 ->    4 ->    5 -> *
+================================
+============CPU INFO============
+* TIMER:   24  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  1     *
+* state: RUNNING           *
+* remaining time step:  1  *
+* waiting time: 15         *
+* arrival time:  7         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     3        *
+* process priority:  6     *
+* state: READY             *
+* remaining time step:  6  *
+* waiting time: 15         *
+* arrival time: 10         *
+============================
+* READY QUEUE:             *
+*     3 ->    4 ->    5 -> *
+================================
+============CPU INFO============
+* TIMER:   25  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  1     *
+* state: RUNNING           *
+* remaining time step:  0  *
+* waiting time: 15         *
+* arrival time:  7         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     3        *
+* process priority:  6     *
+* state: READY             *
+* remaining time step:  6  *
+* waiting time: 16         *
+* arrival time: 10         *
+============================
+* READY QUEUE:             *
+*     3 ->    4 ->    5 -> *
+================================
+============CPU INFO============
+* TIMER:   26  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     3        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  5  *
+* waiting time: 16         *
+* arrival time: 10         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: READY             *
+* remaining time step:  8  *
+* waiting time: 13         *
+* arrival time: 14         *
+============================
+* READY QUEUE:             *
+*     4 ->    5 ->         *
+================================
+============CPU INFO============
+* TIMER:   27  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     3        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  4  *
+* waiting time: 16         *
+* arrival time: 10         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: READY             *
+* remaining time step:  8  *
+* waiting time: 14         *
+* arrival time: 14         *
+============================
+* READY QUEUE:             *
+*     4 ->    5 ->         *
+================================
+============CPU INFO============
+* TIMER:   28  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     3        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  3  *
+* waiting time: 16         *
+* arrival time: 10         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: READY             *
+* remaining time step:  8  *
+* waiting time: 15         *
+* arrival time: 14         *
+============================
+* READY QUEUE:             *
+*     4 ->    5 ->         *
+================================
+============CPU INFO============
+* TIMER:   29  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     3        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  2  *
+* waiting time: 16         *
+* arrival time: 10         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: READY             *
+* remaining time step:  8  *
+* waiting time: 16         *
+* arrival time: 14         *
+============================
+* READY QUEUE:             *
+*     4 ->    5 ->         *
+================================
+============CPU INFO============
+* TIMER:   30  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     3        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  1  *
+* waiting time: 16         *
+* arrival time: 10         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: READY             *
+* remaining time step:  8  *
+* waiting time: 17         *
+* arrival time: 14         *
+============================
+* READY QUEUE:             *
+*     4 ->    5 ->         *
+================================
+============CPU INFO============
+* TIMER:   31  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     3        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  0  *
+* waiting time: 16         *
+* arrival time: 10         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: READY             *
+* remaining time step:  8  *
+* waiting time: 18         *
+* arrival time: 14         *
+============================
+* READY QUEUE:             *
+*     4 ->    5 ->         *
+================================
+============CPU INFO============
+* TIMER:   32  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: RUNNING           *
+* remaining time step:  7  *
+* waiting time: 18         *
+* arrival time: 14         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     5        *
+* process priority:  7     *
+* state: READY             *
+* remaining time step:  7  *
+* waiting time: 18         *
+* arrival time: 15         *
+============================
+* READY QUEUE:             *
+*     5 ->                 *
+================================
+============CPU INFO============
+* TIMER:   33  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: RUNNING           *
+* remaining time step:  6  *
+* waiting time: 18         *
+* arrival time: 14         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     5        *
+* process priority:  7     *
+* state: READY             *
+* remaining time step:  7  *
+* waiting time: 19         *
+* arrival time: 15         *
+============================
+* READY QUEUE:             *
+*     5 ->                 *
+================================
+============CPU INFO============
+* TIMER:   34  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: RUNNING           *
+* remaining time step:  5  *
+* waiting time: 18         *
+* arrival time: 14         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     5        *
+* process priority:  7     *
+* state: READY             *
+* remaining time step:  7  *
+* waiting time: 20         *
+* arrival time: 15         *
+============================
+* READY QUEUE:             *
+*     5 ->                 *
+================================
+============CPU INFO============
+* TIMER:   35  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: RUNNING           *
+* remaining time step:  4  *
+* waiting time: 18         *
+* arrival time: 14         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     5        *
+* process priority:  7     *
+* state: READY             *
+* remaining time step:  7  *
+* waiting time: 21         *
+* arrival time: 15         *
+============================
+* READY QUEUE:             *
+*     5 ->                 *
+================================
+============CPU INFO============
+* TIMER:   36  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: RUNNING           *
+* remaining time step:  3  *
+* waiting time: 18         *
+* arrival time: 14         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     5        *
+* process priority:  7     *
+* state: READY             *
+* remaining time step:  7  *
+* waiting time: 22         *
+* arrival time: 15         *
+============================
+* READY QUEUE:             *
+*     5 ->                 *
+================================
+============CPU INFO============
+* TIMER:   37  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: RUNNING           *
+* remaining time step:  2  *
+* waiting time: 18         *
+* arrival time: 14         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     5        *
+* process priority:  7     *
+* state: READY             *
+* remaining time step:  7  *
+* waiting time: 23         *
+* arrival time: 15         *
+============================
+* READY QUEUE:             *
+*     5 ->                 *
+================================
+============CPU INFO============
+* TIMER:   38  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: RUNNING           *
+* remaining time step:  1  *
+* waiting time: 18         *
+* arrival time: 14         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     5        *
+* process priority:  7     *
+* state: READY             *
+* remaining time step:  7  *
+* waiting time: 24         *
+* arrival time: 15         *
+============================
+* READY QUEUE:             *
+*     5 ->                 *
+================================
+============CPU INFO============
+* TIMER:   39  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: RUNNING           *
+* remaining time step:  0  *
+* waiting time: 18         *
+* arrival time: 14         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     5        *
+* process priority:  7     *
+* state: READY             *
+* remaining time step:  7  *
+* waiting time: 25         *
+* arrival time: 15         *
+============================
+* READY QUEUE:             *
+*     5 ->                 *
+================================
+============CPU INFO============
+* TIMER:   40  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     5        *
+* process priority:  7     *
+* state: RUNNING           *
+* remaining time step:  6  *
+* waiting time: 25         *
+* arrival time: 15         *
+============================
+================================
+============CPU INFO============
+* TIMER:   41  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     5        *
+* process priority:  7     *
+* state: RUNNING           *
+* remaining time step:  5  *
+* waiting time: 25         *
+* arrival time: 15         *
+============================
+================================
+============CPU INFO============
+* TIMER:   42  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     5        *
+* process priority:  7     *
+* state: RUNNING           *
+* remaining time step:  4  *
+* waiting time: 25         *
+* arrival time: 15         *
+============================
+================================
+============CPU INFO============
+* TIMER:   43  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     5        *
+* process priority:  7     *
+* state: RUNNING           *
+* remaining time step:  3  *
+* waiting time: 25         *
+* arrival time: 15         *
+============================
+================================
+============CPU INFO============
+* TIMER:   44  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     5        *
+* process priority:  7     *
+* state: RUNNING           *
+* remaining time step:  2  *
+* waiting time: 25         *
+* arrival time: 15         *
+============================
+================================
+============CPU INFO============
+* TIMER:   45  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     5        *
+* process priority:  7     *
+* state: RUNNING           *
+* remaining time step:  1  *
+* waiting time: 25         *
+* arrival time: 15         *
+============================
+================================
+============CPU INFO============
+* TIMER:   46  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     5        *
+* process priority:  7     *
+* state: RUNNING           *
+* remaining time step:  0  *
+* waiting time: 25         *
+* arrival time: 15         *
+============================
+================================
+============CPU INFO============
+* TIMER:   47  0/ 1        *
+================================
+============CPU INFO============
+* TIMER:   48  0/ 1        *
+================================
+Average Waiting Time: 13.500000
+SCHEDULING ALGORITHM: Preemptive Shortest Job First (SJF)
+PROCESS COUNT: 6
+============CPU INFO============
+* TIMER:    0  0/ 1        *
+================================
+============CPU INFO============
+* TIMER:    0  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  9  *
+* waiting time:  0         *
+* arrival time:  0         *
+============================
+================================
+============CPU INFO============
+* TIMER:    1  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  8  *
+* waiting time:  0         *
+* arrival time:  0         *
+============================
+================================
+============CPU INFO============
+* TIMER:    2  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  7  *
+* waiting time:  0         *
+* arrival time:  0         *
+============================
+================================
+============CPU INFO============
+* TIMER:    3  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  6  *
+* waiting time:  0         *
+* arrival time:  0         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: READY             *
+* remaining time step: 12  *
+* waiting time:  1         *
+* arrival time:  3         *
+============================
+* READY QUEUE:             *
+*     1 ->                 *
+================================
+============CPU INFO============
+* TIMER:    4  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  5  *
+* waiting time:  0         *
+* arrival time:  0         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: READY             *
+* remaining time step: 12  *
+* waiting time:  2         *
+* arrival time:  3         *
+============================
+* READY QUEUE:             *
+*     1 ->                 *
+================================
+============CPU INFO============
+* TIMER:    5  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  4  *
+* waiting time:  0         *
+* arrival time:  0         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: READY             *
+* remaining time step: 12  *
+* waiting time:  3         *
+* arrival time:  3         *
+============================
+* READY QUEUE:             *
+*     1 ->                 *
+================================
+============CPU INFO============
+* TIMER:    6  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  3  *
+* waiting time:  0         *
+* arrival time:  0         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: READY             *
+* remaining time step: 12  *
+* waiting time:  4         *
+* arrival time:  3         *
+============================
+* READY QUEUE:             *
+*     1 ->                 *
+================================
+============CPU INFO============
+* TIMER:    7  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  2  *
+* waiting time:  0         *
+* arrival time:  0         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  1     *
+* state: READY             *
+* remaining time step:  4  *
+* waiting time:  1         *
+* arrival time:  7         *
+============================
+* READY QUEUE:             *
+*     2 ->    1 ->         *
+================================
+============CPU INFO============
+* TIMER:    8  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  1  *
+* waiting time:  0         *
+* arrival time:  0         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  1     *
+* state: READY             *
+* remaining time step:  4  *
+* waiting time:  2         *
+* arrival time:  7         *
+============================
+* READY QUEUE:             *
+*     2 ->    1 ->         *
+================================
+============CPU INFO============
+* TIMER:    9  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  0  *
+* waiting time:  0         *
+* arrival time:  0         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  1     *
+* state: READY             *
+* remaining time step:  4  *
+* waiting time:  3         *
+* arrival time:  7         *
+============================
+* READY QUEUE:             *
+*     2 ->    1 ->         *
+================================
+============CPU INFO============
+* TIMER:   10  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  1     *
+* state: RUNNING           *
+* remaining time step:  3  *
+* waiting time:  3         *
+* arrival time:  7         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     3        *
+* process priority:  6     *
+* state: READY             *
+* remaining time step:  6  *
+* waiting time:  1         *
+* arrival time: 10         *
+============================
+* READY QUEUE:             *
+*     3 ->    1 ->         *
+================================
+============CPU INFO============
+* TIMER:   11  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  1     *
+* state: RUNNING           *
+* remaining time step:  2  *
+* waiting time:  3         *
+* arrival time:  7         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     3        *
+* process priority:  6     *
+* state: READY             *
+* remaining time step:  6  *
+* waiting time:  2         *
+* arrival time: 10         *
+============================
+* READY QUEUE:             *
+*     3 ->    1 ->         *
+================================
+============CPU INFO============
+* TIMER:   12  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  1     *
+* state: RUNNING           *
+* remaining time step:  1  *
+* waiting time:  3         *
+* arrival time:  7         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     3        *
+* process priority:  6     *
+* state: READY             *
+* remaining time step:  6  *
+* waiting time:  3         *
+* arrival time: 10         *
+============================
+* READY QUEUE:             *
+*     3 ->    1 ->         *
+================================
+============CPU INFO============
+* TIMER:   13  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  1     *
+* state: RUNNING           *
+* remaining time step:  0  *
+* waiting time:  3         *
+* arrival time:  7         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     3        *
+* process priority:  6     *
+* state: READY             *
+* remaining time step:  6  *
+* waiting time:  4         *
+* arrival time: 10         *
+============================
+* READY QUEUE:             *
+*     3 ->    1 ->         *
+================================
+============CPU INFO============
+* TIMER:   14  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     3        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  5  *
+* waiting time:  4         *
+* arrival time: 10         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: READY             *
+* remaining time step:  8  *
+* waiting time:  1         *
+* arrival time: 14         *
+============================
+* READY QUEUE:             *
+*     4 ->    1 ->         *
+================================
+============CPU INFO============
+* TIMER:   15  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     3        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  4  *
+* waiting time:  4         *
+* arrival time: 10         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     5        *
+* process priority:  7     *
+* state: READY             *
+* remaining time step:  7  *
+* waiting time:  1         *
+* arrival time: 15         *
+============================
+* READY QUEUE:             *
+*     5 ->    4 ->    1 -> *
+================================
+============CPU INFO============
+* TIMER:   16  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     3        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  3  *
+* waiting time:  4         *
+* arrival time: 10         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     5        *
+* process priority:  7     *
+* state: READY             *
+* remaining time step:  7  *
+* waiting time:  2         *
+* arrival time: 15         *
+============================
+* READY QUEUE:             *
+*     5 ->    4 ->    1 -> *
+================================
+============CPU INFO============
+* TIMER:   17  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     3        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  2  *
+* waiting time:  4         *
+* arrival time: 10         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     5        *
+* process priority:  7     *
+* state: READY             *
+* remaining time step:  7  *
+* waiting time:  3         *
+* arrival time: 15         *
+============================
+* READY QUEUE:             *
+*     5 ->    4 ->    1 -> *
+================================
+============CPU INFO============
+* TIMER:   18  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     3        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  1  *
+* waiting time:  4         *
+* arrival time: 10         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     5        *
+* process priority:  7     *
+* state: READY             *
+* remaining time step:  7  *
+* waiting time:  4         *
+* arrival time: 15         *
+============================
+* READY QUEUE:             *
+*     5 ->    4 ->    1 -> *
+================================
+============CPU INFO============
+* TIMER:   19  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     3        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  0  *
+* waiting time:  4         *
+* arrival time: 10         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     5        *
+* process priority:  7     *
+* state: READY             *
+* remaining time step:  7  *
+* waiting time:  5         *
+* arrival time: 15         *
+============================
+* READY QUEUE:             *
+*     5 ->    4 ->    1 -> *
+================================
+============CPU INFO============
+* TIMER:   20  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     5        *
+* process priority:  7     *
+* state: RUNNING           *
+* remaining time step:  6  *
+* waiting time:  5         *
+* arrival time: 15         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: READY             *
+* remaining time step:  8  *
+* waiting time:  7         *
+* arrival time: 14         *
+============================
+* READY QUEUE:             *
+*     4 ->    1 ->         *
+================================
+============CPU INFO============
+* TIMER:   21  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     5        *
+* process priority:  7     *
+* state: RUNNING           *
+* remaining time step:  5  *
+* waiting time:  5         *
+* arrival time: 15         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: READY             *
+* remaining time step:  8  *
+* waiting time:  8         *
+* arrival time: 14         *
+============================
+* READY QUEUE:             *
+*     4 ->    1 ->         *
+================================
+============CPU INFO============
+* TIMER:   22  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     5        *
+* process priority:  7     *
+* state: RUNNING           *
+* remaining time step:  4  *
+* waiting time:  5         *
+* arrival time: 15         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: READY             *
+* remaining time step:  8  *
+* waiting time:  9         *
+* arrival time: 14         *
+============================
+* READY QUEUE:             *
+*     4 ->    1 ->         *
+================================
+============CPU INFO============
+* TIMER:   23  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     5        *
+* process priority:  7     *
+* state: RUNNING           *
+* remaining time step:  3  *
+* waiting time:  5         *
+* arrival time: 15         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: READY             *
+* remaining time step:  8  *
+* waiting time: 10         *
+* arrival time: 14         *
+============================
+* READY QUEUE:             *
+*     4 ->    1 ->         *
+================================
+============CPU INFO============
+* TIMER:   24  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     5        *
+* process priority:  7     *
+* state: RUNNING           *
+* remaining time step:  2  *
+* waiting time:  5         *
+* arrival time: 15         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: READY             *
+* remaining time step:  8  *
+* waiting time: 11         *
+* arrival time: 14         *
+============================
+* READY QUEUE:             *
+*     4 ->    1 ->         *
+================================
+============CPU INFO============
+* TIMER:   25  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     5        *
+* process priority:  7     *
+* state: RUNNING           *
+* remaining time step:  1  *
+* waiting time:  5         *
+* arrival time: 15         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: READY             *
+* remaining time step:  8  *
+* waiting time: 12         *
+* arrival time: 14         *
+============================
+* READY QUEUE:             *
+*     4 ->    1 ->         *
+================================
+============CPU INFO============
+* TIMER:   26  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     5        *
+* process priority:  7     *
+* state: RUNNING           *
+* remaining time step:  0  *
+* waiting time:  5         *
+* arrival time: 15         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: READY             *
+* remaining time step:  8  *
+* waiting time: 13         *
+* arrival time: 14         *
+============================
+* READY QUEUE:             *
+*     4 ->    1 ->         *
+================================
+============CPU INFO============
+* TIMER:   27  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: RUNNING           *
+* remaining time step:  7  *
+* waiting time: 13         *
+* arrival time: 14         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: READY             *
+* remaining time step: 12  *
+* waiting time: 25         *
+* arrival time:  3         *
+============================
+* READY QUEUE:             *
+*     1 ->                 *
+================================
+============CPU INFO============
+* TIMER:   28  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: RUNNING           *
+* remaining time step:  6  *
+* waiting time: 13         *
+* arrival time: 14         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: READY             *
+* remaining time step: 12  *
+* waiting time: 26         *
+* arrival time:  3         *
+============================
+* READY QUEUE:             *
+*     1 ->                 *
+================================
+============CPU INFO============
+* TIMER:   29  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: RUNNING           *
+* remaining time step:  5  *
+* waiting time: 13         *
+* arrival time: 14         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: READY             *
+* remaining time step: 12  *
+* waiting time: 27         *
+* arrival time:  3         *
+============================
+* READY QUEUE:             *
+*     1 ->                 *
+================================
+============CPU INFO============
+* TIMER:   30  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: RUNNING           *
+* remaining time step:  4  *
+* waiting time: 13         *
+* arrival time: 14         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: READY             *
+* remaining time step: 12  *
+* waiting time: 28         *
+* arrival time:  3         *
+============================
+* READY QUEUE:             *
+*     1 ->                 *
+================================
+============CPU INFO============
+* TIMER:   31  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: RUNNING           *
+* remaining time step:  3  *
+* waiting time: 13         *
+* arrival time: 14         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: READY             *
+* remaining time step: 12  *
+* waiting time: 29         *
+* arrival time:  3         *
+============================
+* READY QUEUE:             *
+*     1 ->                 *
+================================
+============CPU INFO============
+* TIMER:   32  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: RUNNING           *
+* remaining time step:  2  *
+* waiting time: 13         *
+* arrival time: 14         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: READY             *
+* remaining time step: 12  *
+* waiting time: 30         *
+* arrival time:  3         *
+============================
+* READY QUEUE:             *
+*     1 ->                 *
+================================
+============CPU INFO============
+* TIMER:   33  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: RUNNING           *
+* remaining time step:  1  *
+* waiting time: 13         *
+* arrival time: 14         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: READY             *
+* remaining time step: 12  *
+* waiting time: 31         *
+* arrival time:  3         *
+============================
+* READY QUEUE:             *
+*     1 ->                 *
+================================
+============CPU INFO============
+* TIMER:   34  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     4        *
+* process priority: 23     *
+* state: RUNNING           *
+* remaining time step:  0  *
+* waiting time: 13         *
+* arrival time: 14         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: READY             *
+* remaining time step: 12  *
+* waiting time: 32         *
+* arrival time:  3         *
+============================
+* READY QUEUE:             *
+*     1 ->                 *
+================================
+============CPU INFO============
+* TIMER:   35  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step: 11  *
+* waiting time: 32         *
+* arrival time:  3         *
+============================
+================================
+============CPU INFO============
+* TIMER:   36  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step: 10  *
+* waiting time: 32         *
+* arrival time:  3         *
+============================
+================================
+============CPU INFO============
+* TIMER:   37  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  9  *
+* waiting time: 32         *
+* arrival time:  3         *
+============================
+================================
+============CPU INFO============
+* TIMER:   38  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  8  *
+* waiting time: 32         *
+* arrival time:  3         *
+============================
+================================
+============CPU INFO============
+* TIMER:   39  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  7  *
+* waiting time: 32         *
+* arrival time:  3         *
+============================
+================================
+============CPU INFO============
+* TIMER:   40  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  6  *
+* waiting time: 32         *
+* arrival time:  3         *
+============================
+================================
+============CPU INFO============
+* TIMER:   41  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  5  *
+* waiting time: 32         *
+* arrival time:  3         *
+============================
+================================
+============CPU INFO============
+* TIMER:   42  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  4  *
+* waiting time: 32         *
+* arrival time:  3         *
+============================
+================================
+============CPU INFO============
+* TIMER:   43  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  3  *
+* waiting time: 32         *
+* arrival time:  3         *
+============================
+================================
+============CPU INFO============
+* TIMER:   44  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  2  *
+* waiting time: 32         *
+* arrival time:  3         *
+============================
+================================
+============CPU INFO============
+* TIMER:   45  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  1  *
+* waiting time: 32         *
+* arrival time:  3         *
+============================
+================================
+============CPU INFO============
+* TIMER:   46  0/ 1        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  0  *
+* waiting time: 32         *
+* arrival time:  3         *
+============================
+================================
+============CPU INFO============
+* TIMER:   47  0/ 1        *
+================================
+============CPU INFO============
+* TIMER:   48  0/ 1        *
+================================
+Average Waiting Time: 9.500000
+SCHEDULING ALGORITHM: Round Robin with Time Quantum = 3
+PROCESS COUNT: 6
+============CPU INFO============
+* TIMER:    0  0/ 3        *
+================================
+============CPU INFO============
+* TIMER:    0  0/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  9  *
+* waiting time:  0         *
+* arrival time:  0         *
+============================
+================================
+============CPU INFO============
+* TIMER:    1  1/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  8  *
+* waiting time:  0         *
+* arrival time:  0         *
+============================
+================================
+============CPU INFO============
+* TIMER:    2  2/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  7  *
+* waiting time:  0         *
+* arrival time:  0         *
+============================
+================================
+============CPU INFO============
+* TIMER:    3  0/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step: 11  *
+* waiting time:  0         *
+* arrival time:  3         *
+============================
+* WAIT QUEUE:              *
+*     0 ->                 *
+================================
+============CPU INFO============
+* TIMER:    4  1/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step: 10  *
+* waiting time:  0         *
+* arrival time:  3         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: READY             *
+* remaining time step:  7  *
+* waiting time:  2         *
+* arrival time:  0         *
+============================
+* READY QUEUE:             *
+*     0 ->                 *
+================================
+============CPU INFO============
+* TIMER:    5  2/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  9  *
+* waiting time:  0         *
+* arrival time:  3         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: READY             *
+* remaining time step:  7  *
+* waiting time:  3         *
+* arrival time:  0         *
+============================
+* READY QUEUE:             *
+*     0 ->                 *
+================================
+============CPU INFO============
+* TIMER:    6  0/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  6  *
+* waiting time:  3         *
+* arrival time:  0         *
+============================
+* WAIT QUEUE:              *
+*     1 ->                 *
+================================
+============CPU INFO============
+* TIMER:    7  1/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  5  *
+* waiting time:  3         *
+* arrival time:  0         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: READY             *
+* remaining time step:  9  *
+* waiting time:  2         *
+* arrival time:  3         *
+============================
+* READY QUEUE:             *
+*     1 ->    2 ->         *
+================================
+============CPU INFO============
+* TIMER:    8  2/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  4  *
+* waiting time:  3         *
+* arrival time:  0         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: READY             *
+* remaining time step:  9  *
+* waiting time:  3         *
+* arrival time:  3         *
+============================
+* READY QUEUE:             *
+*     1 ->    2 ->         *
+================================
+============CPU INFO============
+* TIMER:    9  0/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  8  *
+* waiting time:  3         *
+* arrival time:  3         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  6     *
+* state: READY             *
+* remaining time step:  4  *
+* waiting time:  3         *
+* arrival time:  7         *
+============================
+* READY QUEUE:             *
+*     2 ->                 *
+* WAIT QUEUE:              *
+*     0 ->                 *
+================================
+============CPU INFO============
+* TIMER:   10  1/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  7  *
+* waiting time:  3         *
+* arrival time:  3         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  6     *
+* state: READY             *
+* remaining time step:  4  *
+* waiting time:  4         *
+* arrival time:  7         *
+============================
+* READY QUEUE:             *
+*     2 ->    3 ->         *
+* WAIT QUEUE:              *
+*     0 ->                 *
+================================
+============CPU INFO============
+* TIMER:   11  2/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  6  *
+* waiting time:  3         *
+* arrival time:  3         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  6     *
+* state: READY             *
+* remaining time step:  4  *
+* waiting time:  5         *
+* arrival time:  7         *
+============================
+* READY QUEUE:             *
+*     2 ->    3 ->         *
+* WAIT QUEUE:              *
+*     0 ->                 *
+================================
+============CPU INFO============
+* TIMER:   12  0/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  3  *
+* waiting time:  5         *
+* arrival time:  7         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     3        *
+* process priority: 23     *
+* state: READY             *
+* remaining time step:  6  *
+* waiting time:  3         *
+* arrival time: 10         *
+============================
+* READY QUEUE:             *
+*     3 ->                 *
+* WAIT QUEUE:              *
+*     0 ->    1 ->         *
+================================
+============CPU INFO============
+* TIMER:   13  1/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  2  *
+* waiting time:  5         *
+* arrival time:  7         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     3        *
+* process priority: 23     *
+* state: READY             *
+* remaining time step:  6  *
+* waiting time:  4         *
+* arrival time: 10         *
+============================
+* READY QUEUE:             *
+*     3 ->                 *
+* WAIT QUEUE:              *
+*     0 ->    1 ->         *
+================================
+============CPU INFO============
+* TIMER:   14  2/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  1  *
+* waiting time:  5         *
+* arrival time:  7         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     3        *
+* process priority: 23     *
+* state: READY             *
+* remaining time step:  6  *
+* waiting time:  5         *
+* arrival time: 10         *
+============================
+* READY QUEUE:             *
+*     3 ->    4 ->         *
+* WAIT QUEUE:              *
+*     0 ->    1 ->         *
+================================
+============CPU INFO============
+* TIMER:   15  0/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     3        *
+* process priority: 23     *
+* state: RUNNING           *
+* remaining time step:  5  *
+* waiting time:  5         *
+* arrival time: 10         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     4        *
+* process priority:  7     *
+* state: READY             *
+* remaining time step:  8  *
+* waiting time:  2         *
+* arrival time: 14         *
+============================
+* READY QUEUE:             *
+*     4 ->    5 ->         *
+* WAIT QUEUE:              *
+*     0 ->    1 ->    2 -> *
+================================
+============CPU INFO============
+* TIMER:   16  1/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     3        *
+* process priority: 23     *
+* state: RUNNING           *
+* remaining time step:  4  *
+* waiting time:  5         *
+* arrival time: 10         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     4        *
+* process priority:  7     *
+* state: READY             *
+* remaining time step:  8  *
+* waiting time:  3         *
+* arrival time: 14         *
+============================
+* READY QUEUE:             *
+*     4 ->    5 ->         *
+* WAIT QUEUE:              *
+*     0 ->    1 ->    2 -> *
+================================
+============CPU INFO============
+* TIMER:   17  2/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     3        *
+* process priority: 23     *
+* state: RUNNING           *
+* remaining time step:  3  *
+* waiting time:  5         *
+* arrival time: 10         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     4        *
+* process priority:  7     *
+* state: READY             *
+* remaining time step:  8  *
+* waiting time:  4         *
+* arrival time: 14         *
+============================
+* READY QUEUE:             *
+*     4 ->    5 ->         *
+* WAIT QUEUE:              *
+*     0 ->    1 ->    2 -> *
+================================
+============CPU INFO============
+* TIMER:   18  0/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     4        *
+* process priority:  7     *
+* state: RUNNING           *
+* remaining time step:  7  *
+* waiting time:  4         *
+* arrival time: 14         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     5        *
+* process priority: 14     *
+* state: READY             *
+* remaining time step:  7  *
+* waiting time:  4         *
+* arrival time: 15         *
+============================
+* READY QUEUE:             *
+*     5 ->                 *
+* WAIT QUEUE:              *
+*     0 ->    1 ->    2 -> *
+*     3 ->                 *
+================================
+============CPU INFO============
+* TIMER:   19  1/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     4        *
+* process priority:  7     *
+* state: RUNNING           *
+* remaining time step:  6  *
+* waiting time:  4         *
+* arrival time: 14         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     5        *
+* process priority: 14     *
+* state: READY             *
+* remaining time step:  7  *
+* waiting time:  5         *
+* arrival time: 15         *
+============================
+* READY QUEUE:             *
+*     5 ->                 *
+* WAIT QUEUE:              *
+*     0 ->    1 ->    2 -> *
+*     3 ->                 *
+================================
+============CPU INFO============
+* TIMER:   20  2/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     4        *
+* process priority:  7     *
+* state: RUNNING           *
+* remaining time step:  5  *
+* waiting time:  4         *
+* arrival time: 14         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     5        *
+* process priority: 14     *
+* state: READY             *
+* remaining time step:  7  *
+* waiting time:  6         *
+* arrival time: 15         *
+============================
+* READY QUEUE:             *
+*     5 ->                 *
+* WAIT QUEUE:              *
+*     0 ->    1 ->    2 -> *
+*     3 ->                 *
+================================
+============CPU INFO============
+* TIMER:   21  0/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     5        *
+* process priority: 14     *
+* state: RUNNING           *
+* remaining time step:  6  *
+* waiting time:  6         *
+* arrival time: 15         *
+============================
+* WAIT QUEUE:              *
+*     0 ->    1 ->    2 -> *
+*     3 ->    4 ->         *
+================================
+============CPU INFO============
+* TIMER:   22  1/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     5        *
+* process priority: 14     *
+* state: RUNNING           *
+* remaining time step:  5  *
+* waiting time:  6         *
+* arrival time: 15         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: READY             *
+* remaining time step:  4  *
+* waiting time: 17         *
+* arrival time:  0         *
+============================
+* READY QUEUE:             *
+*     0 ->                 *
+* WAIT QUEUE:              *
+*     1 ->    2 ->    3 -> *
+*     4 ->                 *
+================================
+============CPU INFO============
+* TIMER:   23  2/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     5        *
+* process priority: 14     *
+* state: RUNNING           *
+* remaining time step:  4  *
+* waiting time:  6         *
+* arrival time: 15         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: READY             *
+* remaining time step:  4  *
+* waiting time: 18         *
+* arrival time:  0         *
+============================
+* READY QUEUE:             *
+*     0 ->                 *
+* WAIT QUEUE:              *
+*     1 ->    2 ->    3 -> *
+*     4 ->                 *
+================================
+============CPU INFO============
+* TIMER:   24  0/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  3  *
+* waiting time: 18         *
+* arrival time:  0         *
+============================
+* WAIT QUEUE:              *
+*     1 ->    2 ->    3 -> *
+*     4 ->    5 ->         *
+================================
+============CPU INFO============
+* TIMER:   25  1/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  2  *
+* waiting time: 18         *
+* arrival time:  0         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: READY             *
+* remaining time step:  6  *
+* waiting time: 17         *
+* arrival time:  3         *
+============================
+* READY QUEUE:             *
+*     1 ->    2 ->    3 -> *
+*     4 ->    5 ->         *
+================================
+============CPU INFO============
+* TIMER:   26  2/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  1  *
+* waiting time: 18         *
+* arrival time:  0         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: READY             *
+* remaining time step:  6  *
+* waiting time: 18         *
+* arrival time:  3         *
+============================
+* READY QUEUE:             *
+*     1 ->    2 ->    3 -> *
+*     4 ->    5 ->         *
+================================
+============CPU INFO============
+* TIMER:   27  0/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  5  *
+* waiting time: 18         *
+* arrival time:  3         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  6     *
+* state: READY             *
+* remaining time step:  1  *
+* waiting time: 18         *
+* arrival time:  7         *
+============================
+* READY QUEUE:             *
+*     2 ->    3 ->    4 -> *
+*     5 ->                 *
+* WAIT QUEUE:              *
+*     0 ->                 *
+================================
+============CPU INFO============
+* TIMER:   28  1/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  4  *
+* waiting time: 18         *
+* arrival time:  3         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  6     *
+* state: READY             *
+* remaining time step:  1  *
+* waiting time: 19         *
+* arrival time:  7         *
+============================
+* READY QUEUE:             *
+*     2 ->    3 ->    4 -> *
+*     5 ->                 *
+* WAIT QUEUE:              *
+*     0 ->                 *
+================================
+============CPU INFO============
+* TIMER:   29  2/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  3  *
+* waiting time: 18         *
+* arrival time:  3         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  6     *
+* state: READY             *
+* remaining time step:  1  *
+* waiting time: 20         *
+* arrival time:  7         *
+============================
+* READY QUEUE:             *
+*     2 ->    3 ->    4 -> *
+*     5 ->                 *
+* WAIT QUEUE:              *
+*     0 ->                 *
+================================
+============CPU INFO============
+* TIMER:   30  0/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     2        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  0  *
+* waiting time: 20         *
+* arrival time:  7         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     3        *
+* process priority: 23     *
+* state: READY             *
+* remaining time step:  3  *
+* waiting time: 18         *
+* arrival time: 10         *
+============================
+* READY QUEUE:             *
+*     3 ->    4 ->    5 -> *
+* WAIT QUEUE:              *
+*     0 ->    1 ->         *
+================================
+============CPU INFO============
+* TIMER:   31  1/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     3        *
+* process priority: 23     *
+* state: RUNNING           *
+* remaining time step:  2  *
+* waiting time: 18         *
+* arrival time: 10         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     4        *
+* process priority:  7     *
+* state: READY             *
+* remaining time step:  5  *
+* waiting time: 15         *
+* arrival time: 14         *
+============================
+* READY QUEUE:             *
+*     4 ->    5 ->         *
+* WAIT QUEUE:              *
+*     0 ->    1 ->         *
+================================
+============CPU INFO============
+* TIMER:   32  2/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     3        *
+* process priority: 23     *
+* state: RUNNING           *
+* remaining time step:  1  *
+* waiting time: 18         *
+* arrival time: 10         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     4        *
+* process priority:  7     *
+* state: READY             *
+* remaining time step:  5  *
+* waiting time: 16         *
+* arrival time: 14         *
+============================
+* READY QUEUE:             *
+*     4 ->    5 ->         *
+* WAIT QUEUE:              *
+*     0 ->    1 ->         *
+================================
+============CPU INFO============
+* TIMER:   33  0/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     4        *
+* process priority:  7     *
+* state: RUNNING           *
+* remaining time step:  4  *
+* waiting time: 16         *
+* arrival time: 14         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     5        *
+* process priority: 14     *
+* state: READY             *
+* remaining time step:  4  *
+* waiting time: 16         *
+* arrival time: 15         *
+============================
+* READY QUEUE:             *
+*     5 ->                 *
+* WAIT QUEUE:              *
+*     0 ->    1 ->    3 -> *
+================================
+============CPU INFO============
+* TIMER:   34  1/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     4        *
+* process priority:  7     *
+* state: RUNNING           *
+* remaining time step:  3  *
+* waiting time: 16         *
+* arrival time: 14         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     5        *
+* process priority: 14     *
+* state: READY             *
+* remaining time step:  4  *
+* waiting time: 17         *
+* arrival time: 15         *
+============================
+* READY QUEUE:             *
+*     5 ->                 *
+* WAIT QUEUE:              *
+*     0 ->    1 ->    3 -> *
+================================
+============CPU INFO============
+* TIMER:   35  2/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     4        *
+* process priority:  7     *
+* state: RUNNING           *
+* remaining time step:  2  *
+* waiting time: 16         *
+* arrival time: 14         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     5        *
+* process priority: 14     *
+* state: READY             *
+* remaining time step:  4  *
+* waiting time: 18         *
+* arrival time: 15         *
+============================
+* READY QUEUE:             *
+*     5 ->                 *
+* WAIT QUEUE:              *
+*     0 ->    1 ->    3 -> *
+================================
+============CPU INFO============
+* TIMER:   36  0/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     5        *
+* process priority: 14     *
+* state: RUNNING           *
+* remaining time step:  3  *
+* waiting time: 18         *
+* arrival time: 15         *
+============================
+* WAIT QUEUE:              *
+*     0 ->    1 ->    3 -> *
+*     4 ->                 *
+================================
+============CPU INFO============
+* TIMER:   37  1/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     5        *
+* process priority: 14     *
+* state: RUNNING           *
+* remaining time step:  2  *
+* waiting time: 18         *
+* arrival time: 15         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: READY             *
+* remaining time step:  1  *
+* waiting time: 29         *
+* arrival time:  0         *
+============================
+* READY QUEUE:             *
+*     0 ->    1 ->    3 -> *
+*     4 ->                 *
+================================
+============CPU INFO============
+* TIMER:   38  2/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     5        *
+* process priority: 14     *
+* state: RUNNING           *
+* remaining time step:  1  *
+* waiting time: 18         *
+* arrival time: 15         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: READY             *
+* remaining time step:  1  *
+* waiting time: 30         *
+* arrival time:  0         *
+============================
+* READY QUEUE:             *
+*     0 ->    1 ->    3 -> *
+*     4 ->                 *
+================================
+============CPU INFO============
+* TIMER:   39  0/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     0        *
+* process priority:  6     *
+* state: RUNNING           *
+* remaining time step:  0  *
+* waiting time: 30         *
+* arrival time:  0         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: READY             *
+* remaining time step:  3  *
+* waiting time: 28         *
+* arrival time:  3         *
+============================
+* READY QUEUE:             *
+*     1 ->    3 ->    4 -> *
+* WAIT QUEUE:              *
+*     5 ->                 *
+================================
+============CPU INFO============
+* TIMER:   40  1/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  2  *
+* waiting time: 28         *
+* arrival time:  3         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     3        *
+* process priority: 23     *
+* state: READY             *
+* remaining time step:  1  *
+* waiting time: 26         *
+* arrival time: 10         *
+============================
+* READY QUEUE:             *
+*     3 ->    4 ->         *
+* WAIT QUEUE:              *
+*     5 ->                 *
+================================
+============CPU INFO============
+* TIMER:   41  2/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  1  *
+* waiting time: 28         *
+* arrival time:  3         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     3        *
+* process priority: 23     *
+* state: READY             *
+* remaining time step:  1  *
+* waiting time: 27         *
+* arrival time: 10         *
+============================
+* READY QUEUE:             *
+*     3 ->    4 ->         *
+* WAIT QUEUE:              *
+*     5 ->                 *
+================================
+============CPU INFO============
+* TIMER:   42  0/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     3        *
+* process priority: 23     *
+* state: RUNNING           *
+* remaining time step:  0  *
+* waiting time: 27         *
+* arrival time: 10         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     4        *
+* process priority:  7     *
+* state: READY             *
+* remaining time step:  2  *
+* waiting time: 23         *
+* arrival time: 14         *
+============================
+* READY QUEUE:             *
+*     4 ->                 *
+* WAIT QUEUE:              *
+*     5 ->    1 ->         *
+================================
+============CPU INFO============
+* TIMER:   43  1/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     4        *
+* process priority:  7     *
+* state: RUNNING           *
+* remaining time step:  1  *
+* waiting time: 23         *
+* arrival time: 14         *
+============================
+* WAIT QUEUE:              *
+*     5 ->    1 ->         *
+================================
+============CPU INFO============
+* TIMER:   44  2/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     4        *
+* process priority:  7     *
+* state: RUNNING           *
+* remaining time step:  0  *
+* waiting time: 23         *
+* arrival time: 14         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     5        *
+* process priority: 14     *
+* state: READY             *
+* remaining time step:  1  *
+* waiting time: 24         *
+* arrival time: 15         *
+============================
+* READY QUEUE:             *
+*     5 ->    1 ->         *
+================================
+============CPU INFO============
+* TIMER:   45  0/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     5        *
+* process priority: 14     *
+* state: RUNNING           *
+* remaining time step:  0  *
+* waiting time: 24         *
+* arrival time: 15         *
+============================
+* NEXT PROCESS:            *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: READY             *
+* remaining time step:  1  *
+* waiting time: 32         *
+* arrival time:  3         *
+============================
+* READY QUEUE:             *
+*     1 ->                 *
+================================
+============CPU INFO============
+* TIMER:   46  1/ 3        *
+* CURRENT PROCESS:         *
+========PROCESS INFO========
+* process id:     1        *
+* process priority: 10     *
+* state: RUNNING           *
+* remaining time step:  0  *
+* waiting time: 32         *
+* arrival time:  3         *
+============================
+================================
+============CPU INFO============
+* TIMER:   47  2/ 3        *
+================================
+============CPU INFO============
+* TIMER:   48  0/ 3        *
+================================
+Average Waiting Time: 26.000000
