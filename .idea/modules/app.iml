@@ -3,7 +3,6 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../3_1/SWCON311_GAME_GRAPHIC_PROGRAMMING/-GameGraphics-_Homework1-master/app" />
-    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
