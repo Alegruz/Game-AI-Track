@@ -60,27 +60,25 @@ def is_promising(index: int, columns: list) -> bool:
     return is_switch
 
 
-def queens(index: int, columns: list, depth: int) -> None:
-    queens_recursive(index=index, columns=columns, depth=depth, current_depth=0)
+def queens(index: int, columns: list, depth: int):
+    results: list[list[int]] = list()
+    queens_recursive(index=index, columns=columns, depth=depth, current_depth=0, results=results)
+
+    print(f"Number of solutions: {len(results)}")
 
 
-def queens_recursive(index: int, columns: list, depth: int, current_depth: int) -> int:
-    if current_depth == -1:
-        return -1
-
+def queens_recursive(index: int, columns: list, depth: int, current_depth: int, results: list[list[int]]) -> int:
     if is_promising(index=index, columns=columns):
         if index == len(columns) - 1:
+            results.append(columns)
             if current_depth == depth:
                 print(columns)
-                return -1
             current_depth += 1
         else:
             for j in range(0, len(columns)):
                 columns[index + 1] = j
                 current_depth = queens_recursive(index=index + 1, columns=columns, depth=depth,
-                                                 current_depth=current_depth)
-                if current_depth == -1:
-                    return -1
+                                                 current_depth=current_depth, results=results)
 
     return current_depth
 
