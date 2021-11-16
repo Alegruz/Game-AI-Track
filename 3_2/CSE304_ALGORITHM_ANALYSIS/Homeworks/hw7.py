@@ -9,16 +9,16 @@ def get_sum_of_subsets(index: int,
         if weight == sum:
             assert (subset not in subset_hashset)
             subset_hashset.add(subset)
-            # print("subset: ", end="")
-            # for i in range(0, len(weights)):
-            #     if (subset >> i) & 1:
-            #         print("1", end="")
-            #     else:
-            #         print("0", end="")
-            #
-            #     if i > 0 and i % 8 == 0:
-            #         print(" ", end="")
-            # print()
+            print("subset: ", end="")
+            for i in range(0, len(weights)):
+                if (subset >> i) & 1:
+                    print("1", end="")
+                else:
+                    print("0", end="")
+
+                if i % 4 == 3:
+                    print(" ", end="")
+            print()
         else:
             subset |= (1 << (index + 1))
             get_sum_of_subsets(index=index + 1,
@@ -74,8 +74,8 @@ def main():
     m: int = 3
     m_coloring(m=m, index=-1, color_vertices=color_vertices, is_edge=is_edge)
 
-    weights: list[int] = [i for i in range(1, 101)]
-    sum: int = 365
+    weights: list[int] = [i for i in range(1, 7)]
+    sum: int = 11
     print(f"items={weights}, sum: {sum}")
     include: list[int] = len(weights) * [0]
     subset: int = 0
@@ -90,7 +90,7 @@ def main():
                        subset=subset,
                        weights=weights,
                        subset_hashset=subset_hashset)
-    print(f"subset_hashset size: {len(subset_hashset)}")
+    # print(f"subset_hashset size: {len(subset_hashset)}")
 
 if __name__ == "__main__":
     main()
