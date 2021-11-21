@@ -1,4 +1,10 @@
-class Level:
+class ComponentType:
+    RENDERABLE: int = 0
+    CAPSULE: int = 1
+    CHARACTER_MOVEMENT: int = 2
+
+
+class Component:
     def __init__(self):
         pass
 
