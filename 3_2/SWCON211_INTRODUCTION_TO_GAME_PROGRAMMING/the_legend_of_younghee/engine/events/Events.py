@@ -3,12 +3,15 @@ import pygame
 
 
 class Events:
-    TITLE_SCREEN_EVENT: int = 0
-    INPUT_NAME_EVENT: int = 1
+    TRANSITION_EVENT: int = 0
+    TITLE_SCREEN_EVENT: int = 1
+    INPUT_NAME_EVENT: int = 2
+    MAIN_GAME_EVENT: int = 3
 
 
 class InputNameScreenEvent:
     START: int = 0
+    END: int = 1
 
 
 class TitleScreenEvent:
@@ -25,3 +28,8 @@ class TitleScreenEvent:
     SHOW_SHINY_EFFECT: int = FADE_IN_BACKGROUND + 1  # 10
     FADE_OUT: int = SHOW_SHINY_EFFECT + 1  # 11
     END: int = FADE_OUT + 1  # 12
+
+
+class MainGameEvent:
+    START: int = 0
+    END: int = 1

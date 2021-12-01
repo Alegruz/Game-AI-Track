@@ -33,10 +33,11 @@ class Vector2f:
         self.__x = x
         self.__y = y
 
-        print(f"init: {id(self)}")
+        # print(f"init: {id(self)}")
 
     def __del__(self):
-        print(f"i am being deleted, {self} {id(self)}")
+        # print(f"i am being deleted, {self} {id(self)}")
+        pass
 
     def __abs__(self):
         return Vector2f(x=abs(self.__x), y=abs(self.__y))
@@ -94,7 +95,7 @@ class Vector2f:
         if isinstance(other, Vector2f):
             return self.__x * other.x + self.__y * other.y
         elif isinstance(other, float) or isinstance(other, int):
-            return Vector2f(x=self.__x * other, y=self.__y * self.__y)
+            return Vector2f(x=self.__x * other, y=self.__y * other)
 
         assert False
 
@@ -148,6 +149,12 @@ class Vector2f:
         self.x = other.x
         self.y = other.y
 
+    def get_length(self):
+        return math.sqrt(self.__x * self.__x + self.__y * self.__y)
+
+    def get_length_squared(self):
+        return self.__x * self.__x + self.__y * self.__y
+
     @staticmethod
     def get_oriented_vector(top_left: Vector2f, size: Vector2f, orientation: int) -> Vector2f:
         center_x: float = top_left.x + size.x / 2.0
@@ -183,6 +190,15 @@ class Vector2f:
         self.x = (1.0 - alpha) * coord0.x + alpha * coord1.x
         self.y = (1.0 - alpha) * coord0.y + alpha * coord1.y
 
+    def normalize(self) -> bool:
+        length: float = self.get_length()
+        if length > 0.0:
+            self.__x = self.__x / length
+            self.__y = self.__y / length
+            return True
+
+        return False
+
     def set_coordinate(self, x: float, y: float):
         self.x = x
         self.y = y
@@ -190,3 +206,21 @@ class Vector2f:
     @staticmethod
     def to_tuple(vector: Vector2f) -> tuple[float, float]:
         return vector.x, vector.y
+
+
+class Box:
+    __slots__ = ["top_left", "width", "height"]
+
+    def __init__(self, top_left: Vector2f, width: float, height: float):
+        self.top_left: Vector2f = top_left
+        self.width: float = width
+        self.height: float = height
+
+    def __str__(self) -> str:
+        return f"box: {{ top_left: {self.top_left}, width: {self.width}, height: {self.height} }}"
+
+    def has_collided_with(self, box: Box):
+        return self.top_left.x < box.top_left.x + box.width and \
+               self.top_left.x + self.width > box.top_left.x and \
+               self.top_left.y < box.top_left.y + box.height and \
+               self.top_left.y + self.height > box.top_left.y

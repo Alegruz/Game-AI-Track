@@ -26,16 +26,20 @@ class Renderer:
                  "__should_flash",
                  "__flashing_index",
                  "__flashing_counter",
-                 "__flashing_duration"]
+                 "__flashing_duration",
+                 "__player_offset",
+                 "__offset_limit_top_left",
+                 "__offset_limit_bottom_right"]
 
-    def __init__(self, size: tuple[float, float], scale_rate: float = 1.0, flags: int = 0) -> None:
+    def __init__(self, size: Vector2f, scale_rate: float = 1.0, flags: int = 0) -> None:
+        assert isinstance(size, Vector2f) and isinstance(scale_rate, float) and isinstance(flags, int)
         self.__scale_rate: float = scale_rate
         self.__flags: int = flags
-        self.__size: tuple[float, float] = size
+        self.__size: Vector2f = size
         self.__front_buffer: pygame.Surface = pygame.display.set_mode(
-            size=(self.__size[0] * self.__scale_rate, self.__size[1] * self.__scale_rate),
+            size=(self.__size.x * self.__scale_rate, self.__size.y * self.__scale_rate),
             flags=self.__flags, depth=16)
-        self.__back_buffer: pygame.Surface = pygame.Surface(size=self.__size)
+        self.__back_buffer: pygame.Surface = pygame.Surface(size=Vector2f.to_tuple(vector=self.__size))
 
         self.__renderables: list[dict[str, Renderable]] = [dict(),
                                                            dict(),
@@ -70,6 +74,27 @@ class Renderer:
         self.__flashing_counter: int = 0
         self.__flashing_duration: int = 0
 
+        self.__player_offset: Vector2f = Vector2f(x=self.__size.x / 2.0, y=self.__size.y / 2.0)
+        self.__offset_limit_top_left: Vector2f = Vector2f(x=0.0, y=0.0)
+        self.__offset_limit_bottom_right: Vector2f = Vector2f(x=0.0, y=0.0)
+
+    @property
+    def player_offset(self) -> Vector2f:
+        return self.__player_offset
+
+    @player_offset.setter
+    def player_offset(self, player_offset: Vector2f) -> None:
+        self.__player_offset.x = player_offset.x
+        self.__player_offset.y = player_offset.y
+
+    @property
+    def unscaled_size(self) -> Vector2f:
+        return self.__size
+
+    @property
+    def scaled_size(self) -> Vector2f:
+        return self.__size * self.__scale_rate
+
     def add_renderable(self, renderable: Renderable) -> bool:
         if renderable.name in self.__renderables[renderable.depth] or \
                 renderable.name in self.__renderables_key_to_depth:
@@ -85,6 +110,10 @@ class Renderer:
 
         return None
 
+    def set_offset_limit(self, top_left: Vector2f, bottom_right: Vector2f):
+        self.__offset_limit_top_left.copy(other=top_left)
+        self.__offset_limit_bottom_right.copy(other=bottom_right)
+
     def set_renderable(self, key: str, renderable: Renderable) -> bool:
         assert key == renderable.name
         if key in self.__renderables[renderable.depth] and key in self.__renderables_key_to_depth:
@@ -94,7 +123,7 @@ class Renderer:
         return False
 
     def remove_renderable(self, key: str) -> bool:
-        print(f"remove {key}")
+        # print(f"remove {key}")
         if key in self.__renderables_key_to_depth and key in self.__renderables[self.__renderables_key_to_depth[key]]:
             del self.__renderables[self.__renderables_key_to_depth[key]][key]
             del self.__renderables_key_to_depth[key]
@@ -144,12 +173,14 @@ class Renderer:
                 renderable.update(delta_time=delta_time)
 
     def render(self) -> None:
-        self.__back_buffer: pygame.Surface = pygame.Surface(size=self.__size)
+        self.__back_buffer: pygame.Surface = pygame.Surface(size=Vector2f.to_tuple(vector=self.__size))
 
         for renderables in self.__renderables:
             for renderable in renderables.values():
+                coordinate: Vector2f = Vector2f(x=renderable.coordinate.x - min(max(self.__player_offset.x, self.__offset_limit_top_left.x + self.__size.x / 2.0), self.__offset_limit_bottom_right.x - self.__size.x / 2.0) + self.__size.x / 2.0,
+                                                y=renderable.coordinate.y - min(max(self.__player_offset.y, self.__offset_limit_top_left.y + self.__size.y / 2.0), self.__offset_limit_bottom_right.y - self.__size.y / 2.0) + self.__size.y / 2.0)
                 self.__back_buffer.blit(source=renderable.surface,
-                                        dest=Vector2f.to_tuple(vector=renderable.coordinate))
+                                        dest=Vector2f.to_tuple(vector=coordinate))
 
         self.__back_buffer = pygame.transform.scale(surface=self.__back_buffer, size=(
             self.__back_buffer.get_width() * self.__scale_rate, self.__back_buffer.get_height() * self.__scale_rate))

@@ -1,3 +1,5 @@
+from typing import IO, Union
+
 import pygame
 
 from engine.core.Math import Math, Vector2f
@@ -33,7 +35,8 @@ class Renderable:
                  "__coordinates_change_counter",
                  "__coordinates_change_duration",
                  "__flip_x",
-                 "__flip_y"]
+                 "__flip_y",
+                 "__is_animation_done"]
 
     def __init__(self, surface: pygame.Surface, coordinate: Vector2f, depth: int, name: str = "",
                  surfaces: list[pygame.Surface] = None, coordinates: list[Vector2f] = None,
@@ -68,6 +71,7 @@ class Renderable:
 
         self.__should_animate: bool = False
         self.__should_loop_animation: bool = False
+        self.__is_animation_done: bool = False
         self.__frame_index: int = 0
         self.__from_frame_index: int = 0
         self.__to_frame_index: int = 0
@@ -84,9 +88,72 @@ class Renderable:
         self.__flip_y: bool = False
 
     def __del__(self):
-        print(f"i am being deleted!! {self.__name} {id(self.__coordinate)}")
+        pass
+        # print(f"Renderable::Destructor: {self.__name} {id(self.__coordinate)}")
+
     #     if self.__surface is not None:
     #         del self.__surface
+
+    @staticmethod
+    def parse_data(file_path: str) -> dict[str, dict[str, dict[str, Union[list[dict[str, int]], str, int]]]]:
+        animation_data: IO = open(file=file_path, mode="r")
+
+        data: dict[str, dict[str, dict[str, Union[list[dict[str, int]], str, int]]]] = dict()
+
+        is_animation_data: bool = False
+        is_direction_data: bool = False
+        data_key: str = ""
+        data_name: str = ""
+        direction_index: int = -1
+        for line in animation_data:
+            if "animation" in line:
+                is_animation_data = True
+                data_key = "animation"
+                if data_key not in data:
+                    data["animation"] = dict()
+            else:
+                if is_animation_data:
+                    splitted_line: list[str] = line.split()
+                    if not is_direction_data:
+                        if splitted_line[0] == "name":
+                            data_name = splitted_line[-1][1:-2]
+                            data[data_key][data_name] = dict()
+                        elif splitted_line[0] == "directions":
+                            is_direction_data = True
+                            direction_index = 0
+                            data[data_key][data_name][splitted_line[0]] = []
+                        elif splitted_line[-1][0] == "\"":
+                            data[data_key][data_name][splitted_line[0]] = splitted_line[-1][1:-2]
+                        else:
+                            data[data_key][data_name][splitted_line[0]] = int(splitted_line[-1][:-1])
+                    else:
+                        if len(splitted_line) == 1:
+                            is_animation_data = False
+                            is_direction_data = False
+                            continue
+                        is_next_data_key: bool = True
+                        key: str = ""
+                        is_next_data_value: bool = False
+                        data[data_key][data_name]["directions"].append(dict())
+                        for parsed_data in splitted_line:
+                            if parsed_data == "{" or parsed_data == "}," or parsed_data == "=":
+                                continue
+                            if is_next_data_key:
+                                key = parsed_data
+                                is_next_data_key = False
+                                is_next_data_value = True
+                            elif is_next_data_value:
+                                if parsed_data[-1] == ",":
+                                    data[data_key][data_name]["directions"][direction_index][key] = int(
+                                        parsed_data[:-1])
+                                else:
+                                    data[data_key][data_name]["directions"][direction_index][key] = int(parsed_data)
+                                is_next_data_key = True
+                                is_next_data_value = False
+
+                        direction_index += 1
+
+        return data
 
     @property
     def coordinate(self) -> Vector2f:
@@ -109,8 +176,16 @@ class Renderable:
         return self.__flip_y
 
     @property
+    def is_animation_done(self) -> bool:
+        return self.__is_animation_done
+
+    @property
     def name(self) -> str:
         return self.__name
+
+    @property
+    def should_loop_animation(self) -> bool:
+        return self.__should_loop_animation
 
     @property
     def surface(self) -> pygame.Surface:
@@ -136,22 +211,57 @@ class Renderable:
         assert isinstance(value, bool)
         self.__flip_y = value
 
-    def start_animation(self, from_frame_index: int, to_frame_index: int, duration: int, should_loop: bool = False):
+    def hide(self):
+        self.__surface.set_alpha(0)
+
+    def reset_animation(self):
+        self.__should_animate = True
+        self.__frame_index = self.__from_frame_index
+        self.__is_animation_done = False
+        self.__animation_counter = 0
+
+    def set_animation_data(self, from_frame_index: int, to_frame_index: int, duration: int, should_loop: bool = False):
         assert (self.__frames is not None)
         assert isinstance(from_frame_index, int)
         assert isinstance(to_frame_index, int)
         assert isinstance(duration, int) and duration > 0
         assert isinstance(should_loop, bool)
 
-        self.__should_animate = True
         self.__should_loop_animation = should_loop
         self.__from_frame_index = from_frame_index
         self.__to_frame_index = to_frame_index
         self.__animation_duration = duration
         self.__animation_counter = 0
 
+    def show(self):
+        self.__surface.set_alpha(255)
+
+    def start_animation(self, from_frame_index: int = -1, to_frame_index: int = -1, duration: int = -1,
+                        should_loop: bool = False):
+        assert (self.__frames is not None)
+        assert isinstance(from_frame_index, int)
+        assert isinstance(to_frame_index, int)
+        assert isinstance(duration, int)
+        assert isinstance(should_loop, bool)
+
+
+        self.__should_animate = True
+        if duration > 0:
+            self.__should_loop_animation = should_loop
+            if from_frame_index < 0:
+                self.__from_frame_index = 0
+            else:
+                self.__from_frame_index = from_frame_index
+
+            if to_frame_index < 0:
+                self.__to_frame_index = len(self.__frames) - 1
+            else:
+                self.__to_frame_index = to_frame_index
+            self.__animation_duration = duration
+            self.__animation_counter = 0
+
     def start_coordinate_change(self, duration: int, should_loop: bool = False):
-        assert(self.__coordinates is not None)
+        assert (self.__coordinates is not None)
         assert isinstance(duration, int) and duration > 0
         assert isinstance(should_loop, bool)
 
@@ -247,6 +357,8 @@ class Renderable:
                 self.__surface = pygame.transform.flip(surface=self.__frames[self.__frame_index],
                                                        flip_x=self.__flip_x,
                                                        flip_y=self.__flip_y)
+            else:
+                self.__is_animation_done = True
 
         if self.__should_change_coordinates:
             self.__coordinates_change_counter += delta_time
@@ -265,8 +377,8 @@ class Renderable:
 
             if not self.__should_loop_coordinates_change:
                 self.__should_change_coordinates = self.__coordinates_change_counter < self.__coordinates_change_duration
-                assert ((not self.__should_loop_coordinates_change) == (self.__coordinates_index == len(self.__coordinates)))
+                assert ((not self.__should_loop_coordinates_change) == (
+                            self.__coordinates_index == len(self.__coordinates)))
             # else:
             #     if self.__coordinates_change_counter >= len(self.__coordinates) * self.__coordinates_change_duration:
             #         self.__coordinates_change_counter -= len(self.__coordinates) * self.__coordinates_change_duration
-
