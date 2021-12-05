@@ -8,7 +8,6 @@ from engine.core.Math import Vector2f
 from engine.graphics.Orientation import Orientation
 from engine.graphics.Renderable import Renderable
 from engine.graphics.Renderer import Depth, Renderer
-from engine.object.BaseObject import BaseObject
 from engine.object.CollidableObject import CollidableObject
 
 
@@ -22,8 +21,8 @@ class eFacingDirection(Enum):
 class Player(CollidableObject):
     __slots__ = ["__name", "__resources", "__speed", "__direction", "__input", "__movement_input_stack", "__renderer",
                  "__data", "__last_movement_input", "__offset", "__has_shield", "__is_attacking_with_sword",
-                 "__is_loading_sword",
-                 "__sound_effects", "__is_lifting", "__facing_direction", "__has_collided"]
+                 "__is_loading_sword", "__sound_effects", "__is_lifting", "__facing_direction", "__has_collided",
+                 "__previous_coordinate"]
 
     def __init__(self, name: str, coordinate: Vector2f, renderer: Renderer):
         super().__init__(coordinate=coordinate, width=24, height=24)
@@ -56,7 +55,9 @@ class Player(CollidableObject):
         self.__is_loading_sword: bool = False
         self.__is_lifting: bool = False
 
+        # collision
         self.__has_collided: bool = False
+        self.__previous_coordinate: Vector2f = Vector2f(x=self._coordinates.x, y=self._coordinates.y)
 
     def initialize(self):
         super().initialize()
@@ -303,10 +304,12 @@ class Player(CollidableObject):
 
     def on_collision_with(self, other: CollidableObject):
         self.__has_collided = True
-
-        if len(self.__movement_input_stack) > 0:
-            self._coordinates.x -= self.__direction.x * self.__speed
-            self._coordinates.y -= self.__direction.y * self.__speed
+        print(f"coordinate: {self._coordinates}")
+        if self._coordinates != self.__previous_coordinate:
+            self._coordinates.copy(other=self.__previous_coordinate)
+        # if len(self.__movement_input_stack) > 0:
+        #     self._coordinates.x -= self.__direction.x * self.__speed
+        #     self._coordinates.y -= self.__direction.y * self.__speed
 
     def on_lifting_animation_done(self):
         self.__is_lifting = False
@@ -372,6 +375,7 @@ class Player(CollidableObject):
         # print(self.get_renderable_component().renderable.coordinate)
 
         if not (self.__direction.x == 0.0 and self.__direction.y == 0.0):
+            self.__previous_coordinate.copy(other=self._coordinates)
             self._coordinates.x += self.__direction.x * self.__speed
             self._coordinates.y += self.__direction.y * self.__speed
 

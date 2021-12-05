@@ -24,6 +24,11 @@ class eGroundType(Enum):
     DEEP_WATER = 12
     SHALLOW_WATER = 13
     ICE = 14
+    GRASS = 15
+    WALL_TOP_LEFT_WATER = 16
+    WALL_TOP_RIGHT_WATER = 17
+    WALL_BOTTOM_LEFT_WATER = 18
+    WALL_BOTTOM_RIGHT_WATER = 19
 
     @staticmethod
     def ground_type_to_str(ground_type: eGroundType) -> str:
@@ -57,6 +62,16 @@ class eGroundType(Enum):
             return "shallow_water"
         elif ground_type == eGroundType.ICE:
             return "ice"
+        elif ground_type == eGroundType.GRASS:
+            return "grass"
+        elif ground_type == eGroundType.WALL_TOP_LEFT_WATER:
+            return "wall_top_left_water"
+        elif ground_type == eGroundType.WALL_TOP_RIGHT_WATER:
+            return "wall_top_right_water"
+        elif ground_type == eGroundType.WALL_BOTTOM_LEFT_WATER:
+            return "wall_bottom_left_water"
+        elif ground_type == eGroundType.WALL_BOTTOM_RIGHT_WATER:
+            return "wall_bottom_right_water"
         else:
             assert False
 
@@ -92,6 +107,16 @@ class eGroundType(Enum):
             return eGroundType.SHALLOW_WATER
         elif key == "ice":
             return eGroundType.ICE
+        elif key == "grass":
+            return eGroundType.GRASS
+        elif key == "wall_top_left_water":
+            return eGroundType.WALL_TOP_LEFT_WATER
+        elif key == "wall_top_right_water":
+            return eGroundType.WALL_TOP_RIGHT_WATER
+        elif key == "wall_bottom_left_water":
+            return eGroundType.WALL_BOTTOM_LEFT_WATER
+        elif key == "wall_bottom_right_water":
+            return eGroundType.WALL_BOTTOM_RIGHT_WATER
         else:
             print(f"wrong key: {key}")
             assert False
@@ -145,11 +170,17 @@ class Tile:
                           default_layer=data["default_layer"],
                           repeat_mode=data["repeat_mode"] if "repeat_mode" in data else eRepeatMode.NONE)
         assert isinstance(data["x"], int)
-        rect: pygame.Rect = pygame.Rect(data["x"], data["y"], data["width"], data["height"])
-        tile.__renderable = Renderable(surface=resource.subsurface(rect),
-                                       coordinate=Vector2f(x=0.0, y=0.0),
-                                       depth=tile.__default_layer,
-                                       name=tile.__id)
+
+        try:
+            rect: pygame.Rect = pygame.Rect(data["x"], data["y"], data["width"], data["height"])
+            tile.__renderable = Renderable(surface=resource.subsurface(rect),
+                                           coordinate=Vector2f(x=0.0, y=0.0),
+                                           depth=tile.__default_layer,
+                                           name=tile.__id)
+        except ValueError:
+            print(f'rect: {data["x"]}, {data["y"]}, width: {data["width"]}, height: {data["height"]}')
+            print(f"tile id: {tile.__id}")
+            # assert False
 
         return tile
 

@@ -55,8 +55,8 @@ class MainGameScene(Scene):
         # self._background_musics["overworld"] = pygame.mixer.Sound("resources/musics/overworld.mp3")
 
     def initialize_kakario_village(self):
-        self.parse_map_data(data_file_name="resources/maps/first_map.dat", name="first_map")
-        self._background_musics["kakariko_village"].play(loops=-1)
+        self.parse_map_data(data_file_name="resources/maps/examples/light_world/eastern_palace.dat", name="eastern_palace")
+        # self._background_musics["kakariko_village"].play(loops=-1)
         # self.parse_tileset_data(data_file_name="resources/tilesets/house.dat", name="house")
 
         # house_surface: pygame.Surface = pygame.Surface(
@@ -90,6 +90,7 @@ class MainGameScene(Scene):
         tile_y: int = -1
         tile_width: int = -1
         tile_height: int = -1
+        tile_tileset: str = ""
         pattern: str = ""
 
         is_properties: bool = False
@@ -104,42 +105,56 @@ class MainGameScene(Scene):
                         is_properties = True
                     elif splitted_line[0][:-1] == "tile":
                         is_tile = True
+                        tile_tileset = tileset_name
                 else:
                     if splitted_line[0] == "}":
                         is_tile = False
-                        if not eGroundType.is_walkable(ground_type=self.__map_tiles[tileset_name][pattern].ground):
-                            collidable_tile: CollidableObject = CollidableObject(coordinate=Vector2f(x=tile_x, y=tile_y),
-                                                                                 width=tile_width,
-                                                                                 height=tile_height)
-                            index: int = 0
-                            while self.__collision_manager.contains_collidable_by_key(key=f"{pattern}_{index}"):
-                                index += 1
-                            self.__collision_manager.add_collidable(key=f"{pattern}_{index}",
-                                                                    collidable_object=collidable_tile)
-                        num_columns = tile_width // self.__map_tiles[tileset_name][
+                        try:
+                            if not eGroundType.is_walkable(ground_type=self.__map_tiles[tile_tileset][pattern].ground):
+                                collidable_tile: CollidableObject = CollidableObject(coordinate=Vector2f(x=tile_x, y=tile_y),
+                                                                                     width=tile_width,
+                                                                                     height=tile_height)
+                                index: int = 0
+                                while self.__collision_manager.contains_collidable_by_key(key=f"{pattern}_{index}"):
+                                    index += 1
+                                self.__collision_manager.add_collidable(key=f"{pattern}_{index}",
+                                                                        collidable_object=collidable_tile)
+                        except KeyError:
+                            print(f"tileset: {tileset}, pattern: {pattern}, {self.__map_tiles[tile_tileset]}")
+                            pattern = f"{pattern}_0"
+                            if not eGroundType.is_walkable(ground_type=self.__map_tiles[tile_tileset][pattern].ground):
+                                collidable_tile: CollidableObject = CollidableObject(coordinate=Vector2f(x=tile_x, y=tile_y),
+                                                                                     width=tile_width,
+                                                                                     height=tile_height)
+                                index: int = 0
+                                while self.__collision_manager.contains_collidable_by_key(key=f"{pattern}_{index}"):
+                                    index += 11
+                                self.__collision_manager.add_collidable(key=f"{pattern}_{index}",
+                                                                        collidable_object=collidable_tile)
+                        num_columns = tile_width // self.__map_tiles[tile_tileset][
                             pattern].renderable.surface.get_width()
-                        num_rows = tile_height // self.__map_tiles[tileset_name][
+                        num_rows = tile_height // self.__map_tiles[tile_tileset][
                             pattern].renderable.surface.get_height()
                         for row_index in range(0, num_rows):
                             for column_index in range(0, num_columns):
-                                dest_x = tile_x + column_index * self.__map_tiles[tileset_name][
+                                dest_x = tile_x + column_index * self.__map_tiles[tile_tileset][
                                     pattern].renderable.surface.get_width()
-                                dest_y = tile_y + row_index * self.__map_tiles[tileset_name][
+                                dest_y = tile_y + row_index * self.__map_tiles[tile_tileset][
                                     pattern].renderable.surface.get_height()
-                                map_surface.blit(source=self.__map_tiles[tileset_name][pattern].renderable.surface,
+                                map_surface.blit(source=self.__map_tiles[tile_tileset][pattern].renderable.surface,
                                                  dest=(dest_x, dest_y))
-                                # for y_index in range(tile_y + row_index * self.__map_tiles[tileset_name][
+                                # for y_index in range(tile_y + row_index * self.__map_tiles[tile_tileset][
                                 #     pattern].renderable.surface.get_height(),
-                                #                      min(tile_y + (row_index + 1) * self.__map_tiles[tileset_name][
+                                #                      min(tile_y + (row_index + 1) * self.__map_tiles[tile_tileset][
                                 #                          pattern].renderable.surface.get_height(),
                                 #                          int(self._renderer.unscaled_size.y))):
                                 #     for x_index in range(
-                                #             tile_x + column_index * self.__map_tiles[tileset_name][
+                                #             tile_x + column_index * self.__map_tiles[tile_tileset][
                                 #                 pattern].renderable.surface.get_width(),
-                                #             min(tile_x + (column_index + 1) * self.__map_tiles[tileset_name][
+                                #             min(tile_x + (column_index + 1) * self.__map_tiles[tile_tileset][
                                 #                 pattern].renderable.surface.get_width(),
                                 #                 int(self._renderer.unscaled_size.x))):
-                                #         self.__map_tilesets[x_index][y_index] = self.__map_tiles[tileset_name][pattern]
+                                #         self.__map_tilesets[x_index][y_index] = self.__map_tiles[tile_tileset][pattern]
 
                     elif splitted_line[0] == "layer":
                         tile_layer = int(splitted_line[-1][:-1])
@@ -153,6 +168,9 @@ class MainGameScene(Scene):
                         tile_height = int(splitted_line[-1][:-1])
                     elif splitted_line[0] == "pattern":
                         pattern = splitted_line[-1][1:-2]
+                    elif splitted_line[0] == "tileset":
+                        tile_tileset = splitted_line[-1][1:-2]
+                        self.parse_tileset_data(data_file_name=f"resources/tilesets/{tile_tileset}.dat", name=tile_tileset)
             else:
                 if splitted_line[0] == "x":
                     map_x = int(splitted_line[-1][:-1])
@@ -187,8 +205,10 @@ class MainGameScene(Scene):
                                                               y=map_y + map_height))
 
     def parse_tileset_data(self, data_file_name: str, name: str):
-        assert name not in self.__map_data
+        if name in self.__map_data:
+            return
         data_file: IO = open(file=data_file_name, mode="r")
+        print(f"parsing tileset {data_file_name}")
 
         self.__map_data[name] = dict()
         self.__map_tiles[name] = dict()
@@ -236,7 +256,10 @@ class MainGameScene(Scene):
                             # print(f'{self.__map_data[name]["tile_pattern"][id][splitted_line[0]][-1]} ', end="")
                         # print("}")
                     else:
-                        self.__map_data[name]["tile_pattern"][id][splitted_line[0]] = int(splitted_line[-1][:-1])
+                        if splitted_line[-1][:-1] == "true" or splitted_line[-1][:-1] == "false":
+                            self.__map_data[name]["tile_pattern"][id][splitted_line[0]] = bool(splitted_line[-1][:-1])
+                        else:
+                            self.__map_data[name]["tile_pattern"][id][splitted_line[0]] = int(splitted_line[-1][:-1])
                         # print(f"\t\t{splitted_line[0]}: {int(splitted_line[-1][:-1])}")
 
         for tile_id in self.__map_data[name]["tile_pattern"]:
