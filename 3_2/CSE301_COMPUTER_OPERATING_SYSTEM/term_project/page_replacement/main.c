@@ -89,7 +89,7 @@ void test()
 									0llu, 4llu, 2llu, 6llu, 
 									2llu, 3llu, 1llu, 3llu, 
 									0llu, 3llu, 4llu, 0llu, };
-	uint64_t main_memory_frame_count = 3llu;
+	uint64_t main_memory_frame_count = 4llu;
 	uint64_t secondary_storage_frame_count = 8llu;
 	uint64_t reference_string_size = sizeof(reference_string) / sizeof(reference_string[0]);
 	uint64_t references_count = 7llu;

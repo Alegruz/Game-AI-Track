@@ -294,6 +294,7 @@ bool add_page_by_lru(memory_t* destination_memory, memory_t* source_memory, uint
     LONGLONG min_lru = MAXLONGLONG;
 #endif        
     for (uint64_t page_idx = 0llu; page_idx < destination_memory->capacity; ++page_idx) {
+        // printf("[%llu]: lru: %lld\n", page_idx, destination_memory->timers[page_idx].QuadPart);
         if (destination_memory->indice[page_idx] == index) {
             b_has_index = true;
             QueryPerformanceCounter(&destination_memory->timers[page_idx]);
