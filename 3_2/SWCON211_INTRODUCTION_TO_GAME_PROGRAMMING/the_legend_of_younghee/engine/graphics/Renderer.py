@@ -110,6 +110,12 @@ class Renderer:
 
         return None
 
+    def has_renderable(self, key: str) -> bool:
+        if key not in self.__renderables_key_to_depth:
+            return False
+
+        return key in self.__renderables[self.__renderables_key_to_depth[key]]
+
     def set_offset_limit(self, top_left: Vector2f, bottom_right: Vector2f):
         self.__offset_limit_top_left.copy(other=top_left)
         self.__offset_limit_bottom_right.copy(other=bottom_right)

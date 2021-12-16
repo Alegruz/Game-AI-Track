@@ -19,6 +19,154 @@ class Math:
         return Vector2f(x=(1.0 - alpha) * coord0.x + alpha * coord1.x, y=(1.0 - alpha) * coord0.y + alpha * coord1.y)
 
 
+class Vector2i:
+    __slots__ = ["__x", "__y"]
+
+    def __init__(self, x: int, y: int):
+        if isinstance(x, float):
+            x = int(x)
+        if isinstance(y, float):
+            y = int(y)
+        assert isinstance(x, int)
+        assert isinstance(y, int)
+
+        self.__x = x
+        self.__y = y
+
+        # print(f"init: {id(self)}")
+
+    def __del__(self):
+        # print(f"i am being deleted, {self} {id(self)}")
+        pass
+
+    def __abs__(self):
+        return Vector2i(x=abs(self.__x), y=abs(self.__y))
+
+    @typing.overload
+    def __add__(self, other: Vector2i) -> Vector2i:
+        ...
+
+    @typing.overload
+    def __add__(self, other: int) -> Vector2i:
+        ...
+
+    def __add__(self, other: typing.Union[int, Vector2i]) -> Vector2i:
+        if isinstance(other, Vector2i):
+            return Vector2i(x=self.__x + other.__x, y=self.__y + other.__y)
+        elif isinstance(other, int):
+            return Vector2i(x=self.__x + other, y=self.__y + other)
+
+        assert False
+
+    def __eq__(self, other: Vector2i) -> bool:
+        assert isinstance(other, Vector2i)
+        return self.__x == other.x and self.__y == other.y
+
+    def __ge__(self, other: Vector2i) -> bool:
+        assert isinstance(other, Vector2i)
+        return self.__x >= other.x and self.__y >= other.y
+
+    def __gt__(self, other: Vector2i) -> bool:
+        assert isinstance(other, Vector2i)
+        return self.__x > other.x and self.__y > other.y
+
+    def __len__(self) -> int:
+        return 2
+
+    @typing.overload
+    def __mul__(self, other: Vector2i) -> int:
+        ...
+
+    @typing.overload
+    def __mul__(self, other: int) -> Vector2i:
+        ...
+
+    @typing.overload
+    def __mul__(self, other: int) -> Vector2i:
+        ...
+
+    def __mul__(self, other: typing.Union[Vector2i, float, int]) -> typing.Union[int, Vector2i]:
+        if isinstance(other, Vector2i):
+            return self.__x * other.__x + self.__y * other.__y
+        elif isinstance(other, float) or isinstance(other, int):
+            return Vector2i(x=int(self.__x * other), y=int(self.__y * other))
+
+        assert False
+
+    def __ne__(self, other: Vector2i) -> bool:
+        assert isinstance(other, Vector2i)
+        return self.__x != other.__x or self.__y != other.__y
+
+    def __neg__(self) -> Vector2i:
+        return Vector2i(x=-self.__x, y=-self.__y)
+
+    def __str__(self) -> str:
+        try:
+            return f"({self.__x}, {self.__y})"
+        except AttributeError:
+            print(f"str: {id(self)}")
+            assert False
+
+    def __sub__(self, other: Vector2i) -> Vector2i:
+        assert isinstance(other, Vector2i)
+        return Vector2i(x=self.__x - other.__x, y=self.__y - other.__y)
+
+    @property
+    def x(self) -> int:
+        try:
+            return self.__x
+        except AttributeError:
+            print(f"id: {id(self)}")
+            assert False
+
+    @property
+    def y(self) -> int:
+        return self.__y
+
+    @x.setter
+    def x(self, x: int) -> None:
+        self.__x = x
+
+    @y.setter
+    def y(self, y: int) -> None:
+        self.__y = y
+
+    def __copy__(self):
+        class_type = self.__class__
+        print(f"cls: {type(class_type)}")
+        result = class_type.__new__(class_type)
+        print(f"result: {type(result)}")
+        result.__dict__.update(self.__dict__)
+        return result
+
+    def copy(self, other: Vector2i) -> None:
+        assert isinstance(other, Vector2i)
+        self.__x = other.x
+        self.__y = other.y
+
+    def get_length(self) -> float:
+        return math.sqrt(self.__x * self.__x + self.__y * self.__y)
+
+    def get_length_squared(self) -> int:
+        return self.__x * self.__x + self.__y * self.__y
+
+    def lerp(self, coord0: Vector2i, coord1: Vector2i, alpha: float):
+        assert isinstance(coord0, Vector2i)
+        assert isinstance(coord1, Vector2i)
+        assert isinstance(alpha, float)
+
+        self.__x = int((1.0 - alpha) * coord0.x + alpha * coord1.x)
+        self.__y = int((1.0 - alpha) * coord0.y + alpha * coord1.y)
+
+    def set_coordinate(self, x: int, y: int):
+        self.x = x
+        self.y = y
+
+    @staticmethod
+    def to_tuple(vector: Vector2i) -> tuple[int, int]:
+        return vector.x, vector.y
+
+
 class Vector2f:
     __slots__ = ["__x", "__y"]
 
@@ -149,6 +297,12 @@ class Vector2f:
         self.x = other.x
         self.y = other.y
 
+    def get_distance_from(self, other: Vector2f):
+        return (self - other).get_length()
+
+    def get_distance_squared_from(self, other: Vector2f):
+        return (self - other).get_length_squared()
+
     def get_length(self):
         return math.sqrt(self.__x * self.__x + self.__y * self.__y)
 
@@ -181,6 +335,11 @@ class Vector2f:
             return Vector2f(x=right_x, y=right_y)
 
         assert False
+
+    @staticmethod
+    def elementwise_multiply(lhs: Vector2f, rhs: Vector2f) -> Vector2f:
+        return Vector2f(x=lhs.__x * rhs.__x,
+                        y=lhs.__y * rhs.__y)
 
     def lerp(self, coord0: Vector2f, coord1: Vector2f, alpha: float):
         assert isinstance(coord0, Vector2f)

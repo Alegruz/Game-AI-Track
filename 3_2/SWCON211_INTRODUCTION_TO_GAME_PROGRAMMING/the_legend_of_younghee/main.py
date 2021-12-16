@@ -1,12 +1,4 @@
-from typing import Union
-
-import pygame
-
 from engine.Engine import Engine
-from engine.core.Math import Vector2f
-from engine.graphics.Renderable import Renderable
-from engine.graphics.Renderer import Depth
-from engine.player.Player import Player
 from game.scenes.InputNameScreenScene import InputNameScreenScene
 from game.scenes.MainGameScene import MainGameScene
 from game.scenes.TitleScreenScene import TitleScreenScene

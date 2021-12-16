@@ -14487,7 +14487,7 @@ destructible{
   y = 253,
   sprite = "destructibles/bush_green",
   destruction_sound = "bush",
-  can_be_cut = true,
+  can_be_cut = true,can
 }
 
 destructible{

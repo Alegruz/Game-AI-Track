@@ -1,15 +1,25 @@
-import pygame
+from __future__ import annotations
 
-from engine.components.Component import Component, ComponentType, RenderableComponent
+from enum import Enum
+
 from engine.core.Math import Vector2f, Box
+from engine.resources.RenderableStorage import RenderableStorage
+
+
+class eFacingDirection(Enum):
+    EAST = 0
+    NORTH = 1
+    WEST = 2
+    SOUTH = 3
 
 
 class BaseObject:
-    __slots__ = ["_components", "_coordinates"]
+    __slots__ = ["_coordinates", "_renderable_names", "_current_renderable_name"]
 
     def __init__(self, coordinate: Vector2f):
-        self._components: dict[int, dict[str, Component]] = dict()
         self._coordinates: Vector2f = Vector2f(x=coordinate.x, y=coordinate.y)
+        self._renderable_names: set[str] = set()
+        self._current_renderable_name: str = None
 
     def __del__(self):
         self.destroy()
@@ -19,27 +29,26 @@ class BaseObject:
     def coordinate(self) -> Vector2f:
         return self._coordinates
 
+    @coordinate.setter
+    def coordinate(self, coordinate: Vector2f) -> None:
+        self._coordinates.copy(other=coordinate)
+
+    def copy(self, other: BaseObject):
+        pass
+
     def initialize(self):
         pass
 
     def destroy(self):
-        pass
+        for renderable_name in self._renderable_names:
+            RenderableStorage.pull_from_renderer(key=renderable_name)
+            print(renderable_name)
+            RenderableStorage.remove_renderable(key=renderable_name)
+            RenderableStorage.remove_surface(key=renderable_name)
 
-    def add_renderable_component(self, renderable_component: RenderableComponent):
-        if ComponentType.RENDERABLE not in self._components:
-            self._components[ComponentType.RENDERABLE] = dict()
 
-        self._components[ComponentType.RENDERABLE][renderable_component.name] = renderable_component
-
-    def get_renderable_component(self, name: str) -> RenderableComponent:
-        if ComponentType.RENDERABLE not in self._components:
-            return None
-
-        if name not in self._components[ComponentType.RENDERABLE]:
-            return None
-
-        return self._components[ComponentType.RENDERABLE][name]
+    def on_print_coord(self):
+        print(f"{id(self)}: {self._coordinates}")
 
     def update(self, delta_time: float):
         pass
-

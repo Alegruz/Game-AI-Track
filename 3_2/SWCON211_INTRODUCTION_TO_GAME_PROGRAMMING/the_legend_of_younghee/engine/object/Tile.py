@@ -6,6 +6,7 @@ import pygame
 
 from engine.core.Math import Vector2f, Box
 from engine.graphics.Renderable import Renderable
+from engine.resources.RenderableStorage import RenderableStorage
 
 
 class eGroundType(Enum):
@@ -123,7 +124,10 @@ class eGroundType(Enum):
 
     @staticmethod
     def is_walkable(ground_type: eGroundType):
-        return ground_type == eGroundType.TRAVERSABLE
+        return ground_type == eGroundType.TRAVERSABLE or \
+               ground_type == eGroundType.EMPTY or \
+               ground_type == eGroundType.LADDER
+
 
 class eRepeatMode(Enum):
     NONE = 0
@@ -146,12 +150,12 @@ class eRepeatMode(Enum):
 class Tile:
     __slots__ = ["__id", "__ground", "__default_layer", "__renderable", "__repeat_mode"]
 
-    def __init__(self, id: str, ground: Union[str, eGroundType], default_layer: int,
+    def __init__(self, tile_id: str, ground: Union[str, eGroundType], default_layer: int,
                  repeat_mode: Union[str, eRepeatMode] = eRepeatMode.NONE):
-        assert isinstance(id, str) and (isinstance(ground, str) or isinstance(ground, eGroundType))
+        assert isinstance(tile_id, str) and (isinstance(ground, str) or isinstance(ground, eGroundType))
         assert isinstance(default_layer, int) and (isinstance(repeat_mode, str) or isinstance(repeat_mode, eRepeatMode))
 
-        self.__id: str = id
+        self.__id: str = tile_id
         if isinstance(ground, str):
             self.__ground: eGroundType = eGroundType.str_to_ground_type(key=ground)
         else:
@@ -165,7 +169,7 @@ class Tile:
 
     @staticmethod
     def create_tile_from_data(id: str, data: dict[str, Union[str, int, list[int]]], resource: pygame.Surface) -> Tile:
-        tile: Tile = Tile(id=id,
+        tile: Tile = Tile(tile_id=id,
                           ground=data["ground"],
                           default_layer=data["default_layer"],
                           repeat_mode=data["repeat_mode"] if "repeat_mode" in data else eRepeatMode.NONE)
@@ -191,7 +195,7 @@ class Tile:
         assert isinstance(data["x"], list)
 
         for i in range(0, len(data["x"])):
-            tile: Tile = Tile(id=f"{id}_{i}",
+            tile: Tile = Tile(tile_id=f"{id}_{i}",
                               ground=data["ground"],
                               default_layer=data["default_layer"],
                               repeat_mode=data["repeat_mode"] if "repeat_mode" in data else eRepeatMode.NONE)
@@ -200,6 +204,7 @@ class Tile:
                                            coordinate=Vector2f(x=0.0, y=0.0),
                                            depth=tile.__default_layer,
                                            name=tile.__id)
+            RenderableStorage.add_renderable(renderable=tile.__renderable)
             tiles.append(tile)
 
         return tiles
@@ -215,3 +220,7 @@ class Tile:
     @property
     def renderable(self) -> Renderable:
         return self.__renderable
+
+    def __del__(self):
+        if self.__renderable is not None:
+            RenderableStorage.remove_renderable(key=self.__renderable.name)

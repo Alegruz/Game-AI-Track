@@ -238,6 +238,7 @@ class Renderable:
 
     def start_animation(self, from_frame_index: int = -1, to_frame_index: int = -1, duration: int = -1,
                         should_loop: bool = False):
+        # print(f"play animation of {self.__name}. {self.__from_frame_index} ~ {self.__to_frame_index}")
         assert (self.__frames is not None)
         assert isinstance(from_frame_index, int)
         assert isinstance(to_frame_index, int)

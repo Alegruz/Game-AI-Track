@@ -3,12 +3,14 @@ import threading
 
 import pygame
 
+from engine.core.GlobalConstants import GlobalConstants
 from engine.core.Math import Vector2f
 from engine.events.Events import Events, InputNameScreenEvent, TitleScreenEvent
 from engine.graphics.Orientation import Orientation
 from engine.graphics.Renderable import Renderable
 from engine.graphics.Renderer import Depth, Renderer
 from engine.player.Player import Player
+from engine.resources.RenderableStorage import RenderableStorage
 from engine.resources.Scene import Scene
 
 
@@ -35,6 +37,8 @@ class Engine:
         self.__renderer: Renderer = Renderer(size=Vector2f(x=self.__width, y=self.__height),
                                              scale_rate=self.__scale_rate,
                                              flags=self.__flags)
+        GlobalConstants.add_constant(key="renderer", value=self.__renderer)
+        RenderableStorage.set_renderer(renderer=self.__renderer)
         self.__scenes: dict[str, Scene] = dict()
         self.__scenes_by_event: dict[int, Scene] = dict()
         self.__current_scene: Scene = None
@@ -61,6 +65,7 @@ class Engine:
         self.__current_player_index: int = 0
 
     def __del__(self):
+        GlobalConstants.remove_constant(key="renderer")
         del self.__renderer
         self.destroy()
 
@@ -82,8 +87,7 @@ class Engine:
             if self.__players[self.__player_index] is None:
                 self.__players[self.__player_index] = Player(name=f"player{self.__player_index}",
                                                              coordinate=Vector2f(x=self.__width / 2.0,
-                                                                                 y=self.__height / 2.0),
-                                                             renderer=self.__renderer)
+                                                                                 y=self.__height / 2.0))
             scene.player = self.__players[self.__player_index]
         self.__scenes[scene.name] = scene
         scene.set_renderer(renderer=self.__renderer)
